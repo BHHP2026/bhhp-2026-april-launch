@@ -1,8 +1,8 @@
-/* ═══════════════════════════════════════════════════
-   BHHP 2026 — Simplified Clean Design
+/* âââââââââââââââââââââââââââââââââââââââââââââââââââ
+   BHHP 2026 â Simplified Clean Design
    Font: Lora (headers) + Montserrat (body)
-   Colors: Tiffany pastel #81D8D0, vivid #0ABAB5, navy, white
-   ═══════════════════════════════════════════════════ */
+   Colors: Navy + Gold #D4AF37, navy, white
+   âââââââââââââââââââââââââââââââââââââââââââââââââââ */
 
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -13,8 +13,8 @@
   --off-white: #F8F7F4;
   --warm-gray: #6B6B6B;
   --light-gray: #E8E6E1;
-  --teal: #81D8D0;
-  --teal-vivid: #0ABAB5;
+  --gold: #D4AF37;
+  --gold-vivid: #B8942E;
   --charcoal: #222222;
   --font-heading: 'Lora', Georgia, serif;
   --font-body: 'Montserrat', sans-serif;
@@ -32,7 +32,7 @@ body {
 img { max-width: 100%; height: auto; display: block; }
 a { text-decoration: none; color: inherit; }
 
-/* ─── NAVIGATION ─── */
+/* âââ NAVIGATION âââ */
 .nav {
   position: fixed;
   top: 0; left: 0; right: 0;
@@ -79,19 +79,19 @@ a { text-decoration: none; color: inherit; }
   transition: color 0.3s;
 }
 
-.nav-links a:hover { color: var(--teal); }
+.nav-links a:hover { color: var(--gold); }
 
 .nav-cta {
   padding: 10px 28px;
-  border: 1.5px solid var(--teal);
-  color: var(--teal) !important;
+  border: 1.5px solid var(--gold);
+  color: var(--gold) !important;
   font-weight: 600 !important;
   letter-spacing: 1.5px !important;
   transition: all 0.3s !important;
 }
 
 .nav-cta:hover {
-  background: var(--teal);
+  background: var(--gold);
   color: var(--navy) !important;
 }
 
@@ -113,7 +113,7 @@ a { text-decoration: none; color: inherit; }
   transition: all 0.3s;
 }
 
-/* ─── HERO ─── */
+/* âââ HERO âââ */
 .hero {
   position: relative;
   min-height: 100vh;
@@ -156,7 +156,7 @@ a { text-decoration: none; color: inherit; }
   font-weight: 500;
   letter-spacing: 4px;
   text-transform: uppercase;
-  color: var(--teal);
+  color: var(--gold);
   margin-bottom: 28px;
 }
 
@@ -182,7 +182,7 @@ a { text-decoration: none; color: inherit; }
   margin: 0 auto 40px;
 }
 
-/* ─── BUTTONS ─── */
+/* âââ BUTTONS âââ */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -199,12 +199,12 @@ a { text-decoration: none; color: inherit; }
 }
 
 .btn-primary {
-  background: var(--teal-vivid);
+  background: var(--gold-vivid);
   color: var(--white);
 }
 
 .btn-primary:hover {
-  background: #09a8a3;
+  background: #9E7E22;
   transform: translateY(-1px);
 }
 
@@ -226,8 +226,8 @@ a { text-decoration: none; color: inherit; }
 }
 
 .btn-outline-dark:hover {
-  border-color: var(--teal);
-  color: var(--teal-vivid);
+  border-color: var(--gold);
+  color: var(--gold-vivid);
 }
 
 .hero-buttons {
@@ -237,7 +237,7 @@ a { text-decoration: none; color: inherit; }
   flex-wrap: wrap;
 }
 
-/* ─── STATS BAR ─── */
+/* âââ STATS BAR âââ */
 .stats-bar {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -257,7 +257,7 @@ a { text-decoration: none; color: inherit; }
   font-family: var(--font-heading);
   font-size: 28px;
   font-weight: 400;
-  color: var(--teal);
+  color: var(--gold);
   margin-bottom: 6px;
 }
 
@@ -269,7 +269,7 @@ a { text-decoration: none; color: inherit; }
   color: rgba(255,255,255,0.5);
 }
 
-/* ─── SECTIONS ─── */
+/* âââ SECTIONS âââ */
 .section {
   padding: 96px 48px;
 }
@@ -279,7 +279,7 @@ a { text-decoration: none; color: inherit; }
   font-weight: 600;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: var(--teal-vivid);
+  color: var(--gold-vivid);
   margin-bottom: 16px;
 }
 
@@ -317,7 +317,7 @@ a { text-decoration: none; color: inherit; }
   margin: 0 auto;
 }
 
-/* ─── ABOUT GRID ─── */
+/* âââ ABOUT GRID âââ */
 .about { background: var(--off-white); }
 
 .about-grid {
@@ -366,7 +366,7 @@ a { text-decoration: none; color: inherit; }
   line-height: 1.6;
 }
 
-/* ─── COMMUNITIES GRID ─── */
+/* âââ COMMUNITIES GRID âââ */
 .communities-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -418,7 +418,7 @@ a { text-decoration: none; color: inherit; }
   letter-spacing: 0.5px;
 }
 
-/* ─── SERVICES / VALUE PROPS ─── */
+/* âââ SERVICES / VALUE PROPS âââ */
 .services-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -436,7 +436,7 @@ a { text-decoration: none; color: inherit; }
   width: 48px;
   height: 48px;
   margin: 0 auto 20px;
-  color: var(--teal-vivid);
+  color: var(--gold-vivid);
 }
 
 .service-item h3 {
@@ -453,7 +453,7 @@ a { text-decoration: none; color: inherit; }
   line-height: 1.7;
 }
 
-/* ─── CTA BANNER ─── */
+/* âââ CTA BANNER âââ */
 .cta-banner {
   background: var(--navy);
   color: var(--white);
@@ -471,7 +471,7 @@ a { text-decoration: none; color: inherit; }
   margin: 0 auto 36px;
 }
 
-/* ─── COMMUNITY PAGE HERO ─── */
+/* âââ COMMUNITY PAGE HERO âââ */
 .page-hero {
   position: relative;
   min-height: 60vh;
@@ -510,7 +510,7 @@ a { text-decoration: none; color: inherit; }
   max-width: 540px;
 }
 
-/* ─── COMMUNITY DETAIL ─── */
+/* âââ COMMUNITY DETAIL âââ */
 .community-detail {
   max-width: 900px;
   margin: 0 auto;
@@ -549,7 +549,7 @@ a { text-decoration: none; color: inherit; }
   font-weight: 600;
   letter-spacing: 1px;
   text-transform: uppercase;
-  color: var(--teal-vivid);
+  color: var(--gold-vivid);
   margin-bottom: 10px;
 }
 
@@ -560,7 +560,7 @@ a { text-decoration: none; color: inherit; }
   margin-bottom: 0;
 }
 
-/* ─── CONTACT ─── */
+/* âââ CONTACT âââ */
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -585,7 +585,7 @@ a { text-decoration: none; color: inherit; }
   font-weight: 600;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: var(--teal-vivid);
+  color: var(--gold-vivid);
   margin-bottom: 8px;
 }
 
@@ -595,7 +595,7 @@ a { text-decoration: none; color: inherit; }
   line-height: 1.6;
 }
 
-.contact-detail a:hover { color: var(--teal-vivid); }
+.contact-detail a:hover { color: var(--gold-vivid); }
 
 .contact-form input,
 .contact-form textarea,
@@ -616,7 +616,7 @@ a { text-decoration: none; color: inherit; }
 .contact-form textarea:focus,
 .contact-form select:focus {
   outline: none;
-  border-color: var(--teal);
+  border-color: var(--gold);
 }
 
 .contact-form textarea {
@@ -629,7 +629,7 @@ a { text-decoration: none; color: inherit; }
   justify-content: center;
 }
 
-/* ─── FOOTER ─── */
+/* âââ FOOTER âââ */
 .footer {
   background: var(--navy);
   color: rgba(255,255,255,0.6);
@@ -672,7 +672,7 @@ a { text-decoration: none; color: inherit; }
   transition: color 0.3s;
 }
 
-.footer-col a:hover { color: var(--teal); }
+.footer-col a:hover { color: var(--gold); }
 
 .footer-bottom {
   border-top: 1px solid rgba(255,255,255,0.06);
@@ -683,7 +683,7 @@ a { text-decoration: none; color: inherit; }
   margin: 0 auto;
 }
 
-/* ─── GET INSPIRED / VIDEO HERO ─── */
+/* âââ GET INSPIRED / VIDEO HERO âââ */
 .inspire-section {
   position: relative;
   min-height: 80vh;
@@ -732,7 +732,7 @@ a { text-decoration: none; color: inherit; }
   font-weight: 500;
   letter-spacing: 4px;
   text-transform: uppercase;
-  color: var(--teal);
+  color: var(--gold);
   margin-bottom: 28px;
 }
 
@@ -793,7 +793,7 @@ a { text-decoration: none; color: inherit; }
   line-height: 1.5;
 }
 
-/* ─── NEIGHBORHOODS GALLERY ─── */
+/* âââ NEIGHBORHOODS GALLERY âââ */
 .neighborhoods-section {
   padding: 96px 48px;
   background: var(--off-white);
@@ -858,7 +858,7 @@ a { text-decoration: none; color: inherit; }
   font-weight: 600;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: var(--teal);
+  color: var(--gold);
   margin-bottom: 6px;
 }
 
@@ -869,7 +869,7 @@ a { text-decoration: none; color: inherit; }
   color: var(--white);
 }
 
-/* ─── BUY/SELL SECTION ─── */
+/* âââ BUY/SELL SECTION âââ */
 .buysell-section {
   padding: 96px 48px;
   background: var(--white);
@@ -956,7 +956,7 @@ a { text-decoration: none; color: inherit; }
   align-self: flex-start;
 }
 
-/* ─── LISTINGS / FEATURED PROPERTIES ─── */
+/* âââ LISTINGS / FEATURED PROPERTIES âââ */
 .listings-section {
   padding: 96px 48px;
   background: var(--navy);
@@ -971,7 +971,7 @@ a { text-decoration: none; color: inherit; }
   margin: 0 auto 48px;
 }
 
-.listings-header .section-eyebrow { color: var(--teal); }
+.listings-header .section-eyebrow { color: var(--gold); }
 
 .listings-header .section-title {
   color: var(--white);
@@ -995,7 +995,7 @@ a { text-decoration: none; color: inherit; }
 }
 
 .listing-card:hover {
-  border-color: rgba(129,216,208,0.3);
+  border-color: rgba(212,175,55,0.3);
 }
 
 .listing-image {
@@ -1019,7 +1019,7 @@ a { text-decoration: none; color: inherit; }
   position: absolute;
   top: 12px;
   left: 12px;
-  background: var(--teal-vivid);
+  background: var(--gold-vivid);
   color: var(--white);
   padding: 4px 12px;
   font-size: 9px;
@@ -1068,7 +1068,7 @@ a { text-decoration: none; color: inherit; }
   font-family: var(--font-heading);
   font-size: 20px;
   font-weight: 500;
-  color: var(--teal);
+  color: var(--gold);
 }
 
 .listings-cta {
@@ -1076,7 +1076,7 @@ a { text-decoration: none; color: inherit; }
   margin-top: 48px;
 }
 
-/* ─── BIO / ADVISOR ─── */
+/* âââ BIO / ADVISOR âââ */
 .bio-section {
   padding: 96px 48px;
   background: var(--white);
@@ -1122,7 +1122,7 @@ a { text-decoration: none; color: inherit; }
   margin-bottom: 32px;
 }
 
-/* ─── TESTIMONIALS / ACCOLADES ─── */
+/* âââ TESTIMONIALS / ACCOLADES âââ */
 .accolades-section {
   padding: 96px 48px;
   background: var(--off-white);
@@ -1163,7 +1163,7 @@ a { text-decoration: none; color: inherit; }
 .accolade-quote {
   font-family: var(--font-heading);
   font-size: 36px;
-  color: var(--teal);
+  color: var(--gold);
   margin-bottom: 16px;
   line-height: 1;
 }
@@ -1180,7 +1180,7 @@ a { text-decoration: none; color: inherit; }
 .accolade-divider {
   width: 24px;
   height: 2px;
-  background: var(--teal);
+  background: var(--gold);
   margin-bottom: 16px;
 }
 
@@ -1197,7 +1197,7 @@ a { text-decoration: none; color: inherit; }
   letter-spacing: 0.5px;
 }
 
-/* ─── PARADISE CTA ─── */
+/* âââ PARADISE CTA âââ */
 .paradise-cta {
   position: relative;
   min-height: 50vh;
@@ -1240,7 +1240,7 @@ a { text-decoration: none; color: inherit; }
   margin-bottom: 36px;
 }
 
-/* ─── RESPONSIVE ─── */
+/* âââ RESPONSIVE âââ */
 @media (max-width: 1024px) {
   .communities-grid { grid-template-columns: repeat(2, 1fr); }
   .services-grid { grid-template-columns: repeat(2, 1fr); }
