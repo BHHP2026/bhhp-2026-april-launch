@@ -1,8 +1,8 @@
-/* âââââââââââââââââââââââââââââââââââââââââââââââââââ
-   BHHP 2026 â Simplified Clean Design
+/* ═══════════════════════════════════════════════════
+   BHHP 2026 — Simplified Clean Design
    Font: Lora (headers) + Montserrat (body)
    Colors: Navy + Gold #D4AF37, navy, white
-   âââââââââââââââââââââââââââââââââââââââââââââââââââ */
+   ═══════════════════════════════════════════════════ */
 
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -32,7 +32,7 @@ body {
 img { max-width: 100%; height: auto; display: block; }
 a { text-decoration: none; color: inherit; }
 
-/* âââ NAVIGATION âââ */
+/* ─── NAVIGATION ─── */
 .nav {
   position: fixed;
   top: 0; left: 0; right: 0;
@@ -113,7 +113,7 @@ a { text-decoration: none; color: inherit; }
   transition: all 0.3s;
 }
 
-/* âââ HERO âââ */
+/* ─── HERO ─── */
 .hero {
   position: relative;
   min-height: 100vh;
@@ -182,7 +182,7 @@ a { text-decoration: none; color: inherit; }
   margin: 0 auto 40px;
 }
 
-/* âââ BUTTONS âââ */
+/* ─── BUTTONS ─── */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -237,7 +237,7 @@ a { text-decoration: none; color: inherit; }
   flex-wrap: wrap;
 }
 
-/* âââ STATS BAR âââ */
+/* ─── STATS BAR ─── */
 .stats-bar {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -269,7 +269,7 @@ a { text-decoration: none; color: inherit; }
   color: rgba(255,255,255,0.5);
 }
 
-/* âââ SECTIONS âââ */
+/* ─── SECTIONS ─── */
 .section {
   padding: 96px 48px;
 }
@@ -317,7 +317,7 @@ a { text-decoration: none; color: inherit; }
   margin: 0 auto;
 }
 
-/* âââ ABOUT GRID âââ */
+/* ─── ABOUT GRID ─── */
 .about { background: var(--off-white); }
 
 .about-grid {
@@ -366,7 +366,7 @@ a { text-decoration: none; color: inherit; }
   line-height: 1.6;
 }
 
-/* âââ COMMUNITIES GRID âââ */
+/* ─── COMMUNITIES GRID ─── */
 .communities-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -418,7 +418,7 @@ a { text-decoration: none; color: inherit; }
   letter-spacing: 0.5px;
 }
 
-/* âââ SERVICES / VALUE PROPS âââ */
+/* ─── SERVICES / VALUE PROPS ─── */
 .services-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -453,7 +453,7 @@ a { text-decoration: none; color: inherit; }
   line-height: 1.7;
 }
 
-/* âââ CTA BANNER âââ */
+/* ─── CTA BANNER ─── */
 .cta-banner {
   background: var(--navy);
   color: var(--white);
@@ -471,7 +471,7 @@ a { text-decoration: none; color: inherit; }
   margin: 0 auto 36px;
 }
 
-/* âââ COMMUNITY PAGE HERO âââ */
+/* ─── COMMUNITY PAGE HERO ─── */
 .page-hero {
   position: relative;
   min-height: 60vh;
@@ -510,7 +510,7 @@ a { text-decoration: none; color: inherit; }
   max-width: 540px;
 }
 
-/* âââ COMMUNITY DETAIL âââ */
+/* ─── COMMUNITY DETAIL ─── */
 .community-detail {
   max-width: 900px;
   margin: 0 auto;
@@ -560,7 +560,7 @@ a { text-decoration: none; color: inherit; }
   margin-bottom: 0;
 }
 
-/* âââ CONTACT âââ */
+/* ─── CONTACT ─── */
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -629,7 +629,7 @@ a { text-decoration: none; color: inherit; }
   justify-content: center;
 }
 
-/* âââ FOOTER âââ */
+/* ─── FOOTER ─── */
 .footer {
   background: var(--navy);
   color: rgba(255,255,255,0.6);
@@ -683,7 +683,7 @@ a { text-decoration: none; color: inherit; }
   margin: 0 auto;
 }
 
-/* âââ GET INSPIRED / VIDEO HERO âââ */
+/* ─── GET INSPIRED / VIDEO HERO ─── */
 .inspire-section {
   position: relative;
   min-height: 80vh;
@@ -793,7 +793,7 @@ a { text-decoration: none; color: inherit; }
   line-height: 1.5;
 }
 
-/* âââ NEIGHBORHOODS GALLERY âââ */
+/* ─── NEIGHBORHOODS GALLERY ─── */
 .neighborhoods-section {
   padding: 96px 48px;
   background: var(--off-white);
@@ -869,7 +869,7 @@ a { text-decoration: none; color: inherit; }
   color: var(--white);
 }
 
-/* âââ BUY/SELL SECTION âââ */
+/* ─── BUY/SELL SECTION ─── */
 .buysell-section {
   padding: 96px 48px;
   background: var(--white);
@@ -956,7 +956,7 @@ a { text-decoration: none; color: inherit; }
   align-self: flex-start;
 }
 
-/* âââ LISTINGS / FEATURED PROPERTIES âââ */
+/* ─── LISTINGS / FEATURED PROPERTIES ─── */
 .listings-section {
   padding: 96px 48px;
   background: var(--navy);
@@ -1076,7 +1076,7 @@ a { text-decoration: none; color: inherit; }
   margin-top: 48px;
 }
 
-/* âââ BIO / ADVISOR âââ */
+/* ─── BIO / ADVISOR ─── */
 .bio-section {
   padding: 96px 48px;
   background: var(--white);
@@ -1122,7 +1122,7 @@ a { text-decoration: none; color: inherit; }
   margin-bottom: 32px;
 }
 
-/* âââ TESTIMONIALS / ACCOLADES âââ */
+/* ─── TESTIMONIALS / ACCOLADES ─── */
 .accolades-section {
   padding: 96px 48px;
   background: var(--off-white);
@@ -1197,7 +1197,7 @@ a { text-decoration: none; color: inherit; }
   letter-spacing: 0.5px;
 }
 
-/* âââ PARADISE CTA âââ */
+/* ─── PARADISE CTA ─── */
 .paradise-cta {
   position: relative;
   min-height: 50vh;
@@ -1240,7 +1240,7 @@ a { text-decoration: none; color: inherit; }
   margin-bottom: 36px;
 }
 
-/* âââ RESPONSIVE âââ */
+/* ─── RESPONSIVE ─── */
 @media (max-width: 1024px) {
   .communities-grid { grid-template-columns: repeat(2, 1fr); }
   .services-grid { grid-template-columns: repeat(2, 1fr); }
