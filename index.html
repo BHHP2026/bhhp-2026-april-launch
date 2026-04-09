@@ -249,34 +249,117 @@
       </div>
     </section>
 
-    <!-- ═══ WIDGET 4: YOUR NEXT MOVE STARTS HERE ═══ -->
-    <section class="buysell-section">
-      <div class="buysell-header">
+    <!-- ═══ WIDGET 4: YOUR NEXT MOVE STARTS HERE (staging design) ═══ -->
+    <style>
+      /* === Buy/Sell Widget — staging design === */
+      .buysell2-section {
+        padding: 100px 0;
+        background: #f8f8f6;
+        text-align: center;
+      }
+      .buysell2-header {
+        max-width: 720px;
+        margin: 0 auto 60px;
+        padding: 0 32px;
+      }
+      .buysell2-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 48px;
+      }
+      .buysell2-card {
+        background: #fff;
+        overflow: hidden;
+      }
+      .buysell2-img {
+        height: 300px;
+        background-size: cover;
+        background-position: center;
+      }
+      .buysell2-body {
+        padding: 44px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .buysell2-body h3 {
+        font-family: 'Playfair Display', serif;
+        font-size: 26px;
+        font-weight: 400;
+        color: #0a0f1c;
+        margin-bottom: 16px;
+      }
+      .buysell2-body p {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 13px;
+        font-weight: 300;
+        color: rgba(10,15,28,0.58);
+        line-height: 1.8;
+        max-width: 340px;
+        margin-bottom: 28px;
+      }
+      .buysell2-btn {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 11px;
+        font-weight: 500;
+        letter-spacing: 2.5px;
+        text-transform: uppercase;
+        padding: 15px 36px;
+        text-decoration: none;
+        display: inline-block;
+        transition: all 0.3s;
+      }
+      .buysell2-btn-dark {
+        background: #0a0f1c;
+        color: #fff;
+        border: 1px solid #0a0f1c;
+      }
+      .buysell2-btn-dark:hover {
+        background: #d4af37;
+        border-color: #d4af37;
+        color: #0a0f1c;
+      }
+      .buysell2-btn-gold {
+        background: #d4af37;
+        color: #0a0f1c;
+        border: 1px solid #d4af37;
+      }
+      .buysell2-btn-gold:hover {
+        background: #0a0f1c;
+        border-color: #0a0f1c;
+        color: #fff;
+      }
+      @media (max-width: 900px) {
+        .buysell2-grid { grid-template-columns: 1fr; max-width: 560px; }
+        .buysell2-body { padding: 32px 24px; }
+      }
+    </style>
+
+    <section class="buysell2-section">
+      <div class="buysell2-header">
         <p class="section-eyebrow">For Buyers & Sellers</p>
         <h2 class="section-title">Your Next Move <strong>Starts Here</strong></h2>
-        <p class="section-subtitle" style="margin: 0 auto;">Whether you’re searching for the perfect Hilton Head Island property or ready to maximize your sale — we have the tools, the data, and the team to make it happen.</p>
+        <p class="section-subtitle" style="margin: 0 auto;">Whether you're searching for the perfect Hilton Head Island property or ready to maximize your sale — we have the tools, the data, and the team to make it happen.</p>
       </div>
-      <div class="buysell-grid">
-        <div class="buysell-card">
-          <div class="buysell-image">
-            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80" alt="Buyers — luxury home">
-            <div class="buysell-image-label">Buyers</div>
-          </div>
-          <div class="buysell-body">
+      <div class="buysell2-grid">
+        <div class="buysell2-card">
+          <div class="buysell2-img" style="background-image: url('https://besthiltonheadproperties.com/wp-content/uploads/2022/03/Palmetto-Bluff-luxury-home-exterior-rendering-square-1-1.jpg');"></div>
+          <div class="buysell2-body">
             <h3>Find Your Dream Home</h3>
             <p>Browse every listing across Hilton Head Island, Bluffton, and the surrounding Lowcountry with our advanced property search — or tell us your vision and let us curate the perfect match.</p>
-            <a href="https://search.besthiltonheadproperties.com" target="_blank" class="btn btn-primary">Search All Properties →</a>
+            <a href="https://search.besthiltonheadproperties.com" target="_blank" class="buysell2-btn buysell2-btn-dark">Search All Properties &rarr;</a>
           </div>
         </div>
-        <div class="buysell-card">
-          <div class="buysell-image">
-            <img src="https://images.unsplash.com/photo-1600573472592-401b489a3cdc?w=800&q=80" alt="Sellers — luxury estate">
-            <div class="buysell-image-label">Sellers</div>
-          </div>
-          <div class="buysell-body">
+        <div class="buysell2-card">
+          <div class="buysell2-img" style="background-image: url('https://besthiltonheadproperties.com/wp-content/uploads/2022/03/PBHomeEvaluationoption2-1-1.jpeg');"></div>
+          <div class="buysell2-body">
             <h3>What Is Your Home Worth?</h3>
             <p>Get your free, no-obligation home valuation from our market experts — backed by data analytics, cinematic marketing, and a proven record of achieving maximum sale price.</p>
-            <a href="contact.html" class="btn btn-primary">Get Free Valuation →</a>
+            <a href="contact.html" class="buysell2-btn buysell2-btn-gold">Get Free Valuation &rarr;</a>
           </div>
         </div>
       </div>
@@ -472,7 +555,7 @@
       <div class="bio-content">
         <div class="bio-eyebrow">Your Trusted Advisor</div>
         <h2 class="bio-headline">Talita<br><em>Haggist</em></h2>
-        <p class="bio-body">Talita Haggist is a Global Real Estate Advisor whose life and career have been shaped by an uncommon international journey. The daughter of property developers, she pursued engineering studies across Brazil, Russia, Germany, and Italy &mdash; a foundation that gave her an avant-garde perspective on markets, value, and opportunity that few advisors can match. After founding a full-service property management company and serving as senior liaison to one of Brazil&rsquo;s most prominent corporations, she relocated from London to Hilton Head Island, drawn by the island’s understated elegance and enduring investment strength. That rare international lens is what Talita brings to every client relationship — translating global insight into the kind of clear, confident guidance that helps people find the properties that truly elevate their lives.</p>
+        <p class="bio-body">Talita Haggist is a Global Real Estate Advisor whose life and career have been shaped by an uncommon international journey. The daughter of property developers, she pursued engineering studies across Brazil, Russia, Germany, and Italy &mdash; a foundation that gave her an avant-garde perspective on markets, value, and opportunity that few advisors can match. After founding a full-service property management company and serving as senior liaison to one of Brazil&rsquo;s most prominent corporations, she relocated from London to Hilton Head Island, drawn by the island&rsquo;s understated elegance and enduring investment strength. That rare international lens is what Talita brings to every client relationship &mdash; translating global insight into the kind of clear, confident guidance that helps people find the properties that truly elevate their lives.</p>
         <a href="about.html" class="bio-btn-outline">Our Story &rarr;</a>
       </div>
     </section>
