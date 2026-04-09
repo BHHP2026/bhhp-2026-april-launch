@@ -117,7 +117,7 @@
       <div class="buysell-header">
         <p class="section-eyebrow">For Buyers & Sellers</p>
         <h2 class="section-title">Your Next Move <strong>Starts Here</strong></h2>
-        <p class="section-subtitle" style="margin: 0 auto;">Whether you're searching for the perfect Hilton Head Island property or ready to maximize your sale — we have the tools, the data, and the team to make it happen.</p>
+        <p class="section-subtitle" style="margin: 0 auto;">Whether you’re searching for the perfect Hilton Head Island property or ready to maximize your sale — we have the tools, the data, and the team to make it happen.</p>
       </div>
       <div class="buysell-grid">
         <div class="buysell-card">
@@ -212,19 +212,131 @@
       </div>
     </section>
 
-    <!-- ═══ WIDGET 6: YOUR TRUSTED ADVISOR ═══ -->
+    <!-- ═══ WIDGET 6: YOUR TRUSTED ADVISOR (staging design) ═══ -->
+    <style>
+      /* === Bio Widget — staging design === */
+      .bio-section {
+        background: #0d1f40;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        min-height: 640px;
+        position: relative;
+        overflow: hidden;
+      }
+      .bio-watermark {
+        position: absolute;
+        right: -60px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-family: 'Playfair Display', serif;
+        font-size: 280px;
+        font-weight: 900;
+        letter-spacing: -10px;
+        color: rgba(255,255,255,0.024);
+        text-transform: uppercase;
+        pointer-events: none;
+        white-space: nowrap;
+        user-select: none;
+      }
+      .bio-image {
+        background: url('https://raw.githubusercontent.com/BHHP2026/bhhp-website-b564f/main/images/talita-hero.jpg') center center / cover #0d1f40;
+        position: relative;
+      }
+      .bio-image-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to right, transparent 60%, #0d1f40 100%);
+      }
+      .bio-content {
+        padding: 80px 80px 80px 60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        z-index: 2;
+      }
+      .bio-eyebrow {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 10px;
+        font-weight: 500;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        color: #d4af37;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .bio-eyebrow::before {
+        content: '';
+        display: block;
+        width: 32px;
+        height: 1px;
+        background: #d4af37;
+      }
+      .bio-headline {
+        font-family: 'Playfair Display', serif;
+        font-size: clamp(32px, 3.5vw, 48px);
+        font-weight: 400;
+        text-transform: uppercase;
+        color: #ffffff;
+        letter-spacing: 1px;
+        line-height: 1.1;
+        margin-bottom: 24px;
+      }
+      .bio-headline em {
+        font-style: italic;
+        color: #d4af37;
+      }
+      .bio-body {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 13px;
+        font-weight: 300;
+        letter-spacing: 0.3px;
+        color: rgba(255,255,255,0.6);
+        line-height: 1.9;
+        margin-bottom: 40px;
+        max-width: 440px;
+      }
+      .bio-btn-outline {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 10px;
+        font-weight: 500;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        color: #ffffff;
+        border: 1px solid rgba(255,255,255,0.5);
+        padding: 14px 32px;
+        cursor: pointer;
+        background: transparent;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        transition: 0.25s;
+      }
+      .bio-btn-outline:hover {
+        border-color: #d4af37;
+        color: #d4af37;
+      }
+      @media (max-width: 900px) {
+        .bio-section { grid-template-columns: 1fr; }
+        .bio-image { min-height: 400px; }
+        .bio-image-overlay { background: linear-gradient(to bottom, transparent 60%, #0d1f40 100%); }
+        .bio-content { padding: 48px 32px; }
+      }
+    </style>
+
     <section class="bio-section">
-      <div class="bio-grid">
-        <div class="bio-image-wrap">
-          <img src="https://raw.githubusercontent.com/BHHP2026/bhhp-website-b564f/main/images/talita-hero.jpg" alt="Talita Haggist — Global Real Estate Advisor">
-        </div>
-        <div class="bio-text">
-          <p class="section-eyebrow">Your Trusted Advisor</p>
-          <h2 class="bio-name">Talita <strong>Haggist</strong></h2>
-          <p class="bio-description">Talita Haggist is a Global Real Estate Advisor whose life and career have been shaped by an uncommon international journey. The daughter of property developers, she pursued engineering studies across Brazil, Russia, Germany, and Italy — a foundation that gave her an avant-garde perspective on markets, value, and opportunity that few advisors can match.</p>
-          <p class="bio-description">After founding a full-service property management company and serving as senior liaison to one of Brazil’s most prominent corporations, she relocated from London to Hilton Head Island, drawn by the island’s understated elegance and enduring investment strength. That rare international lens is what Talita brings to every client relationship — translating global insight into the kind of clear, confident guidance that helps people find the properties that truly elevate their lives.</p>
-          <a href="about.html" class="btn btn-outline-dark">Our Story →</a>
-        </div>
+      <div class="bio-watermark">BHHP</div>
+      <div class="bio-image">
+        <div class="bio-image-overlay"></div>
+      </div>
+      <div class="bio-content">
+        <div class="bio-eyebrow">Your Trusted Advisor</div>
+        <h2 class="bio-headline">Talita<br><em>Haggist</em></h2>
+        <p class="bio-body">Talita Haggist is a Global Real Estate Advisor whose life and career have been shaped by an uncommon international journey. The daughter of property developers, she pursued engineering studies across Brazil, Russia, Germany, and Italy &mdash; a foundation that gave her an avant-garde perspective on markets, value, and opportunity that few advisors can match. After founding a full-service property management company and serving as senior liaison to one of Brazil&rsquo;s most prominent corporations, she relocated from London to Hilton Head Island, drawn by the island&rsquo;s understated elegance and enduring investment strength. That rare international lens is what Talita brings to every client relationship &mdash; translating global insight into the kind of clear, confident guidance that helps people find the properties that truly elevate their lives.</p>
+        <a href="about.html" class="bio-btn-outline">Our Story &rarr;</a>
       </div>
     </section>
 
@@ -398,7 +510,7 @@
             <span>BEST</span>
             Hilton Head Properties
           </a>
-          <p style="margin-top: 16px;">Hilton Head Island's premier luxury real estate team — serving Hilton Head Island's most discerning buyers and sellers.</p>
+          <p style="margin-top: 16px;">Hilton Head Island’s premier luxury real estate team — serving Hilton Head Island’s most discerning buyers and sellers.</p>
         </div>
         <div class="footer-col">
           <h4>Explore</h4>
