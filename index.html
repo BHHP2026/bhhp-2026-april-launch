@@ -1,762 +1,822 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Best Hilton Head Properties | Luxury Real Estate — Hilton Head Island & Bluffton</title>
-    <meta name="description" content="Boutique luxury real estate advisory serving Hilton Head Island & Bluffton. 45 years of combined experience across five continents. Luxury homes & estates in the Lowcountry.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Best Hilton Head Properties | Luxury Real Estate — Hilton Head Island &amp; Bluffton</title>
+  <meta name="description" content="Boutique luxury real estate advisory serving Hilton Head Island &amp; Bluffton. 45 years of combined experience across five continents. Luxury homes &amp; estates in the Lowcountry.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <!-- ═══ WIDGET 1: HEADER NAV ═══ -->
-    <nav class="nav">
+<!-- ═══ WIDGET 1: HEADER NAV ═══ -->
+<nav class="nav">
+  <a href="index.html" class="nav-logo">
+    <span>BEST</span> Hilton Head Properties
+  </a>
+  <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('active')" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">Our Story</a></li>
+    <li><a href="communities.html">Communities</a></li>
+    <li><a href="https://search.besthiltonheadproperties.com" target="_blank">Search Properties</a></li>
+    <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+  </ul>
+</nav>
+
+<!-- ═══ WIDGET 2: CINEMATIC VIDEO HERO ═══ -->
+<style>
+.hero { position: relative; height: 100vh; min-height: 700px; background: #000; display: flex; align-items: flex-end; overflow: hidden; }
+.hero-video { position: absolute; inset: 0 64px; width: calc(100% - 128px); height: 100%; object-fit: cover; z-index: 1; opacity: 1; pointer-events: none; }
+.hero-overlay { position: absolute; inset: 0 64px; z-index: 2; background: linear-gradient(to top, rgba(0,0,0,0.68) 0%, rgba(0,0,0,0.08) 50%, transparent 100%); }
+.hero-content { position: relative; z-index: 3; padding: 0 96px 80px; max-width: 960px; }
+.hero-content .inspire-eyebrow { font-family: 'Montserrat', sans-serif; font-size: 10px; font-weight: 500; letter-spacing: 4px; text-transform: uppercase; color: #d4af37; margin-bottom: 16px; }
+.hero-content h2 { font-family: 'Montserrat', sans-serif; font-size: clamp(36px, 5vw, 64px); font-weight: 700; color: #fff; line-height: 1.05; margin-bottom: 20px; letter-spacing: -1px; }
+.hero-content h2 strong { font-style: normal; font-weight: 300; }
+.hero-content .inspire-sub { font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: 300; color: rgba(255,255,255,0.7); line-height: 1.7; max-width: 520px; margin-bottom: 32px; }
+.hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 48px; }
+.hero-cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; max-width: 800px; }
+.hero-card { background: rgba(255,255,255,0.08); backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 20px 16px; text-align: center; }
+.hero-card h4 { font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.5px; color: #fff; margin-bottom: 8px; }
+.hero-card p { font-family: 'Montserrat', sans-serif; font-size: 10px; font-weight: 300; color: rgba(255,255,255,0.5); line-height: 1.5; }
+.hero-scroll { position: absolute; right: 48px; bottom: 80px; z-index: 2; writing-mode: vertical-rl; font-family: 'Montserrat', sans-serif; font-size: 9px; font-weight: 500; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.4); display: flex; align-items: center; gap: 12px; }
+.hero-scroll::before { content: ''; display: block; width: 1px; height: 48px; background: rgba(255,255,255,0.2); }
+@media (max-width: 900px) {
+  .hero-video { inset: 0; width: 100%; }
+  .hero-overlay { inset: 0; }
+  .hero-content { padding: 0 32px 60px; }
+  .hero-cards { grid-template-columns: repeat(2, 1fr); }
+  .hero-scroll { display: none; }
+}
+@media (max-width: 600px) {
+  .hero-cards { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .hero-content { padding: 0 20px 40px; }
+}
+</style>
+
+<section class="hero">
+  <video class="hero-video" autoplay muted loop playsinline>
+    <source src="https://raw.githubusercontent.com/BHHP2026/bhhp-website-b564f/main/hero-bg-mobile.mp4" type="video/mp4" media="(max-width: 768px)">
+    <source src="https://raw.githubusercontent.com/BHHP2026/bhhp-website-b564f/main/hero-bg-desktop.mp4" type="video/mp4">
+  </video>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <p class="inspire-eyebrow">Hilton Head Island, South Carolina</p>
+    <h2>Coastal Elegance <strong>Defined</strong></h2>
+    <p class="inspire-sub">Find your next home with precision. Sell your current one with confidence. Hilton Head Island real estate, elevated.</p>
+    <div class="hero-buttons">
+      <a href="https://search.besthiltonheadproperties.com" target="_blank" class="btn btn-primary">Explore Properties &rarr;</a>
+      <a href="contact.html" class="btn btn-outline">Get Your Free Home Valuation &rarr;</a>
+    </div>
+    <div class="hero-cards">
+      <div class="hero-card">
+        <h4>Film Production Quality</h4>
+        <p>Cinematic Campaigns &middot; Stories That Captivate</p>
+      </div>
+      <div class="hero-card">
+        <h4>Strategic Marketing</h4>
+        <p>Global Reach &middot; Data-Driven. Creatively Relentless.</p>
+      </div>
+      <div class="hero-card">
+        <h4>Global Network</h4>
+        <p>International Connections &middot; Five Continents of Experience</p>
+      </div>
+      <div class="hero-card">
+        <h4>Creative Excellence</h4>
+        <p>World-Class Talent &middot; Brought to Hilton Head</p>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll">Scroll to discover</div>
+</section>
+
+<!-- ═══ WIDGET 3: FEATURED PROPERTIES — MOBILE SWIPE CAROUSELS ═══ -->
+<style>
+/* ── Swipe Carousels ── */
+.swipe-section {
+  padding: 72px 0 64px;
+  background: #fff;
+}
+.swipe-section-label {
+  padding: 0 24px;
+  margin-bottom: 32px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.swipe-section-label .label-left {}
+.swipe-section-label .section-eyebrow {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #d4af37;
+  margin-bottom: 6px;
+}
+.swipe-section-label h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(22px, 4vw, 32px);
+  font-weight: 700;
+  color: #0a0f1c;
+  line-height: 1.1;
+  margin: 0;
+  letter-spacing: -0.5px;
+}
+.swipe-section-label h2 strong {
+  font-style: normal;
+  font-weight: 300;
+}
+.swipe-see-all {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #0a0f1c;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(10,15,28,0.25);
+  padding-bottom: 2px;
+  white-space: nowrap;
+  align-self: flex-end;
+  transition: color 0.2s, border-color 0.2s;
+}
+.swipe-see-all:hover { color: #d4af37; border-color: #d4af37; }
+
+/* ── Carousel Track ── */
+.swipe-track {
+  display: flex;
+  gap: 16px;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding: 4px 24px 16px;
+  cursor: grab;
+  user-select: none;
+}
+.swipe-track::-webkit-scrollbar { display: none; }
+.swipe-track.dragging { cursor: grabbing; }
+
+/* ── Property Card ── */
+.swipe-card {
+  scroll-snap-align: start;
+  flex: 0 0 82vw;
+  max-width: 300px;
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.12);
+  border-radius: 0;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  box-shadow: none;
+  transition: border-color 0.2s;
+}
+.swipe-card:hover {
+  border-color: #0a0f1c;
+}
+.swipe-img-wrap {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.swipe-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.swipe-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: rgba(10,15,28,0.82);
+  color: #d4af37;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 4px 8px;
+  border-radius: 0;
+}
+.swipe-status {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: #22c55e;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 4px 8px;
+  border-radius: 0;
+}
+.swipe-body {
+  padding: 16px 16px 18px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.swipe-name {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #0a0f1c;
+  line-height: 1.3;
+  margin-bottom: 4px;
+}
+.swipe-address {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  color: rgba(10,15,28,0.42);
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+.swipe-specs {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  color: rgba(10,15,28,0.5);
+  margin-bottom: 12px;
+}
+.swipe-price {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #0a0f1c;
+  margin-bottom: 14px;
+  margin-top: auto;
+}
+.swipe-btn {
+  display: block;
+  width: 100%;
+  text-align: center;
+  background: #0a0f1c;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 12px;
+  border-radius: 0;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+.swipe-btn:hover { background: #d4af37; color: #0a0f1c; }
+
+/* ── Section divider ── */
+.swipe-divider {
+  height: 1px;
+  background: rgba(0,0,0,0.06);
+  margin: 56px 24px 0;
+}
+
+/* ── Bottom CTA ── */
+.swipe-footer-cta {
+  text-align: center;
+  padding: 48px 24px 0;
+}
+
+/* ── Responsive ── */
+@media (min-width: 600px) {
+  .swipe-card { flex: 0 0 270px; max-width: 270px; }
+  .swipe-section-label { padding: 0 40px; }
+  .swipe-track { padding: 4px 40px 16px; }
+  .swipe-divider { margin: 56px 40px 0; }
+  .swipe-footer-cta { padding: 48px 40px 0; }
+}
+@media (min-width: 1024px) {
+  .swipe-section { padding: 90px 0 72px; }
+  .swipe-card { flex: 0 0 300px; max-width: 300px; }
+  .swipe-section-label { padding: 0 60px; }
+  .swipe-track { padding: 4px 60px 16px; gap: 20px; }
+  .swipe-divider { margin: 64px 60px 0; }
+  .swipe-footer-cta { padding: 56px 60px 0; }
+}
+</style>
+
+<section class="swipe-section">
+
+  <!-- ── Hilton Head Island ── -->
+  <div class="swipe-section-label">
+    <div class="label-left">
+      <p class="section-eyebrow">Hilton Head Island</p>
+      <h2>Island <strong>Estates</strong></h2>
+    </div>
+    <a href="https://search.besthiltonheadproperties.com" target="_blank" class="swipe-see-all">View All →</a>
+  </div>
+
+  <div class="swipe-track" id="hhiTrack">
+
+    <!-- Card 1: Collier Beach — Oceanfront anchor -->
+    <a href="https://search.besthiltonheadproperties.com" target="_blank" class="swipe-card">
+      <div class="swipe-img-wrap">
+        <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=600&q=80" alt="Collier Beach Ocean Estate">
+        <span class="swipe-badge">Oceanfront</span>
+        <span class="swipe-status">Active</span>
+      </div>
+      <div class="swipe-body">
+        <div class="swipe-name">Collier Beach Ocean Estate</div>
+        <div class="swipe-address">10 Collier Beach Rd · Hilton Head Island, SC</div>
+        <div class="swipe-specs">6 Beds &middot; 8 Baths &middot; 5,000 Sq Ft</div>
+        <div class="swipe-price">$7,950,000</div>
+        <a href="https://search.besthiltonheadproperties.com" target="_blank" class="swipe-btn">View on IDX &rarr;</a>
+      </div>
+    </a>
+
+    <!-- Card 2: Harbour Town Golf -->
+    <a href="https://search.besthiltonheadproperties.com" target="_blank" class="swipe-card">
+      <div class="swipe-img-wrap">
+        <img src="https://images.unsplash.com/photo-1587302186428-d3753405ffed?w=600&q=80" alt="Harbour Town Golf Retreat">
+        <span class="swipe-badge">Golf Views</span>
+        <span class="swipe-status">Active</span>
+      </div>
+      <div class="swipe-body">
+        <div class="swipe-name">Harbour Town Golf Retreat</div>
+        <div class="swipe-address">32 Lighthouse Lane · Sea Pines, SC</div>
+        <div class="swipe-specs">4 Beds &middot; 5 Baths &middot; 3,840 Sq Ft</div>
+        <div class="swipe-price">$2,450,000</div>
+        <a href="https://search.besthiltonheadproperties.com" target="_blank" class="swipe-btn">View on IDX &rarr;</a>
+      </div>
+    </a>
+
+    <!-- Card 3: Long Cove Club -->
+    <a href="https://search.besthiltonheadproperties.com" target="_blank" class="swipe-card">
+      <div class="swipe-img-wrap">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80" alt="Long Cove Club Estate">
+        <span class="swipe-badge">Gated</span>
+        <span class="swipe-status">Active</span>
+      </div>
+      <div class="swipe-body">
+        <div class="swipe-name">Long Cove Club Estate</div>
+        <div class="swipe-address">14 Club Estate Blvd · Hilton Head Island, SC</div>
+        <div class="swipe-specs">5 Beds &middot; 5 Baths &middot; 3,920 Sq Ft</div>
+        <div class="swipe-price">$1,950,000</div>
+        <a href="https://search.besthiltonheadproperties.com" target="_blank" class="swipe-btn">View on IDX &rarr;</a>
+      </div>
+    </a>
+
+    <!-- Card 4: Palmetto Dunes -->
+    <a href="https://search.besthiltonheadproperties.com" target="_blank" class="swipe-card">
+      <div class="swipe-img-wrap">
+        <img src="https://images.unsplash.com/photo-1592919505780-303950717480?w=600&q=80" alt="Palmetto Dunes Villa">
+        <span class="swipe-badge">Oceanfront Access</span>
+        <span class="swipe-status">Active</span>
+      </div>
+      <div class="swipe-body">
+        <div class="swipe-name">Palmetto Dunes Villa</div>
+        <div class="swipe-address">8 Dune Ridge Ct · Hilton Head Island, SC</div>
+        <div class="swipe-specs">4 Beds &middot; 4 Baths &middot; 2,960 Sq Ft</div>
+        <div class="swipe-price">$1,785,000</div>
+        <a href="https://search.besthiltonheadproperties.com" target="_blank" class="swipe-btn">View on IDX &rarr;</a>
+      </div>
+    </a>
+
+    <!-- Card 5: Spanish Wells -->
+    <a href="https://search.besthiltonheadproperties.com" target="_blank" class="swipe-card">
+      <div class="swipe-img-wrap">
+        <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=600&q=80" alt="Spanish Wells Golf Cottage">
+        <span class="swipe-badge">Golf &amp;Beach</span>
+        <span class="swipe-status">Active</span>
+      </div>
+      <div class="swipe-body">
+        <div class="swipe-name">Spanish Wells Golf Cottage</div>
+        <div class="swipe-address">21 Galleon Way · Hilton Head Island, SC</div>
+        <div class="swipe-specs">4 Beds &middot; 3 Baths &middot; 2,540 Sq Ft</div>
+        <div class="swipe-price">$1,495,000</div>
+        <a href="https://search.besthiltonheadproperties.com" target="_blank" class="swipe-btn">View on IDX &rarr;</a>
+      </div>
+    </a>
+
+  </div><!-- /hhiTrack -->
+
+  <!-- ── Divider ── -->
+  <div class="swipe-divider"></div>
+
+  <!-- ── Bluffton ── -->
+  <div class="swipe-section-label" style="margin-top: 56px;">
+    <div class="label-left">
+      <p class="section-eyebrow">Bluffton &amp; Surrounding</p>
+      <h2>Bluffton <strong>Estates</strong></h2>
+    </div>
+    <a href="https://search.besthiltonheadproperties.com" target="_blank" class="swipe-see-all">View All →</a>
+  </div>
+
+  <div class="swipe-track" id="blufftonTrack">
+
+    <!-- Card 1: Palmetto Bluff -->
+    <a href="https://search.besthiltonheadproperties.com" target="_blank" class="swipe-card">
+      <div class="swipe-img-wrap">
+        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=80" alt="Palmetto Bluff Estate">
+        <span class="swipe-badge">Private Club</span>
+        <span class="swipe-status">Active</span>
+      </div>
+      <div class="swipe-body">
+        <div class="swipe-name">Palmetto Bluff Estate</div>
+        <div class="swipe-address">18 River Road · Bluffton, SC 29910</div>
+        <div class="swipe-specs">4 Beds &middot; 4 Baths &middot; 3,100 Sq Ft</div>
+        <div class="swipe-price">$1,650,000</div>
+        <a href="https://search.besthiltonheadproperties.com" target="_blank" class="swipe-btn">View on IDX &rarr;</a>
+      </div>
+    </a>
+
+    <!-- Card 2: Blue Dasher -->
+    <a href="https://search.besthiltonheadproperties.com" target="_blank" class="swipe-card">
+      <div class="swipe-img-wrap">
+        <img src="https://images.unsplash.com/photo-1568605114901-be110958e7b5?w=600&q=80" alt="Blue Dasher Estate">
+        <span class="swipe-badge">New Construction</span>
+        <span class="swipe-status">Active</span>
+      </div>
+      <div class="swipe-body">
+        <div class="swipe-name">Blue Dasher Estate</div>
+        <div class="swipe-address">35 Blue Dasher Lane · Bluffton, SC 29909</div>
+        <div class="swipe-specs">5 Beds &middot; 4.5 Baths &middot; 3,282 Sq Ft</div>
+        <div class="swipe-price">$1,225,000</div>
+        <a href="https://search.besthiltonheadproperties.com" target="_blank" class="swipe-btn">View on IDX &rarr;</a>
+      </div>
+    </a>
+
+    <!-- Card 3: Hidden Lake -->
+    <a href="https://search.besthiltonheadproperties.com" target="_blank" class="swipe-card">
+      <div class="swipe-img-wrap">
+        <img src="https://images.unsplash.com/photo-1572120360610-d971b9d7767c?w=600&q=80" alt="Hidden Lake Court">
+        <span class="swipe-badge">Gated</span>
+        <span class="swipe-status">Active</span>
+      </div>
+      <div class="swipe-body">
+        <div class="swipe-name">Hidden Lake Court</div>
+        <div class="swipe-address">4 Hidden Lake Ct · Bluffton, SC 29910</div>
+        <div class="swipe-specs">5 Beds &middot; 5.5 Baths &middot; 4,858 Sq Ft</div>
+        <div class="swipe-price">$1,185,000</div>
+        <a href="https://search.besthiltonheadproperties.com" target="_blank" class="swipe-btn">View on IDX &rarr;</a>
+      </div>
+    </a>
+
+    <!-- Card 4: Belfair -->
+    <a href="https://search.besthiltonheadproperties.com" target="_blank" class="swipe-card">
+      <div class="swipe-img-wrap">
+        <img src="https://images.unsplash.com/photo-1513584684374-8bab748fbf90?w=600&q=80" alt="Belfair Club Home">
+        <span class="swipe-badge">Golf Community</span>
+        <span class="swipe-status">Active</span>
+      </div>
+      <div class="swipe-body">
+        <div class="swipe-name">Belfair Club Home</div>
+        <div class="swipe-address">67 Belfair Oaks Blvd · Bluffton, SC 29910</div>
+        <div class="swipe-specs">4 Beds &middot; 3 Baths &middot; 2,880 Sq Ft</div>
+        <div class="swipe-price">$895,000</div>
+        <a href="https://search.besthiltonheadproperties.com" target="_blank" class="swipe-btn">View on IDX &rarr;</a>
+      </div>
+    </a>
+
+  </div><!-- /blufftonTrack -->
+
+  <!-- ── Footer CTA ── -->
+  <div class="swipe-footer-cta">
+    <a href="https://search.besthiltonheadproperties.com" target="_blank" class="btn btn-outline">Search All Properties &rarr;</a>
+  </div>
+
+</section>
+
+<!-- ── Swipe drag support ── -->
+<script>
+(function(){
+  document.querySelectorAll('.swipe-track').forEach(function(track){
+    var isDown = false, startX = 0, scrollLeft = 0;
+    track.addEventListener('mousedown', function(e){
+      isDown = true; track.classList.add('dragging');
+      startX = e.pageX - track.offsetLeft; scrollLeft = track.scrollLeft;
+    });
+    track.addEventListener('mouseleave', function(){ isDown = false; track.classList.remove('dragging'); });
+    track.addEventListener('mouseup', function(){ isDown = false; track.classList.remove('dragging'); });
+    track.addEventListener('mousemove', function(e){
+      if (!isDown) return; e.preventDefault();
+      var x = e.pageX - track.offsetLeft;
+      track.scrollLeft = scrollLeft - (x - startX) * 1.5;
+    });
+  });
+})();
+</script>
+
+<!-- ═══ WIDGET 4: YOUR NEXT MOVE STARTS HERE ═══ -->
+<style>
+.buysell2-section { padding: 100px 0; background: #f8f8f6; text-align: center; }
+.buysell2-header { max-width: 720px; margin: 0 auto 60px; padding: 0 32px; }
+.buysell2-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; max-width: 1100px; margin: 0 auto; padding: 0 48px; }
+.buysell2-card { background: #fff; overflow: hidden; }
+.buysell2-img { height: 300px; background-size: cover; background-position: center; }
+.buysell2-body { padding: 44px; display: flex; flex-direction: column; align-items: center; text-align: center; }
+.buysell2-body h3 { font-family: 'Montserrat', sans-serif; font-size: 20px; font-weight: 700; color: #0a0f1c; margin-bottom: 16px; letter-spacing: -0.3px; }
+.buysell2-body p { font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 300; color: rgba(10,15,28,0.58); line-height: 1.8; max-width: 340px; margin-bottom: 28px; }
+.buysell2-btn { font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 2.5px; text-transform: uppercase; padding: 15px 36px; text-decoration: none; display: inline-block; transition: all 0.3s; }
+.buysell2-btn-dark { background: #0a0f1c; color: #fff; border: 1px solid #0a0f1c; }
+.buysell2-btn-dark:hover { background: #d4af37; border-color: #d4af37; color: #0a0f1c; }
+.buysell2-btn-gold { background: #d4af37; color: #0a0f1c; border: 1px solid #d4af37; }
+.buysell2-btn-gold:hover { background: #0a0f1c; border-color: #0a0f1c; color: #fff; }
+@media (max-width: 900px) {
+  .buysell2-grid { grid-template-columns: 1fr; max-width: 560px; }
+  .buysell2-body { padding: 32px 24px; }
+}
+</style>
+
+<section class="buysell2-section">
+  <div class="buysell2-header">
+    <p class="section-eyebrow">For Buyers &amp; Sellers</p>
+    <h2 class="section-title">Your Next Move <strong>Starts Here</strong></h2>
+    <p class="section-subtitle" style="margin: 0 auto;">Whether you're searching for the perfect Hilton Head Island property or ready to maximize your sale — we have the tools, the data, and the team to make it happen.</p>
+  </div>
+  <div class="buysell2-grid">
+    <div class="buysell2-card">
+      <div class="buysell2-img" style="background-image: url('https://besthiltonheadproperties.com/wp-content/uploads/2022/03/Palmetto-Bluff-luxury-home-exterior-rendering-square-1-1.jpg');"></div>
+      <div class="buysell2-body">
+        <h3>Find Your Dream Home</h3>
+        <p>Browse every listing across Hilton Head Island, Bluffton, and the surrounding Lowcountry with our advanced property search — or tell us your vision and let us curate the perfect match.</p>
+        <a href="https://search.besthiltonheadproperties.com" target="_blank" class="buysell2-btn buysell2-btn-dark">Search All Properties &rarr;</a>
+      </div>
+    </div>
+    <div class="buysell2-card">
+      <div class="buysell2-img" style="background-image: url('https://besthiltonheadproperties.com/wp-content/uploads/2022/03/PBHomeEvaluationoption2-1-1.jpeg');"></div>
+      <div class="buysell2-body">
+        <h3>What Is Your Home Worth?</h3>
+        <p>Get your free, no-obligation home valuation from our market experts — backed by data analytics, cinematic marketing, and a proven record of achieving maximum sale price.</p>
+        <a href="contact.html" class="buysell2-btn buysell2-btn-gold">Get Free Valuation &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ WIDGET 5: YOUR TRUSTED ADVISOR ═══ -->
+<style>
+.bio-section { background: #0d1f40; display: grid; grid-template-columns: 1fr 1fr; min-height: 640px; position: relative; overflow: hidden; }
+.bio-watermark { position: absolute; right: -60px; top: 50%; transform: translateY(-50%); font-family: 'Playfair Display', serif; font-size: 280px; font-weight: 900; letter-spacing: -10px; color: rgba(255,255,255,0.024); text-transform: uppercase; pointer-events: none; white-space: nowrap; user-select: none; }
+.bio-image { background: url('https://raw.githubusercontent.com/BHHP2026/bhhp-website-b564f/main/images/talita-hero.jpg') center center / cover #0d1f40; position: relative; }
+.bio-image-overlay { position: absolute; inset: 0; background: linear-gradient(to right, transparent 60%, #0d1f40 100%); }
+.bio-content { padding: 80px 80px 80px 60px; display: flex; flex-direction: column; justify-content: center; position: relative; z-index: 2; }
+.bio-eyebrow { font-family: 'Montserrat', sans-serif; font-size: 10px; font-weight: 500; letter-spacing: 4px; text-transform: uppercase; color: #d4af37; margin-bottom: 20px; display: flex; align-items: center; gap: 12px; }
+.bio-eyebrow::before { content: ''; display: block; width: 32px; height: 1px; background: #d4af37; }
+.bio-headline { font-family: 'Playfair Display', serif; font-size: clamp(32px, 3.5vw, 48px); font-weight: 400; text-transform: uppercase; color: #ffffff; letter-spacing: 1px; line-height: 1.1; margin-bottom: 24px; }
+.bio-headline em { font-style: italic; color: #d4af37; }
+.bio-body { font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 300; letter-spacing: 0.3px; color: rgba(255,255,255,0.6); line-height: 1.9; margin-bottom: 40px; max-width: 440px; }
+.bio-btn-outline { font-family: 'Montserrat', sans-serif; font-size: 10px; font-weight: 500; letter-spacing: 3px; text-transform: uppercase; color: #ffffff; border: 1px solid rgba(255,255,255,0.5); padding: 14px 32px; cursor: pointer; background: transparent; text-decoration: none; display: inline-flex; align-items: center; gap: 12px; transition: 0.25s; }
+.bio-btn-outline:hover { border-color: #d4af37; color: #d4af37; }
+@media (max-width: 900px) {
+  .bio-section { grid-template-columns: 1fr; }
+  .bio-image { min-height: 400px; }
+  .bio-image-overlay { background: linear-gradient(to bottom, transparent 60%, #0d1f40 100%); }
+  .bio-content { padding: 48px 32px; }
+}
+</style>
+
+<section class="bio-section">
+  <div class="bio-watermark">BHHP</div>
+  <div class="bio-image">
+    <div class="bio-image-overlay"></div>
+  </div>
+  <div class="bio-content">
+    <div class="bio-eyebrow">Your Trusted Advisor</div>
+    <h2 class="bio-headline">Talita<br><em>Haggist</em></h2>
+    <p class="bio-body">Talita Haggist is a Global Real Estate Advisor whose life and career have been shaped by an uncommon international journey. The daughter of property developers, she pursued engineering studies across Brazil, Russia, Germany, and Italy &mdash; a foundation that gave her an avant-garde perspective on markets, value, and opportunity that few advisors can match. After founding a full-service property management company and serving as senior liaison to one of Brazil&rsquo;s most prominent corporations, she relocated from London to Hilton Head Island, drawn by the island&rsquo;s understated elegance and enduring investment strength. That rare international lens is what Talita brings to every client relationship &mdash; translating global insight into the kind of clear, confident guidance that helps people find the properties that truly elevate their lives.</p>
+    <a href="about.html" class="bio-btn-outline">Our Story &rarr;</a>
+  </div>
+</section>
+
+<!-- ═══ WIDGET 6: ISLAND NEIGHBORHOODS GALLERY ═══ -->
+<section class="neighborhoods-section">
+  <div class="neighborhoods-header">
+    <div>
+      <p class="section-eyebrow">Explore</p>
+      <h2>Island <strong>Neighborhoods</strong></h2>
+    </div>
+    <a href="communities.html" class="btn btn-outline-dark">View All Areas →</a>
+  </div>
+  <div class="neighborhoods-grid">
+    <a href="communities/sea-pines.html" class="neighborhood-card">
+      <img src="https://images.unsplash.com/photo-1587302186428-d3753405ffed?w=600&q=80" alt="Sea Pines Resort">
+      <div class="neighborhood-overlay">
+        <span class="neighborhood-tag">Premier Enclave</span>
+        <h3>Sea Pines Resort</h3>
+      </div>
+    </a>
+    <a href="communities.html" class="neighborhood-card">
+      <img src="https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?w=600&q=80" alt="Palmetto Dunes">
+      <div class="neighborhood-overlay">
+        <span class="neighborhood-tag">Oceanfront Living</span>
+        <h3>Palmetto Dunes</h3>
+      </div>
+    </a>
+    <a href="communities.html" class="neighborhood-card">
+      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80" alt="Long Cove Club">
+      <div class="neighborhood-overlay">
+        <span class="neighborhood-tag">Gated Community</span>
+        <h3>Long Cove Club</h3>
+      </div>
+    </a>
+    <a href="communities/wexford.html" class="neighborhood-card">
+      <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=80" alt="Wexford">
+      <div class="neighborhood-overlay">
+        <span class="neighborhood-tag">Private Island</span>
+        <h3>Wexford</h3>
+      </div>
+    </a>
+    <a href="communities.html" class="neighborhood-card">
+      <img src="https://images.unsplash.com/photo-1592919505780-303950717480?w=600&q=80" alt="Spanish Wells">
+      <div class="neighborhood-overlay">
+        <span class="neighborhood-tag">Golf &amp; Beach</span>
+        <h3>Spanish Wells</h3>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- ═══ WIDGET 7: CLIENT ACCOLADES ═══ -->
+<style>
+:root { --gold: #d4af37; --white: #ffffff; --charcoal: #1a1a1a; --navy: #0a0f1c; }
+.tst2-section { position: relative; padding: 0; overflow: hidden; background: #0a0f1c; }
+.tst2-bg { position: absolute; inset: 0; background: linear-gradient(135deg, #0a0f1c 0%, #0d1528 25%, #111d35 50%, #0d1528 75%, #0a0f1c 100%); background-size: cover; }
+.acc-overlay { position: absolute; inset: 0; z-index: 1; background: linear-gradient(to bottom, rgba(10,10,18,0.72) 0%, rgba(10,10,18,0.62) 100%); }
+.acc-container { position: relative; z-index: 2; padding: 100px 60px 80px; max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; }
+.acc-header { text-align: center; margin-bottom: 60px; }
+.acc-eyebrow-label { font-family: 'Montserrat', sans-serif; font-size: 10px; font-weight: 500; letter-spacing: 6px; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; display: flex; align-items: center; gap: 14px; justify-content: center; }
+.acc-eyebrow-label::before, .acc-eyebrow-label::after { content: ''; display: block; width: 36px; height: 1px; background: var(--gold); }
+.acc-title { font-family: 'Lora', serif; font-size: clamp(42px, 6vw, 72px); font-weight: 400; text-transform: uppercase; line-height: 1.0; color: var(--white); letter-spacing: 4px; }
+.acc-title em { font-style: italic; color: var(--gold); display: block; font-size: 0.88em; }
+.acc-card { position: relative; width: 100%; background: rgba(15,15,25,0.78); border-radius: 32px; overflow: hidden; border: 1px solid rgba(201,169,110,0.15); backdrop-filter: blur(6px); }
+.acc-viewport { overflow: hidden; }
+.acc-track { display: flex; transition: transform 0.55s cubic-bezier(0.77,0,0.18,1); }
+.acc-slide { min-width: 50%; padding: 60px 56px 52px; border-right: 1px solid rgba(255,255,255,0.06); display: flex; flex-direction: column; }
+.acc-slide:last-child { border-right: none; }
+.acc-qmark { font-family: 'Lora', serif; font-size: 72px; line-height: 0.6; color: rgba(201,169,110,0.25); margin-bottom: 28px; display: block; }
+.acc-quote { font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: 300; letter-spacing: 0.3px; color: rgba(250,250,248,0.9); line-height: 1.9; flex: 1; margin-bottom: 32px; font-style: italic; }
+.acc-divider { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
+.acc-divider-line { flex: 0 0 28px; height: 1px; background: var(--gold); opacity: 0.7; }
+.acc-divider-icon { color: var(--gold); font-size: 13px; opacity: 0.9; line-height: 1; }
+.acc-name { font-family: 'Montserrat', sans-serif; font-size: 10px; font-weight: 500; letter-spacing: 3px; text-transform: uppercase; color: var(--white); margin-bottom: 5px; }
+.acc-role { font-family: 'Montserrat', sans-serif; font-size: 10px; font-weight: 400; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(201,169,110,0.75); }
+.acc-arrow { position: absolute; top: 50%; transform: translateY(-50%); width: 46px; height: 46px; border-radius: 50%; border: 1px solid rgba(201,169,110,0.5); background: rgba(15,15,25,0.7); color: var(--gold); font-size: 16px; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.3s; z-index: 10; }
+.acc-arrow:hover { background: var(--gold); color: var(--charcoal); border-color: var(--gold); }
+.acc-arrow.acc-prev { left: -23px; }
+.acc-arrow.acc-next { right: -23px; }
+.acc-bottom { margin-top: 48px; text-align: center; }
+.acc-dots { display: flex; gap: 8px; justify-content: center; margin-bottom: 32px; }
+.acc-dot { width: 6px; height: 6px; border-radius: 50%; background: rgba(255,255,255,0.25); cursor: pointer; transition: background 0.3s; }
+.acc-dot.active { background: var(--gold); }
+.acc-cta-link { font-family: 'Montserrat', sans-serif; font-size: 10px; font-weight: 500; letter-spacing: 3px; text-transform: uppercase; color: var(--white); border: 1px solid rgba(255,255,255,0.35); padding: 14px 40px; text-decoration: none; display: inline-block; transition: background 0.3s, color 0.3s, border-color 0.3s; }
+.acc-cta-link:hover { background: var(--white); color: var(--charcoal); border-color: var(--white); }
+@media (max-width: 900px) {
+  .acc-slide { min-width: 100%; padding: 48px 40px 44px; border-right: none; border-bottom: none; }
+  .acc-container { padding: 80px 24px 64px; }
+  .acc-arrow.acc-prev { left: -16px; }
+  .acc-arrow.acc-next { right: -16px; }
+}
+@media (max-width: 600px) {
+  .acc-slide { padding: 40px 28px 36px; }
+  .acc-qmark { font-size: 56px; }
+  .acc-container { padding: 64px 16px 52px; }
+}
+</style>
+
+<section class="tst2-section" id="testimonials">
+  <div class="tst2-bg"></div>
+  <div class="acc-overlay"></div>
+  <div class="acc-container">
+    <div class="acc-header">
+      <div class="acc-eyebrow-label">Best Hilton Head Properties</div>
+      <h2 class="acc-title">Client<br><em>Testimonials</em></h2>
+    </div>
+    <div class="acc-card">
+      <div class="acc-viewport">
+        <div class="acc-track" id="accTrack">
+          <div class="acc-slide">
+            <span class="acc-qmark">&#10077;</span>
+            <p class="acc-quote">My immediate reaction was that they were very knowledgeable and likable &mdash; they didn&rsquo;t grovel like other realtors. They drew up a roadmap, and eight days after listing we had an offer for the exact same amount Douglas had suggested the day I met him.</p>
+            <div class="acc-divider"><span class="acc-divider-line"></span><span class="acc-divider-icon">&#9830;</span><span class="acc-divider-line"></span></div>
+            <div class="acc-name">John F.</div>
+            <div class="acc-role">Home Seller &nbsp;&middot;&nbsp; Hilton Head Island</div>
+          </div>
+          <div class="acc-slide">
+            <span class="acc-qmark">&#10077;</span>
+            <p class="acc-quote">Choosing Talita and Doug was one of the best decisions I have made to date. They give the kind of personal attention that makes you feel as though you are the only client on the planet. I wasn&rsquo;t sure I could manage to buy on my own &mdash; but they helped me see it was possible.</p>
+            <div class="acc-divider"><span class="acc-divider-line"></span><span class="acc-divider-icon">&#9830;</span><span class="acc-divider-line"></span></div>
+            <div class="acc-name">Dr. Stacy H.</div>
+            <div class="acc-role">Homebuyer &nbsp;&middot;&nbsp; Hilton Head Island</div>
+          </div>
+          <div class="acc-slide">
+            <span class="acc-qmark">&#10077;</span>
+            <p class="acc-quote">The process was so quick and easy with little to no surprises. I can&rsquo;t say enough about the way they established trust from the beginning and got to know us personally. If you want good people who don&rsquo;t pressure you, give them a call.</p>
+            <div class="acc-divider"><span class="acc-divider-line"></span><span class="acc-divider-icon">&#9830;</span><span class="acc-divider-line"></span></div>
+            <div class="acc-name">Tyler W.</div>
+            <div class="acc-role">First-Time Homebuyer &nbsp;&middot;&nbsp; Bluffton, SC</div>
+          </div>
+          <div class="acc-slide">
+            <span class="acc-qmark">&#10077;</span>
+            <p class="acc-quote">Doug and Talita were wonderful to work with in finding the right place for us in Bluffton. They were dedicated, professional, and fun. Doug goes above and beyond &mdash; his honesty was very important for us since we were not from the area. Highly recommend them.</p>
+            <div class="acc-divider"><span class="acc-divider-line"></span><span class="acc-divider-icon">&#9830;</span><span class="acc-divider-line"></span></div>
+            <div class="acc-name">David M.</div>
+            <div class="acc-role">Local Guide &nbsp;&middot;&nbsp; Bluffton, SC</div>
+          </div>
+          <div class="acc-slide">
+            <span class="acc-qmark">&#10077;</span>
+            <p class="acc-quote">From start to finish Doug and Talita were a pleasure to work with &mdash; professional, very knowledgeable, and always available to assist with our questions and concerns. We highly recommend their services and appreciate all their assistance in helping us find our new home.</p>
+            <div class="acc-divider"><span class="acc-divider-line"></span><span class="acc-divider-icon">&#9830;</span><span class="acc-divider-line"></span></div>
+            <div class="acc-name">Michele S.</div>
+            <div class="acc-role">Homebuyer &nbsp;&middot;&nbsp; Hilton Head Island</div>
+          </div>
+        </div>
+      </div>
+      <button class="acc-arrow acc-prev" id="accPrev" aria-label="Previous">&#8592;</button>
+      <button class="acc-arrow acc-next" id="accNext" aria-label="Next">&#8594;</button>
+    </div>
+    <div class="acc-bottom">
+      <div class="acc-dots" id="accDots">
+        <span class="acc-dot active"></span>
+        <span class="acc-dot"></span>
+        <span class="acc-dot"></span>
+      </div>
+      <a href="https://www.google.com/search?sca_esv=2e9e3577ff7485d9&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOTSakoHT5VThy2v6hmqnkPX4XC9i_6FrWL0CwPHB9T_o-aVoPrL8iX8IRaGYXTp0W9ApbqkR0PKYdOksXToJXMRqPD-96FtRKAub3ku6vJK29QkxvQ%3D%3D&q=Best+Hilton+Head+Properties+Reviews&sa=X&ved=2ahUKEwjv9dT7gbGTAxVRwskDHSGHF6sQ0bkNegQILxAF" target="_blank" rel="noopener noreferrer" class="acc-cta-link">Read All Reviews &nbsp;&#8594;</a>
+    </div>
+  </div>
+  <script>
+  (function(){
+    var track = document.getElementById('accTrack');
+    var prev = document.getElementById('accPrev');
+    var next = document.getElementById('accNext');
+    var dots = document.querySelectorAll('.acc-dot');
+    var slides = track ? track.children.length : 5;
+    var current = 0;
+    function perView() { return window.innerWidth > 900 ? 2 : 1; }
+    function pages() { return Math.ceil(slides / perView()); }
+    function goTo(n) {
+      current = Math.max(0, Math.min(n, pages() - 1));
+      track.style.transform = 'translateX(-' + (current * perView() * (100 / perView())) + '%)';
+      dots.forEach(function(d,i){ d.classList.toggle('active', i===current); });
+    }
+    if (prev) prev.addEventListener('click', function(){ goTo(current - 1); });
+    if (next) next.addEventListener('click', function(){ goTo(current + 1); });
+    dots.forEach(function(d,i){ d.addEventListener('click', function(){ goTo(i); }); });
+    window.addEventListener('resize', function(){ goTo(current); });
+  })();
+  </script>
+</section>
+
+<!-- ═══ WIDGET 8: READY TO CALL PARADISE HOME CTA ═══ -->
+<section class="paradise-cta">
+  <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?w=1920&q=80');"></div>
+  <div class="paradise-content">
+    <p class="inspire-eyebrow">Best Hilton Head Properties</p>
+    <h2>Ready to Call <strong>Paradise Home?</strong></h2>
+    <p class="paradise-sub">Local Expertise. Global Connections. Hilton Head Island &middot; International Markets.</p>
+    <a href="about.html" class="btn btn-primary">Our Story ₒ</a>
+  </div>
+</section>
+
+<!-- ═══ WIDGET 9: FOOTER ═══ -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
       <a href="index.html" class="nav-logo">
-        <span>BEST</span>
-        Hilton Head Properties
+        <span>BEST</span> Hilton Head Properties
       </a>
-      <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('active')" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">Our Story</a></li>
-        <li><a href="communities.html">Communities</a></li>
-        <li><a href="https://search.besthiltonheadproperties.com" target="_blank">Search Properties</a></li>
-        <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
-      </ul>
-    </nav>
-
-    <!-- ═══ WIDGET 2: CINEMATIC VIDEO HERO (staging design) ═══ -->
-    <style>
-      /* === Video Hero — staging design === */
-      .hero {
-        position: relative;
-        height: 100vh;
-        min-height: 700px;
-        background: #000;
-        display: flex;
-        align-items: flex-end;
-        overflow: hidden;
-      }
-      .hero-video {
-        position: absolute;
-        inset: 0 64px;
-        width: calc(100% - 128px);
-        height: 100%;
-        object-fit: cover;
-        z-index: 1;
-        opacity: 1;
-        pointer-events: none;
-      }
-      .hero-overlay {
-        position: absolute;
-        inset: 0 64px;
-        z-index: 2;
-        background: linear-gradient(to top, rgba(0,0,0,0.68) 0%, rgba(0,0,0,0.08) 50%, transparent 100%);
-      }
-      .hero-content {
-        position: relative;
-        z-index: 3;
-        padding: 0 96px 80px;
-        max-width: 960px;
-      }
-      .hero-content .inspire-eyebrow {
-        font-family: 'Montserrat', sans-serif;
-        font-size: 10px;
-        font-weight: 500;
-        letter-spacing: 4px;
-        text-transform: uppercase;
-        color: #d4af37;
-        margin-bottom: 16px;
-      }
-      .hero-content h2 {
-        font-family: 'Playfair Display', serif;
-        font-size: clamp(42px, 5vw, 72px);
-        font-weight: 400;
-        color: #fff;
-        line-height: 1.05;
-        margin-bottom: 20px;
-      }
-      .hero-content h2 strong {
-        font-style: italic;
-        font-weight: 400;
-      }
-      .hero-content .inspire-sub {
-        font-family: 'Montserrat', sans-serif;
-        font-size: 14px;
-        font-weight: 300;
-        color: rgba(255,255,255,0.7);
-        line-height: 1.7;
-        max-width: 520px;
-        margin-bottom: 32px;
-      }
-      .hero-buttons {
-        display: flex;
-        gap: 16px;
-        flex-wrap: wrap;
-        margin-bottom: 48px;
-      }
-      .hero-cards {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 16px;
-        max-width: 800px;
-      }
-      .hero-card {
-        background: rgba(255,255,255,0.08);
-        backdrop-filter: blur(8px);
-        border: 1px solid rgba(255,255,255,0.1);
-        border-radius: 12px;
-        padding: 20px 16px;
-        text-align: center;
-      }
-      .hero-card h4 {
-        font-family: 'Montserrat', sans-serif;
-        font-size: 11px;
-        font-weight: 600;
-        letter-spacing: 0.5px;
-        color: #fff;
-        margin-bottom: 8px;
-      }
-      .hero-card p {
-        font-family: 'Montserrat', sans-serif;
-        font-size: 10px;
-        font-weight: 300;
-        color: rgba(255,255,255,0.5);
-        line-height: 1.5;
-      }
-      .hero-scroll {
-        position: absolute;
-        right: 48px;
-        bottom: 80px;
-        z-index: 2;
-        writing-mode: vertical-rl;
-        font-family: 'Montserrat', sans-serif;
-        font-size: 9px;
-        font-weight: 500;
-        letter-spacing: 3px;
-        text-transform: uppercase;
-        color: rgba(255,255,255,0.4);
-        display: flex;
-        align-items: center;
-        gap: 12px;
-      }
-      .hero-scroll::before {
-        content: '';
-        display: block;
-        width: 1px;
-        height: 48px;
-        background: rgba(255,255,255,0.2);
-      }
-      @media (max-width: 900px) {
-        .hero-video { inset: 0; width: 100%; }
-        .hero-overlay { inset: 0; }
-        .hero-content { padding: 0 32px 60px; }
-        .hero-cards { grid-template-columns: repeat(2, 1fr); }
-        .hero-scroll { display: none; }
-      }
-      @media (max-width: 600px) {
-        .hero-cards { grid-template-columns: 1fr 1fr; gap: 10px; }
-        .hero-content { padding: 0 20px 40px; }
-      }
-    </style>
-
-    <section class="hero">
-      <video class="hero-video" autoplay muted loop playsinline>
-        <source src="https://raw.githubusercontent.com/BHHP2026/bhhp-website-b564f/main/hero-bg-mobile.mp4" type="video/mp4" media="(max-width: 768px)">
-        <source src="https://raw.githubusercontent.com/BHHP2026/bhhp-website-b564f/main/hero-bg-desktop.mp4" type="video/mp4">
-      </video>
-      <div class="hero-overlay"></div>
-      <div class="hero-content">
-        <p class="inspire-eyebrow">Hilton Head Island, South Carolina</p>
-        <h2>Coastal Elegance <strong>Defined</strong></h2>
-        <p class="inspire-sub">Find your next home with precision. Sell your current one with confidence. Hilton Head Island real estate, elevated.</p>
-        <div class="hero-buttons">
-          <a href="https://search.besthiltonheadproperties.com" target="_blank" class="btn btn-primary">Explore Properties &rarr;</a>
-          <a href="contact.html" class="btn btn-outline">Get Your Free Home Valuation &rarr;</a>
-        </div>
-        <div class="hero-cards">
-          <div class="hero-card">
-            <h4>Film Production Quality</h4>
-            <p>Cinematic Campaigns &middot; Stories That Captivate</p>
-          </div>
-          <div class="hero-card">
-            <h4>Strategic Marketing</h4>
-            <p>Global Reach &middot; Data-Driven. Creatively Relentless.</p>
-          </div>
-          <div class="hero-card">
-            <h4>Global Network</h4>
-            <p>International Connections &middot; Five Continents of Experience</p>
-          </div>
-          <div class="hero-card">
-            <h4>Creative Excellence</h4>
-            <p>World-Class Talent &middot; Brought to Hilton Head</p>
-          </div>
-        </div>
-      </div>
-      <div class="hero-scroll">Scroll to discover</div>
-    </section>
-
-    <!-- ═══ WIDGET 3: ISLAND NEIGHBORHOODS GALLERY ═══ -->
-    <section class="neighborhoods-section">
-      <div class="neighborhoods-header">
-        <div>
-          <p class="section-eyebrow">Explore</p>
-          <h2>Island <strong>Neighborhoods</strong></h2>
-        </div>
-        <a href="communities.html" class="btn btn-outline-dark">View All Areas →</a>
-      </div>
-      <div class="neighborhoods-grid">
-        <a href="communities/sea-pines.html" class="neighborhood-card">
-          <img src="https://images.unsplash.com/photo-1587302186428-d3753405ffed?w=600&q=80" alt="Sea Pines Resort">
-          <div class="neighborhood-overlay">
-            <span class="neighborhood-tag">Premier Enclave</span>
-            <h3>Sea Pines Resort</h3>
-          </div>
-        </a>
-        <a href="communities.html" class="neighborhood-card">
-          <img src="https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?w=600&q=80" alt="Palmetto Dunes">
-          <div class="neighborhood-overlay">
-            <span class="neighborhood-tag">Oceanfront Living</span>
-            <h3>Palmetto Dunes</h3>
-          </div>
-        </a>
-        <a href="communities.html" class="neighborhood-card">
-          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80" alt="Long Cove Club">
-          <div class="neighborhood-overlay">
-            <span class="neighborhood-tag">Gated Community</span>
-            <h3>Long Cove Club</h3>
-          </div>
-        </a>
-        <a href="communities/wexford.html" class="neighborhood-card">
-          <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=80" alt="Wexford">
-          <div class="neighborhood-overlay">
-            <span class="neighborhood-tag">Private Island</span>
-            <h3>Wexford</h3>
-          </div>
-        </a>
-        <a href="communities.html" class="neighborhood-card">
-          <img src="https://images.unsplash.com/photo-1592919505780-303950717480?w=600&q=80" alt="Spanish Wells">
-          <div class="neighborhood-overlay">
-            <span class="neighborhood-tag">Golf & Beach</span>
-            <h3>Spanish Wells</h3>
-          </div>
-        </a>
-      </div>
-    </section>
-
-    <!-- ═══ WIDGET 4: YOUR NEXT MOVE STARTS HERE (staging design) ═══ -->
-    <style>
-      /* === Buy/Sell Widget — staging design === */
-      .buysell2-section {
-        padding: 100px 0;
-        background: #f8f8f6;
-        text-align: center;
-      }
-      .buysell2-header {
-        max-width: 720px;
-        margin: 0 auto 60px;
-        padding: 0 32px;
-      }
-      .buysell2-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 32px;
-        max-width: 1100px;
-        margin: 0 auto;
-        padding: 0 48px;
-      }
-      .buysell2-card {
-        background: #fff;
-        overflow: hidden;
-      }
-      .buysell2-img {
-        height: 300px;
-        background-size: cover;
-        background-position: center;
-      }
-      .buysell2-body {
-        padding: 44px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-      }
-      .buysell2-body h3 {
-        font-family: 'Playfair Display', serif;
-        font-size: 26px;
-        font-weight: 400;
-        color: #0a0f1c;
-        margin-bottom: 16px;
-      }
-      .buysell2-body p {
-        font-family: 'Montserrat', sans-serif;
-        font-size: 13px;
-        font-weight: 300;
-        color: rgba(10,15,28,0.58);
-        line-height: 1.8;
-        max-width: 340px;
-        margin-bottom: 28px;
-      }
-      .buysell2-btn {
-        font-family: 'Montserrat', sans-serif;
-        font-size: 11px;
-        font-weight: 500;
-        letter-spacing: 2.5px;
-        text-transform: uppercase;
-        padding: 15px 36px;
-        text-decoration: none;
-        display: inline-block;
-        transition: all 0.3s;
-      }
-      .buysell2-btn-dark {
-        background: #0a0f1c;
-        color: #fff;
-        border: 1px solid #0a0f1c;
-      }
-      .buysell2-btn-dark:hover {
-        background: #d4af37;
-        border-color: #d4af37;
-        color: #0a0f1c;
-      }
-      .buysell2-btn-gold {
-        background: #d4af37;
-        color: #0a0f1c;
-        border: 1px solid #d4af37;
-      }
-      .buysell2-btn-gold:hover {
-        background: #0a0f1c;
-        border-color: #0a0f1c;
-        color: #fff;
-      }
-      @media (max-width: 900px) {
-        .buysell2-grid { grid-template-columns: 1fr; max-width: 560px; }
-        .buysell2-body { padding: 32px 24px; }
-      }
-    </style>
-
-    <section class="buysell2-section">
-      <div class="buysell2-header">
-        <p class="section-eyebrow">For Buyers & Sellers</p>
-        <h2 class="section-title">Your Next Move <strong>Starts Here</strong></h2>
-        <p class="section-subtitle" style="margin: 0 auto;">Whether you're searching for the perfect Hilton Head Island property or ready to maximize your sale — we have the tools, the data, and the team to make it happen.</p>
-      </div>
-      <div class="buysell2-grid">
-        <div class="buysell2-card">
-          <div class="buysell2-img" style="background-image: url('https://besthiltonheadproperties.com/wp-content/uploads/2022/03/Palmetto-Bluff-luxury-home-exterior-rendering-square-1-1.jpg');"></div>
-          <div class="buysell2-body">
-            <h3>Find Your Dream Home</h3>
-            <p>Browse every listing across Hilton Head Island, Bluffton, and the surrounding Lowcountry with our advanced property search — or tell us your vision and let us curate the perfect match.</p>
-            <a href="https://search.besthiltonheadproperties.com" target="_blank" class="buysell2-btn buysell2-btn-dark">Search All Properties &rarr;</a>
-          </div>
-        </div>
-        <div class="buysell2-card">
-          <div class="buysell2-img" style="background-image: url('https://besthiltonheadproperties.com/wp-content/uploads/2022/03/PBHomeEvaluationoption2-1-1.jpeg');"></div>
-          <div class="buysell2-body">
-            <h3>What Is Your Home Worth?</h3>
-            <p>Get your free, no-obligation home valuation from our market experts — backed by data analytics, cinematic marketing, and a proven record of achieving maximum sale price.</p>
-            <a href="contact.html" class="buysell2-btn buysell2-btn-gold">Get Free Valuation &rarr;</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══ WIDGET 5: FEATURED PROPERTIES ═══ -->
-    <section class="listings-section">
-      <div class="listings-header">
-        <div>
-          <p class="section-eyebrow">Featured</p>
-          <h2 class="section-title">Featured <strong>Estates</strong></h2>
-        </div>
-      </div>
-      <div class="listings-grid">
-        <a href="https://search.besthiltonheadproperties.com" target="_blank" class="listing-card">
-          <div class="listing-image">
-            <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=600&q=80" alt="Collier Beach Ocean Estate">
-            <span class="listing-status">Active</span>
-          </div>
-          <div class="listing-body">
-            <div class="listing-name">Collier Beach Ocean Estate</div>
-            <div class="listing-address">10 Collier Beach Road · Hilton Head Island, SC 29928</div>
-            <div class="listing-specs">6 Beds · 8 Baths · 5,000 Sq Ft</div>
-            <div class="listing-price-label">Asking Price</div>
-            <div class="listing-price">$7,950,000</div>
-          </div>
-        </a>
-        <a href="https://search.besthiltonheadproperties.com" target="_blank" class="listing-card">
-          <div class="listing-image">
-            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=80" alt="Island Creek Estate">
-            <span class="listing-status">Active</span>
-          </div>
-          <div class="listing-body">
-            <div class="listing-name">Island Creek Estate</div>
-            <div class="listing-address">29 Island Creek Drive · Okatie, SC 29909</div>
-            <div class="listing-specs">4 Beds · 5 Baths · 3,570 Sq Ft</div>
-            <div class="listing-price-label">Asking Price</div>
-            <div class="listing-price">$1,950,000</div>
-          </div>
-        </a>
-        <a href="https://search.besthiltonheadproperties.com" target="_blank" class="listing-card">
-          <div class="listing-image">
-            <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=600&q=80" alt="Blue Dasher Estate">
-            <span class="listing-status">Active</span>
-          </div>
-          <div class="listing-body">
-            <div class="listing-name">Blue Dasher Estate</div>
-            <div class="listing-address">35 Blue Dasher Lane · Bluffton, SC 29909</div>
-            <div class="listing-specs">5 Beds · 4.5 Baths · 3,282 Sq Ft</div>
-            <div class="listing-price-label">Asking Price</div>
-            <div class="listing-price">$1,225,000</div>
-          </div>
-        </a>
-        <a href="https://search.besthiltonheadproperties.com" target="_blank" class="listing-card">
-          <div class="listing-image">
-            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80" alt="Hidden Lake Estate">
-            <span class="listing-status">Active</span>
-          </div>
-          <div class="listing-body">
-            <div class="listing-name">Hidden Lake Estate</div>
-            <div class="listing-address">4 Hidden Lake Court · Bluffton, SC 29910</div>
-            <div class="listing-specs">5 Beds · 5.5 Baths · 4,858 Sq Ft</div>
-            <div class="listing-price-label">Asking Price</div>
-            <div class="listing-price">$1,185,000</div>
-          </div>
-        </a>
-      </div>
-      <div class="listings-cta">
-        <a href="https://search.besthiltonheadproperties.com" target="_blank" class="btn btn-outline">View All Properties →</a>
-      </div>
-    </section>
-
-    <!-- ═══ WIDGET 6: YOUR TRUSTED ADVISOR (staging design) ═══ -->
-    <style>
-      /* === Bio Widget — staging design === */
-      .bio-section {
-        background: #0d1f40;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        min-height: 640px;
-        position: relative;
-        overflow: hidden;
-      }
-      .bio-watermark {
-        position: absolute;
-        right: -60px;
-        top: 50%;
-        transform: translateY(-50%);
-        font-family: 'Playfair Display', serif;
-        font-size: 280px;
-        font-weight: 900;
-        letter-spacing: -10px;
-        color: rgba(255,255,255,0.024);
-        text-transform: uppercase;
-        pointer-events: none;
-        white-space: nowrap;
-        user-select: none;
-      }
-      .bio-image {
-        background: url('https://raw.githubusercontent.com/BHHP2026/bhhp-website-b564f/main/images/talita-hero.jpg') center center / cover #0d1f40;
-        position: relative;
-      }
-      .bio-image-overlay {
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(to right, transparent 60%, #0d1f40 100%);
-      }
-      .bio-content {
-        padding: 80px 80px 80px 60px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        position: relative;
-        z-index: 2;
-      }
-      .bio-eyebrow {
-        font-family: 'Montserrat', sans-serif;
-        font-size: 10px;
-        font-weight: 500;
-        letter-spacing: 4px;
-        text-transform: uppercase;
-        color: #d4af37;
-        margin-bottom: 20px;
-        display: flex;
-        align-items: center;
-        gap: 12px;
-      }
-      .bio-eyebrow::before {
-        content: '';
-        display: block;
-        width: 32px;
-        height: 1px;
-        background: #d4af37;
-      }
-      .bio-headline {
-        font-family: 'Playfair Display', serif;
-        font-size: clamp(32px, 3.5vw, 48px);
-        font-weight: 400;
-        text-transform: uppercase;
-        color: #ffffff;
-        letter-spacing: 1px;
-        line-height: 1.1;
-        margin-bottom: 24px;
-      }
-      .bio-headline em {
-        font-style: italic;
-        color: #d4af37;
-      }
-      .bio-body {
-        font-family: 'Montserrat', sans-serif;
-        font-size: 13px;
-        font-weight: 300;
-        letter-spacing: 0.3px;
-        color: rgba(255,255,255,0.6);
-        line-height: 1.9;
-        margin-bottom: 40px;
-        max-width: 440px;
-      }
-      .bio-btn-outline {
-        font-family: 'Montserrat', sans-serif;
-        font-size: 10px;
-        font-weight: 500;
-        letter-spacing: 3px;
-        text-transform: uppercase;
-        color: #ffffff;
-        border: 1px solid rgba(255,255,255,0.5);
-        padding: 14px 32px;
-        cursor: pointer;
-        background: transparent;
-        text-decoration: none;
-        display: inline-flex;
-        align-items: center;
-        gap: 12px;
-        transition: 0.25s;
-      }
-      .bio-btn-outline:hover {
-        border-color: #d4af37;
-        color: #d4af37;
-      }
-      @media (max-width: 900px) {
-        .bio-section { grid-template-columns: 1fr; }
-        .bio-image { min-height: 400px; }
-        .bio-image-overlay { background: linear-gradient(to bottom, transparent 60%, #0d1f40 100%); }
-        .bio-content { padding: 48px 32px; }
-      }
-    </style>
-
-    <section class="bio-section">
-      <div class="bio-watermark">BHHP</div>
-      <div class="bio-image">
-        <div class="bio-image-overlay"></div>
-      </div>
-      <div class="bio-content">
-        <div class="bio-eyebrow">Your Trusted Advisor</div>
-        <h2 class="bio-headline">Talita<br><em>Haggist</em></h2>
-        <p class="bio-body">Talita Haggist is a Global Real Estate Advisor whose life and career have been shaped by an uncommon international journey. The daughter of property developers, she pursued engineering studies across Brazil, Russia, Germany, and Italy &mdash; a foundation that gave her an avant-garde perspective on markets, value, and opportunity that few advisors can match. After founding a full-service property management company and serving as senior liaison to one of Brazil&rsquo;s most prominent corporations, she relocated from London to Hilton Head Island, drawn by the island&rsquo;s understated elegance and enduring investment strength. That rare international lens is what Talita brings to every client relationship &mdash; translating global insight into the kind of clear, confident guidance that helps people find the properties that truly elevate their lives.</p>
-        <a href="about.html" class="bio-btn-outline">Our Story &rarr;</a>
-      </div>
-    </section>
-
-    <!-- ═══ WIDGET 7: CLIENT ACCOLADES (Exact copy from staging site) ═══ -->
-    <style>
-      /* === Client Accolades Widget — copied from staging === */
-      :root {
-        --gold: #d4af37;
-        --white: #ffffff;
-        --charcoal: #1a1a1a;
-        --navy: #0a0f1c;
-      }
-      .tst2-section { position: relative; padding: 0; overflow: hidden; background: #0a0f1c; }
-      .tst2-bg {
-        position: absolute; inset: 0;
-        background: linear-gradient(135deg, #0a0f1c 0%, #0d1528 25%, #111d35 50%, #0d1528 75%, #0a0f1c 100%);
-        background-size: cover;
-      }
-      .acc-overlay { position: absolute; inset: 0; z-index: 1;
-        background: linear-gradient(to bottom, rgba(10,10,18,0.72) 0%, rgba(10,10,18,0.62) 100%); }
-      .acc-container { position: relative; z-index: 2;
-        padding: 100px 60px 80px; max-width: 1200px; margin: 0 auto;
-        display: flex; flex-direction: column; align-items: center; }
-      .acc-header { text-align: center; margin-bottom: 60px; }
-      .acc-eyebrow-label { font-family: 'Montserrat', sans-serif; font-size: 10px; font-weight: 500;
-        letter-spacing: 6px; text-transform: uppercase; color: var(--gold); margin-bottom: 10px;
-        display: flex; align-items: center; gap: 14px; justify-content: center; }
-      .acc-eyebrow-label::before, .acc-eyebrow-label::after { content: ''; display: block;
-        width: 36px; height: 1px; background: var(--gold); }
-      .acc-title { font-family: 'Lora', serif; font-size: clamp(42px, 6vw, 72px);
-        font-weight: 400; text-transform: uppercase; line-height: 1.0; color: var(--white); letter-spacing: 4px; }
-      .acc-title em { font-style: italic; color: var(--gold); display: block; font-size: 0.88em; }
-      .acc-card { position: relative; width: 100%;
-        background: rgba(15,15,25,0.78); border-radius: 32px; overflow: hidden;
-        border: 1px solid rgba(201,169,110,0.15); backdrop-filter: blur(6px); }
-      .acc-viewport { overflow: hidden; }
-      .acc-track { display: flex; transition: transform 0.55s cubic-bezier(0.77,0,0.18,1); }
-      .acc-slide { min-width: 50%; padding: 60px 56px 52px;
-        border-right: 1px solid rgba(255,255,255,0.06);
-        display: flex; flex-direction: column; }
-      .acc-slide:last-child { border-right: none; }
-      .acc-qmark { font-family: 'Lora', serif; font-size: 72px; line-height: 0.6;
-        color: rgba(201,169,110,0.25); margin-bottom: 28px; display: block; }
-      .acc-quote { font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: 300;
-        letter-spacing: 0.3px; color: rgba(250,250,248,0.9); line-height: 1.9;
-        flex: 1; margin-bottom: 32px; font-style: italic; }
-      .acc-divider { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
-      .acc-divider-line { flex: 0 0 28px; height: 1px; background: var(--gold); opacity: 0.7; }
-      .acc-divider-icon { color: var(--gold); font-size: 13px; opacity: 0.9; line-height: 1; }
-      .acc-name { font-family: 'Montserrat', sans-serif; font-size: 10px; font-weight: 500;
-        letter-spacing: 3px; text-transform: uppercase; color: var(--white); margin-bottom: 5px; }
-      .acc-role { font-family: 'Montserrat', sans-serif; font-size: 10px; font-weight: 400;
-        letter-spacing: 1.5px; text-transform: uppercase; color: rgba(201,169,110,0.75); }
-      .acc-arrow { position: absolute; top: 50%; transform: translateY(-50%);
-        width: 46px; height: 46px; border-radius: 50%;
-        border: 1px solid rgba(201,169,110,0.5); background: rgba(15,15,25,0.7);
-        color: var(--gold); font-size: 16px; cursor: pointer;
-        display: flex; align-items: center; justify-content: center;
-        transition: all 0.3s; z-index: 10; }
-      .acc-arrow:hover { background: var(--gold); color: var(--charcoal); border-color: var(--gold); }
-      .acc-arrow.acc-prev { left: -23px; }
-      .acc-arrow.acc-next { right: -23px; }
-      .acc-bottom { margin-top: 48px; text-align: center; }
-      .acc-dots { display: flex; gap: 8px; justify-content: center; margin-bottom: 32px; }
-      .acc-dot { width: 6px; height: 6px; border-radius: 50%;
-        background: rgba(255,255,255,0.25); cursor: pointer; transition: background 0.3s; }
-      .acc-dot.active { background: var(--gold); }
-      .acc-cta-link { font-family: 'Montserrat', sans-serif; font-size: 10px; font-weight: 500;
-        letter-spacing: 3px; text-transform: uppercase; color: var(--white);
-        border: 1px solid rgba(255,255,255,0.35); padding: 14px 40px;
-        text-decoration: none; display: inline-block;
-        transition: background 0.3s, color 0.3s, border-color 0.3s; }
-      .acc-cta-link:hover { background: var(--white); color: var(--charcoal); border-color: var(--white); }
-
-      /* Responsive: tablet */
-      @media (max-width: 900px) {
-        .acc-slide { min-width: 100%; padding: 48px 40px 44px; border-right: none; border-bottom: none; }
-        .acc-container { padding: 80px 24px 64px; }
-        .acc-arrow.acc-prev { left: -16px; }
-        .acc-arrow.acc-next { right: -16px; }
-      }
-      /* Responsive: mobile */
-      @media (max-width: 600px) {
-        .acc-slide { padding: 40px 28px 36px; }
-        .acc-qmark { font-size: 56px; }
-        .acc-container { padding: 64px 16px 52px; }
-      }
-    </style>
-
-    <section class="tst2-section" id="testimonials">
-      <div class="tst2-bg"></div>
-      <div class="acc-overlay"></div>
-      <div class="acc-container">
-        <div class="acc-header">
-          <div class="acc-eyebrow-label">Best Hilton Head Properties</div>
-          <h2 class="acc-title">Client<br><em>Accolades</em></h2>
-        </div>
-        <div class="acc-card">
-          <div class="acc-viewport">
-            <div class="acc-track" id="accTrack">
-              <div class="acc-slide">
-                <span class="acc-qmark">&#10077;</span>
-                <p class="acc-quote">My immediate reaction was that they were very knowledgeable and likable &mdash; they didn&rsquo;t grovel like other realtors. They drew up a roadmap, and eight days after listing we had an offer for the exact same amount Douglas had suggested the day I met him.</p>
-                <div class="acc-divider"><span class="acc-divider-line"></span><span class="acc-divider-icon">&#9830;</span><span class="acc-divider-line"></span></div>
-                <div class="acc-name">John F.</div>
-                <div class="acc-role">Home Seller &nbsp;&middot;&nbsp; Hilton Head Island</div>
-              </div>
-              <div class="acc-slide">
-                <span class="acc-qmark">&#10077;</span>
-                <p class="acc-quote">Choosing Talita and Doug was one of the best decisions I have made to date. They give the kind of personal attention that makes you feel as though you are the only client on the planet. I wasn&rsquo;t sure I could manage to buy on my own &mdash; but they helped me see it was possible.</p>
-                <div class="acc-divider"><span class="acc-divider-line"></span><span class="acc-divider-icon">&#9830;</span><span class="acc-divider-line"></span></div>
-                <div class="acc-name">Dr. Stacy H.</div>
-                <div class="acc-role">Homebuyer &nbsp;&middot;&nbsp; Hilton Head Island</div>
-              </div>
-              <div class="acc-slide">
-                <span class="acc-qmark">&#10077;</span>
-                <p class="acc-quote">The process was so quick and easy with little to no surprises. I can&rsquo;t say enough about the way they established trust from the beginning and got to know us personally. If you want good people who don&rsquo;t pressure you, give them a call.</p>
-                <div class="acc-divider"><span class="acc-divider-line"></span><span class="acc-divider-icon">&#9830;</span><span class="acc-divider-line"></span></div>
-                <div class="acc-name">Tyler W.</div>
-                <div class="acc-role">First-Time Homebuyer &nbsp;&middot;&nbsp; Bluffton, SC</div>
-              </div>
-              <div class="acc-slide">
-                <span class="acc-qmark">&#10077;</span>
-                <p class="acc-quote">Doug and Talita were wonderful to work with in finding the right place for us in Bluffton. They were dedicated, professional, and fun. Doug goes above and beyond &mdash; his honesty was very important for us since we were not from the area. Highly recommend them.</p>
-                <div class="acc-divider"><span class="acc-divider-line"></span><span class="acc-divider-icon">&#9830;</span><span class="acc-divider-line"></span></div>
-                <div class="acc-name">David M.</div>
-                <div class="acc-role">Local Guide &nbsp;&middot;&nbsp; Bluffton, SC</div>
-              </div>
-              <div class="acc-slide">
-                <span class="acc-qmark">&#10077;</span>
-                <p class="acc-quote">From start to finish Doug and Talita were a pleasure to work with &mdash; professional, very knowledgeable, and always available to assist with our questions and concerns. We highly recommend their services and appreciate all their assistance in helping us find our new home.</p>
-                <div class="acc-divider"><span class="acc-divider-line"></span><span class="acc-divider-icon">&#9830;</span><span class="acc-divider-line"></span></div>
-                <div class="acc-name">Michele S.</div>
-                <div class="acc-role">Homebuyer &nbsp;&middot;&nbsp; Hilton Head Island</div>
-              </div>
-            </div>
-          </div>
-          <button class="acc-arrow acc-prev" id="accPrev" aria-label="Previous">&#8592;</button>
-          <button class="acc-arrow acc-next" id="accNext" aria-label="Next">&#8594;</button>
-        </div>
-        <div class="acc-bottom">
-          <div class="acc-dots" id="accDots">
-            <span class="acc-dot active"></span>
-            <span class="acc-dot"></span>
-            <span class="acc-dot"></span>
-          </div>
-          <a href="https://www.google.com/search?sca_esv=2e9e3577ff7485d9&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOTSakoHT5VThy2v6hmqnkPX4XC9i_6FrWL0CwPHB9T_o-aVoPrL8iX8IRaGYXTp0W9ApbqkR0PKYdOksXToJXMRqPD-96FtRKAub3ku6vJK29QkxvQ%3D%3D&q=Best+Hilton+Head+Properties+Reviews&sa=X&ved=2ahUKEwjv9dT7gbGTAxVRwskDHSGHF6sQ0bkNegQILxAF" target="_blank" rel="noopener noreferrer" class="acc-cta-link">Read All Reviews &nbsp;&#8594;</a>
-        </div>
-      </div>
-      <script>
-      (function(){ var track = document.getElementById('accTrack'); var prev = document.getElementById('accPrev'); var next = document.getElementById('accNext'); var dots = document.querySelectorAll('.acc-dot'); var slides = track ? track.children.length : 5; var current = 0; function perView() { return window.innerWidth > 900 ? 2 : 1; } function pages() { return Math.ceil(slides / perView()); } function goTo(n) { current = Math.max(0, Math.min(n, pages() - 1)); track.style.transform = 'translateX(-' + (current * perView() * (100 / perView())) + '%)'; dots.forEach(function(d,i){ d.classList.toggle('active', i===current); }); } if (prev) prev.addEventListener('click', function(){ goTo(current - 1); }); if (next) next.addEventListener('click', function(){ goTo(current + 1); }); dots.forEach(function(d,i){ d.addEventListener('click', function(){ goTo(i); }); }); window.addEventListener('resize', function(){ goTo(current); }); })();
-      </script>
-    </section>
-
-    <!-- ═══ WIDGET 8: READY TO CALL PARADISE HOME CTA ═══ -->
-    <section class="paradise-cta">
-      <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?w=1920&q=80');"></div>
-      <div class="paradise-content">
-        <p class="inspire-eyebrow">Best Hilton Head Properties</p>
-        <h2>Ready to Call <strong>Paradise Home?</strong></h2>
-        <p class="paradise-sub">Local Expertise. Global Connections. Hilton Head Island · International Markets.</p>
-        <a href="about.html" class="btn btn-primary">Our Story →</a>
-      </div>
-    </section>
-
-    <!-- ═══ WIDGET 9: FOOTER ═══ -->
-    <footer class="footer">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a href="index.html" class="nav-logo">
-            <span>BEST</span>
-            Hilton Head Properties
-          </a>
-          <p style="margin-top: 16px;">Hilton Head Island's premier luxury real estate team — serving Hilton Head Island's most discerning buyers and sellers.</p>
-        </div>
-        <div class="footer-col">
-          <h4>Explore</h4>
-          <a href="https://search.besthiltonheadproperties.com" target="_blank">Featured Listings</a>
-          <a href="https://search.besthiltonheadproperties.com" target="_blank">Oceanfront Homes</a>
-          <a href="https://search.besthiltonheadproperties.com" target="_blank">New Construction</a>
-          <a href="https://search.besthiltonheadproperties.com" target="_blank">Search All Listings</a>
-        </div>
-        <div class="footer-col">
-          <h4>Neighborhoods</h4>
-          <a href="communities/sea-pines.html">Sea Pines Resort</a>
-          <a href="communities.html">Palmetto Dunes</a>
-          <a href="communities.html">Long Cove Club</a>
-          <a href="communities.html">Shipyard Plantation</a>
-        </div>
-        <div class="footer-col">
-          <h4>Contact</h4>
-          <a href="tel:+18435483337">(843) 548-3337</a>
-          <a href="mailto:info@besthiltonheadproperties.com">info@besthiltonheadproperties.com</a>
-          <p style="font-size: 13px; margin-top: 8px; line-height: 1.6;">71 Lighthouse Rd, Ste 300<br>Hilton Head Island, SC 29928</p>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2026 Best Hilton Head Properties. All rights reserved. | BestHiltonHeadProperties.com</p>
-      </div>
-    </footer>
+      <p style="margin-top: 16px;">Hilton Head Island's premier luxury real estate team — serving Hilton Head Island's most discerning buyers and sellers.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <a href="https://search.besthiltonheadproperties.com" target="_blank">Featured Listings</a>
+      <a href="https://search.besthiltonheadproperties.com" target="_blank">Oceanfront Homes</a>
+      <a href="https://search.besthiltonheadproperties.com" target="_blank">New Construction</a>
+      <a href="https://search.besthiltonheadproperties.com" target="_blank">Search All Listings</a>
+    </div>
+    <div class="footer-col">
+      <h4>Neighborhoods</h4>
+      <a href="communities/sea-pines.html">Sea Pines Resort</a>
+      <a href="communities.html">Palmetto Dunes</a>
+      <a href="communities.html">Long Cove Club</a>
+      <a href="communities.html">Shipyard Plantation</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <a href="tel:+18435483337">(843) 548-3337</a>
+      <a href="mailto:info@besthiltonheadproperties.com">info@besthiltonheadproperties.com</a>
+      <p style="font-size: 13px; margin-top: 8px; line-height: 1.6;">71 Lighthouse Rd, Ste 300<br>Hilton Head Island, SC 29928</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Best Hilton Head Properties. All rights reserved. | BestHiltonHeadProperties.com</p>
+  </div>
+</footer>
 
 </body>
 </html>
