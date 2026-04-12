@@ -63,6 +63,13 @@ a { text-decoration: none; color: inherit; }
   font-weight: 700;
 }
 
+
+.nav-logo-img {
+  height: 44px;
+  width: auto;
+  display: block;
+  filter: brightness(0) invert(1);
+}
 .nav-links {
   display: flex;
   align-items: center;
@@ -199,12 +206,15 @@ a { text-decoration: none; color: inherit; }
 }
 
 .btn-primary {
-  background: var(--gold-vivid);
+  background: transparent;
   color: var(--white);
+  border: 1.5px solid rgba(255,255,255,0.6);
 }
 
 .btn-primary:hover {
-  background: #9E7E22;
+  background: var(--gold-vivid);
+  border-color: var(--gold-vivid);
+  color: var(--white);
   transform: translateY(-1px);
 }
 
