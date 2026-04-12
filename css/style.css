@@ -65,14 +65,14 @@ a { text-decoration: none; color: inherit; }
 
 
 .nav-logo-img {
-  height: 80px;
+  height: 92px;
   width: auto;
   display: block;
   filter: brightness(0) invert(1);
 }
 @media (max-width: 768px) {
   .nav-logo-img {
-    height: 68px;
+    height: 78px;
   }
 }
 .nav-links {
