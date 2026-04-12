@@ -31,31 +31,25 @@
 
 <!-- ═══ WIDGET 2: CINEMATIC VIDEO HERO ═══ -->
 <style>
-.hero { position: relative; height: 100vh; min-height: 700px; background: #000; display: flex; align-items: flex-end; overflow: hidden; }
-.hero-video { position: absolute; inset: 0 64px; width: calc(100% - 128px); height: 100%; object-fit: cover; z-index: 1; opacity: 1; pointer-events: none; }
-.hero-overlay { position: absolute; inset: 0 64px; z-index: 2; background: linear-gradient(to top, rgba(0,0,0,0.68) 0%, rgba(0,0,0,0.08) 50%, transparent 100%); }
-.hero-content { position: relative; z-index: 3; padding: 0 96px 80px; max-width: 960px; }
-.hero-content .inspire-eyebrow { font-family: 'Montserrat', sans-serif; font-size: 10px; font-weight: 500; letter-spacing: 4px; text-transform: uppercase; color: #d4af37; margin-bottom: 16px; }
-.hero-content h2 { font-family: 'Montserrat', sans-serif; font-size: clamp(36px, 5vw, 64px); font-weight: 700; color: #fff; line-height: 1.05; margin-bottom: 20px; letter-spacing: -1px; }
-.hero-content h2 strong { font-style: normal; font-weight: 300; }
-.hero-content .inspire-sub { font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: 300; color: rgba(255,255,255,0.7); line-height: 1.7; max-width: 520px; margin-bottom: 32px; }
-.hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 48px; }
-.hero-cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; max-width: 800px; }
-.hero-card { background: rgba(255,255,255,0.08); backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 20px 16px; text-align: center; }
-.hero-card h4 { font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.5px; color: #fff; margin-bottom: 8px; }
-.hero-card p { font-family: 'Montserrat', sans-serif; font-size: 10px; font-weight: 300; color: rgba(255,255,255,0.5); line-height: 1.5; }
+.hero { position: relative; height: 100vh; min-height: 700px; background: #000; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+.hero-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1; opacity: 1; pointer-events: none; }
+.hero-overlay { position: absolute; inset: 0; z-index: 2; background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.45) 50%, rgba(0,0,0,0.45) 100%); }
+.hero-content { position: relative; z-index: 3; display: flex; flex-direction: column; align-items: center; text-align: center; padding: 0 40px; max-width: 720px; width: 100%; }
+.hero-logo { width: 300px; max-width: 75vw; margin-bottom: 36px; filter: drop-shadow(0 4px 24px rgba(0,0,0,0.5)); }
+.hero-content .inspire-sub { font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: 300; color: rgba(255,255,255,0.82); line-height: 1.8; max-width: 520px; margin-bottom: 36px; letter-spacing: 0.3px; }
+.hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; }
 .hero-scroll { position: absolute; right: 48px; bottom: 80px; z-index: 2; writing-mode: vertical-rl; font-family: 'Montserrat', sans-serif; font-size: 9px; font-weight: 500; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.4); display: flex; align-items: center; gap: 12px; }
 .hero-scroll::before { content: ''; display: block; width: 1px; height: 48px; background: rgba(255,255,255,0.2); }
 @media (max-width: 900px) {
   .hero-video { inset: 0; width: 100%; }
   .hero-overlay { inset: 0; }
-  .hero-content { padding: 0 32px 60px; }
-  .hero-cards { grid-template-columns: repeat(2, 1fr); }
+  .hero-logo { width: 220px; }
   .hero-scroll { display: none; }
 }
 @media (max-width: 600px) {
-  .hero-cards { grid-template-columns: 1fr 1fr; gap: 10px; }
-  .hero-content { padding: 0 20px 40px; }
+  .hero-logo { width: 180px; margin-bottom: 28px; }
+  .hero-content { padding: 0 24px; }
+  .hero-content .inspire-sub { font-size: 13px; }
 }
 </style>
 
@@ -66,30 +60,11 @@
   </video>
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <p class="inspire-eyebrow">Hilton Head Island, South Carolina</p>
-    <h2>Coastal Elegance <strong>Defined</strong></h2>
+    <img src="https://raw.githubusercontent.com/BHHP2026/bhhp-website-b564f/main/images/bhhp-logo-square.png" alt="Best Hilton Head Properties" class="hero-logo">
     <p class="inspire-sub">Find your next home with precision. Sell your current one with confidence. Hilton Head Island real estate, elevated.</p>
     <div class="hero-buttons">
       <a href="https://search.besthiltonheadproperties.com" target="_blank" class="btn btn-primary">Explore Properties &rarr;</a>
       <a href="contact.html" class="btn btn-outline">Get Your Free Home Valuation &rarr;</a>
-    </div>
-    <div class="hero-cards">
-      <div class="hero-card">
-        <h4>Film Production Quality</h4>
-        <p>Cinematic Campaigns &middot; Stories That Captivate</p>
-      </div>
-      <div class="hero-card">
-        <h4>Strategic Marketing</h4>
-        <p>Global Reach &middot; Data-Driven. Creatively Relentless.</p>
-      </div>
-      <div class="hero-card">
-        <h4>Global Network</h4>
-        <p>International Connections &middot; Five Continents of Experience</p>
-      </div>
-      <div class="hero-card">
-        <h4>Creative Excellence</h4>
-        <p>World-Class Talent &middot; Brought to Hilton Head</p>
-      </div>
     </div>
   </div>
   <div class="hero-scroll">Scroll to discover</div>
