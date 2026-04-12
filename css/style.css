@@ -65,10 +65,15 @@ a { text-decoration: none; color: inherit; }
 
 
 .nav-logo-img {
-  height: 44px;
+  height: 56px;
   width: auto;
   display: block;
   filter: brightness(0) invert(1);
+}
+@media (max-width: 768px) {
+  .nav-logo-img {
+    height: 48px;
+  }
 }
 .nav-links {
   display: flex;
