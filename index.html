@@ -107,6 +107,289 @@
   </div>
 </section>
 
+<!-- PPP WIDGET 4: HILTON HEAD ISLAND FEATURED HOMES CAROUSEL PPP -->
+<style>
+.hhi-carousel { background: #0d1f40; padding: 64px 0 72px; }
+.hhi-carousel .hhi-hdr { text-align: center; margin-bottom: 40px; padding: 0 48px; }
+.hhi-carousel .hhi-eyebrow { font-family: 'Montserrat', sans-serif; font-size: 10px; font-weight: 600; letter-spacing: 4px; text-transform: uppercase; color: #d4af37; margin-bottom: 12px; }
+.hhi-carousel h2 { font-family: 'Montserrat', sans-serif; font-size: clamp(22px, 2.8vw, 30px); font-weight: 700; color: #fff; line-height: 1.25; margin: 0; }
+.hhi-track-wrap { position: relative; overflow: hidden; padding: 0 64px; }
+.hhi-track { display: flex; gap: 20px; transition: transform 0.45s cubic-bezier(.4,0,.2,1); will-change: transform; }
+.hhi-card { flex: 0 0 calc(33.333% - 14px); min-width: 0; position: relative; overflow: hidden; border-radius: 2px; cursor: pointer; }
+.hhi-card-img { width: 100%; aspect-ratio: 4/3; object-fit: cover; display: block; transition: transform 0.5s ease; }
+.hhi-card:hover .hhi-card-img { transform: scale(1.04); }
+.hhi-card-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.18) 55%, transparent 100%); }
+.hhi-card-info { position: absolute; bottom: 0; left: 0; right: 0; padding: 20px 20px 18px; }
+.hhi-card-price { font-family: 'Montserrat', sans-serif; font-size: 20px; font-weight: 700; color: #d4af37; margin-bottom: 4px; }
+.hhi-card-addr { font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: 500; color: #fff; margin-bottom: 8px; opacity: 0.9; }
+.hhi-card-specs { font-family: 'Montserrat', sans-serif; font-size: 10px; font-weight: 500; color: rgba(255,255,255,0.7); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 14px; }
+.hhi-card-btn { display: inline-block; padding: 8px 18px; border: 1px solid #d4af37; color: #d4af37; font-family: 'Montserrat', sans-serif; font-size: 9px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; text-decoration: none; transition: background 0.2s, color 0.2s; }
+.hhi-card-btn:hover { background: #d4af37; color: #0d1f40; }
+.hhi-arrow { position: absolute; top: 50%; transform: translateY(-50%); width: 44px; height: 44px; border: 1px solid rgba(212,175,55,0.5); background: rgba(13,31,64,0.85); color: #d4af37; font-size: 18px; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 10; transition: border-color 0.2s, background 0.2s; }
+.hhi-arrow:hover { border-color: #d4af37; background: rgba(13,31,64,1); }
+.hhi-arrow.prev { left: 12px; }
+.hhi-arrow.next { right: 12px; }
+.hhi-arrow.disabled { opacity: 0.3; pointer-events: none; }
+.hhi-dots { display: flex; justify-content: center; gap: 8px; margin-top: 28px; }
+.hhi-dot { width: 6px; height: 6px; border-radius: 50%; background: rgba(212,175,55,0.3); cursor: pointer; transition: background 0.2s; }
+.hhi-dot.active { background: #d4af37; }
+.hhi-footer { text-align: center; margin-top: 36px; }
+.hhi-browse-btn { display: inline-block; padding: 14px 36px; border: 1px solid #d4af37; color: #d4af37; font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; text-decoration: none; transition: background 0.2s, color 0.2s; }
+.hhi-browse-btn:hover { background: #d4af37; color: #0d1f40; }
+@media (max-width: 900px) { .hhi-card { flex: 0 0 calc(50% - 10px); } .hhi-track-wrap { padding: 0 48px; } }
+@media (max-width: 600px) { .hhi-card { flex: 0 0 calc(100% - 0px); } .hhi-track-wrap { padding: 0 32px; } .hhi-carousel h2 { font-size: 20px; } }
+</style>
+<section class="hhi-carousel">
+  <div class="hhi-hdr">
+    <div class="hhi-eyebrow">Featured Listings</div>
+    <h2>Hilton Head Island Homes For Sale</h2>
+  </div>
+  <div class="hhi-track-wrap" id="hhiWrap">
+    <button class="hhi-arrow prev disabled" id="hhiPrev" onclick="hhiSlide(-1)">&#8592;</button>
+    <div class="hhi-track" id="hhiTrack">
+      <a class="hhi-card" href="https://search.besthiltonheadproperties.com/search/detail/262596552?s[orderBy]=sourceCreationDate%2Cdesc&s[page]=1&s[mainInputSearch]=false&s[circle][lat]=32.1813961&s[circle][lng]=-80.77872339999999&s[circle][radius]=3&s[address]=12%20Widewater%20Rd%2C%20Hilton%20Head%20Island%2C%20SC%2029926&s[addressComponents][street]=12%20Widewater%20Road&s[addressComponents][city]=Hilton%20Head%20Island&s[addressComponents][state]=SC&s[addressComponents][zip]=29926" target="_blank" rel="noopener">
+        <img class="hhi-card-img" src="https://d25fhp1qfwqa2h.cloudfront.net/f18e8fd604820996e0772ef7ce77712d,1775853795333_600_auto?phid=18989848933" alt="12 Widewater Road" loading="lazy">
+        <div class="hhi-card-overlay"></div>
+        <div class="hhi-card-info">
+          <div class="hhi-card-price">$3,999,000</div>
+          <div class="hhi-card-addr">12 Widewater Road</div>
+          <div class="hhi-card-specs">4 BD &nbsp;|&nbsp; 4.5 BA &nbsp;|&nbsp; 3,943 SF</div>
+          <span class="hhi-card-btn">View Home &rarr;</span>
+        </div>
+      </a>
+      <a class="hhi-card" href="https://search.besthiltonheadproperties.com/search/detail/262444007?s[orderBy]=sourceCreationDate%2Cdesc&s[page]=1&s[mainInputSearch]=false&s[circle][lat]=32.1591328&s[circle][lng]=-80.8004924&s[circle][radius]=3&s[address]=100%20Brams%20Point%20Road%2C%20Hilton%20Head%20Island%2C%20SC%2029926&s[addressComponents][street]=100%20Brams%20Point%20Road&s[addressComponents][city]=Hilton%20Head%20Island&s[addressComponents][state]=SC&s[addressComponents][zip]=29926" target="_blank" rel="noopener">
+        <img class="hhi-card-img" src="https://d25fhp1qfwqa2h.cloudfront.net/c1678c5c91039a519bc27e0c344fc834,1775657460510_600_auto?phid=18974925375" alt="100 Brams Point Road" loading="lazy">
+        <div class="hhi-card-overlay"></div>
+        <div class="hhi-card-info">
+          <div class="hhi-card-price">$14,995,000</div>
+          <div class="hhi-card-addr">100 Brams Point Road</div>
+          <div class="hhi-card-specs">5 BD &nbsp;|&nbsp; 5.5 BA &nbsp;|&nbsp; 6,756 SF</div>
+          <span class="hhi-card-btn">View Home &rarr;</span>
+        </div>
+      </a>
+      <a class="hhi-card" href="https://search.besthiltonheadproperties.com/search/detail/262643436?s[orderBy]=sourceCreationDate%2Cdesc&s[page]=1&s[mainInputSearch]=false&s[circle][lat]=32.1736612&s[circle][lng]=-80.755028&s[circle][radius]=3&s[address]=46%20Yorkshire%20Dr%2C%20Hilton%20Head%20Island%2C%20SC%2029928&s[addressComponents][street]=46%20Yorkshire%20Drive&s[addressComponents][city]=Hilton%20Head%20Island&s[addressComponents][state]=SC&s[addressComponents][zip]=29928" target="_blank" rel="noopener">
+        <img class="hhi-card-img" src="https://d25fhp1qfwqa2h.cloudfront.net/b6768ff5baaf570e6dd09105ec6d685b,1776049655547_600_auto?phid=18997795703" alt="46 Yorkshire Drive" loading="lazy">
+        <div class="hhi-card-overlay"></div>
+        <div class="hhi-card-info">
+          <div class="hhi-card-price">$2,675,000</div>
+          <div class="hhi-card-addr">46 Yorkshire Drive</div>
+          <div class="hhi-card-specs">4 BD &nbsp;|&nbsp; 4.5 BA &nbsp;|&nbsp; 4,261 SF</div>
+          <span class="hhi-card-btn">View Home &rarr;</span>
+        </div>
+      </a>
+      <a class="hhi-card" href="https://search.besthiltonheadproperties.com/search/detail/262330430?s[orderBy]=sourceCreationDate%2Cdesc&s[page]=1&s[mainInputSearch]=false&s[circle][lat]=32.216276&s[circle][lng]=-80.776066&s[circle][radius]=3&s[address]=44%20Sparwheel%20Ln%2C%20Hilton%20Head%20Island%2C%20SC%2029926&s[addressComponents][street]=44%20Sparwheel%20Lane&s[addressComponents][city]=Hilton%20Head%20Island&s[addressComponents][state]=SC&s[addressComponents][zip]=29926" target="_blank" rel="noopener">
+        <img class="hhi-card-img" src="https://d25fhp1qfwqa2h.cloudfront.net/d38b4e10720875591ab7d36258ba9c44,1775656321100_600_auto?phid=18974794526" alt="44 Sparwheel Lane" loading="lazy">
+        <div class="hhi-card-overlay"></div>
+        <div class="hhi-card-info">
+          <div class="hhi-card-price">$2,349,000</div>
+          <div class="hhi-card-addr">44 Sparwheel Lane</div>
+          <div class="hhi-card-specs">4 BD &nbsp;|&nbsp; 4.5 BA &nbsp;|&nbsp; 3,558 SF</div>
+          <span class="hhi-card-btn">View Home &rarr;</span>
+        </div>
+      </a>
+      <a class="hhi-card" href="https://search.besthiltonheadproperties.com/search/detail/262564548?s[orderBy]=sourceCreationDate%2Cdesc&s[page]=1&s[mainInputSearch]=false&s[circle][lat]=32.2027102&s[circle][lng]=-80.7608008&s[circle][radius]=3&s[address]=219%20Jonesville%20Rd%2C%20Hilton%20Head%20Island%2C%20SC%2029926&s[addressComponents][street]=219%20Jonesville%20Road&s[addressComponents][city]=Hilton%20Head%20Island&s[addressComponents][state]=SC&s[addressComponents][zip]=29926" target="_blank" rel="noopener">
+        <img class="hhi-card-img" src="https://d25fhp1qfwqa2h.cloudfront.net/4051c9f0301e6d8c98a9725b3067de8d,1775829360350_600_auto?phid=18986862712" alt="219 Jonesville Road" loading="lazy">
+        <div class="hhi-card-overlay"></div>
+        <div class="hhi-card-info">
+          <div class="hhi-card-price">$2,450,000</div>
+          <div class="hhi-card-addr">219 Jonesville Road</div>
+          <div class="hhi-card-specs">5 BD &nbsp;|&nbsp; 5 BA &nbsp;|&nbsp; 3,248 SF</div>
+          <span class="hhi-card-btn">View Home &rarr;</span>
+        </div>
+      </a>
+      <a class="hhi-card" href="https://search.besthiltonheadproperties.com/search/detail/262439876?s[orderBy]=closest%2Casc&s[page]=1&s[limit]=18&s[mainInputSearch]=false&s[circle][lat]=32.2435779&s[circle][lng]=-80.6910178&s[circle][radius]=3&s[address]=2%20Talon%20Ct%2C%20Hilton%20Head%20Island%2C%20SC%2029926&s[addressComponents][street]=2%20Talon%20Court&s[addressComponents][city]=Hilton%20Head%20Island&s[addressComponents][state]=SC&s[addressComponents][zip]=29926" target="_blank" rel="noopener">
+        <img class="hhi-card-img" src="https://d25fhp1qfwqa2h.cloudfront.net/47d36507e0746a1de198140522289a27,1775651879493_600_auto?phid=18974537240" alt="2 Talon Court" loading="lazy">
+        <div class="hhi-card-overlay"></div>
+        <div class="hhi-card-info">
+          <div class="hhi-card-price">$1,789,000</div>
+          <div class="hhi-card-addr">2 Talon Court</div>
+          <div class="hhi-card-specs">6 BD &nbsp;|&nbsp; 5.5 BA &nbsp;|&nbsp; 3,662 SF</div>
+          <span class="hhi-card-btn">View Home &rarr;</span>
+        </div>
+      </a>
+    </div>
+    <button class="hhi-arrow next" id="hhiNext" onclick="hhiSlide(1)">&#8594;</button>
+  </div>
+  <div class="hhi-dots" id="hhiDots"></div>
+  <div class="hhi-footer">
+    <a href="https://search.besthiltonheadproperties.com/search?area=hilton-head-island&ip=t&s[orderBy]=sourceCreationDate%2Cdesc&s[page]=1&s[locations][0][city]=Hilton%20Head%20Island&s[locations][0][state]=SC" target="_blank" class="hhi-browse-btn">Browse All Hilton Head Island Homes</a>
+  </div>
+</section>
+<script>
+(function(){
+  var track = document.getElementById('hhiTrack');
+  var prev = document.getElementById('hhiPrev');
+  var next = document.getElementById('hhiNext');
+  var dotsEl = document.getElementById('hhiDots');
+  var cards = track.querySelectorAll('.hhi-card');
+  var total = cards.length;
+  var perPage = window.innerWidth <= 600 ? 1 : window.innerWidth <= 900 ? 2 : 3;
+  var maxStep = total - perPage;
+  var step = 0;
+
+  function buildDots(){
+    dotsEl.innerHTML = '';
+    var numDots = maxStep + 1;
+    for(var i=0;i<numDots;i++){
+      var d = document.createElement('button');
+      d.className = 'hhi-dot' + (i===0?' active':'');
+      d.setAttribute('aria-label','Go to slide '+(i+1));
+      (function(idx){ d.onclick = function(){ goTo(idx); }; })(i);
+      dotsEl.appendChild(d);
+    }
+  }
+
+  function goTo(n){
+    step = Math.max(0, Math.min(n, maxStep));
+    var cardW = cards[0].offsetWidth + 20;
+    track.style.transform = 'translateX(-' + (step * cardW) + 'px)';
+    prev.classList.toggle('disabled', step === 0);
+    next.classList.toggle('disabled', step === maxStep);
+    var dots = dotsEl.querySelectorAll('.hhi-dot');
+    dots.forEach(function(d,i){ d.classList.toggle('active', i===step); });
+  }
+
+  window.hhiSlide = function(dir){ goTo(step + dir); };
+
+  window.addEventListener('resize', function(){
+    perPage = window.innerWidth <= 600 ? 1 : window.innerWidth <= 900 ? 2 : 3;
+    maxStep = total - perPage;
+    step = Math.min(step, maxStep);
+    buildDots();
+    goTo(step);
+  });
+
+  buildDots();
+  goTo(0);
+})();
+</script>
+<!-- PPP END WIDGET 4 PPP -->
+
+
+
+<!-- BLUFFTON CAROUSEL — Homes For Sale -->
+<section class="hhi-carousel" style="background:#0a1f38;">
+  <div class="hhi-hdr">
+    <div class="hhi-eyebrow">New to Market</div>
+    <h2>Bluffton Homes For Sale</h2>
+  </div>
+  <div class="hhi-track-wrap">
+    <button class="hhi-arrow prev disabled" id="bltPrev" onclick="bltSlide(-1)">&#8592;</button>
+    <div class="hhi-track" id="bltTrack">
+      <!-- Card 1: 91 Farnsleigh Ave -->
+      <a class="hhi-card" href="https://search.besthiltonheadproperties.com/search/detail/262656214?s[orderBy]=sourceCreationDate%2Cdesc&s[page]=1&s[locations][0][city]=Bluffton&s[locations][0][state]=SC" target="_blank">
+        <img class="hhi-card-img" src="https://d25fhp1qfwqa2h.cloudfront.net/85750a1b03fbea33f24c71450155d225,1776090568430_600_auto?phid=18999018959" alt="91 Farnsleigh Avenue Bluffton SC" loading="lazy">
+        <div class="hhi-card-overlay"></div>
+        <div class="hhi-card-info">
+          <div class="hhi-card-price">$1,400,000</div>
+          <div class="hhi-card-addr">91 Farnsleigh Avenue</div>
+          <div class="hhi-card-specs">5 BD &nbsp;&middot;&nbsp; 4 BA &nbsp;&middot;&nbsp; 3,372 SF</div>
+          <span class="hhi-card-btn">View Home &#8594;</span>
+        </div>
+      </a>
+      <!-- Card 2: 38 Newberry Court -->
+      <a class="hhi-card" href="https://search.besthiltonheadproperties.com/search/detail/262662561?s[orderBy]=sourceCreationDate%2Cdesc&s[page]=1&s[locations][0][city]=Bluffton&s[locations][0][state]=SC" target="_blank">
+        <img class="hhi-card-img" src="https://d25fhp1qfwqa2h.cloudfront.net/be1bdb43a1922cffc9d27a5c32f658d6,1776100923457_600_auto?phid=19000119647" alt="38 Newberry Court Bluffton SC" loading="lazy">
+        <div class="hhi-card-overlay"></div>
+        <div class="hhi-card-info">
+          <div class="hhi-card-price">$1,050,000</div>
+          <div class="hhi-card-addr">38 Newberry Court</div>
+          <div class="hhi-card-specs">3 BD &nbsp;&middot;&nbsp; 3 BA &nbsp;&middot;&nbsp; 2,884 SF</div>
+          <span class="hhi-card-btn">View Home &#8594;</span>
+        </div>
+      </a>
+      <!-- Card 3: 30 Heathrow Ave — pond view -->
+      <a class="hhi-card" href="https://search.besthiltonheadproperties.com/search/detail/262622906?s[orderBy]=sourceCreationDate%2Cdesc&s[page]=1&s[locations][0][city]=Bluffton&s[locations][0][state]=SC" target="_blank">
+        <img class="hhi-card-img" src="https://d25fhp1qfwqa2h.cloudfront.net/7bc78fb91726a3cea17e91533559a2bc,1776089460643_600_auto?phid=18998926480" alt="30 Heathrow Avenue Bluffton SC" loading="lazy">
+        <div class="hhi-card-overlay"></div>
+        <div class="hhi-card-info">
+          <div class="hhi-card-price">$890,000</div>
+          <div class="hhi-card-addr">30 Heathrow Avenue</div>
+          <div class="hhi-card-specs">3 BD &nbsp;&middot;&nbsp; 3 BA &nbsp;&middot;&nbsp; 2,784 SF</div>
+          <span class="hhi-card-btn">View Home &#8594;</span>
+        </div>
+      </a>
+      <!-- Card 4: 16 Baldwin Lane -->
+      <a class="hhi-card" href="https://search.besthiltonheadproperties.com/search/detail/262665175?s[orderBy]=sourceCreationDate%2Cdesc&s[page]=1&s[locations][0][city]=Bluffton&s[locations][0][state]=SC" target="_blank">
+        <img class="hhi-card-img" src="https://d25fhp1qfwqa2h.cloudfront.net/1bdf85643fce887cc65d92242dd2d344,1776100505023_600_auto?phid=19000088341" alt="16 Baldwin Lane Bluffton SC" loading="lazy">
+        <div class="hhi-card-overlay"></div>
+        <div class="hhi-card-info">
+          <div class="hhi-card-price">$849,900</div>
+          <div class="hhi-card-addr">16 Baldwin Lane</div>
+          <div class="hhi-card-specs">3 BD &nbsp;&middot;&nbsp; 3 BA &nbsp;&middot;&nbsp; 3,503 SF</div>
+          <span class="hhi-card-btn">View Home &#8594;</span>
+        </div>
+      </a>
+      <!-- Card 5: 108 Keller Springs -->
+      <a class="hhi-card" href="https://search.besthiltonheadproperties.com/search/detail/262647152?s[orderBy]=sourceCreationDate%2Cdesc&s[page]=1&s[locations][0][city]=Bluffton&s[locations][0][state]=SC" target="_blank">
+        <img class="hhi-card-img" src="https://d25fhp1qfwqa2h.cloudfront.net/9def398302bebdd45df65a0470844652,1776045801907_600_auto?phid=18997667277" alt="108 Keller Springs Bluffton SC" loading="lazy">
+        <div class="hhi-card-overlay"></div>
+        <div class="hhi-card-info">
+          <div class="hhi-card-price">$799,000</div>
+          <div class="hhi-card-addr">108 Keller Springs</div>
+          <div class="hhi-card-specs">3 BD &nbsp;&middot;&nbsp; 3 BA &nbsp;&middot;&nbsp; 3,130 SF</div>
+          <span class="hhi-card-btn">View Home &#8594;</span>
+        </div>
+      </a>
+      <!-- Card 6: 149 Rudder Run -->
+      <a class="hhi-card" href="https://search.besthiltonheadproperties.com/search/detail/262635416?s[orderBy]=sourceCreationDate%2Cdesc&s[page]=1&s[locations][0][city]=Bluffton&s[locations][0][state]=SC" target="_blank">
+        <img class="hhi-card-img" src="https://d25fhp1qfwqa2h.cloudfront.net/f7b64bcc06641b3736395166b33fcca7,1776006060630_600_auto?phid=18995888972" alt="149 Rudder Run Bluffton SC" loading="lazy">
+        <div class="hhi-card-overlay"></div>
+        <div class="hhi-card-info">
+          <div class="hhi-card-price">$675,000</div>
+          <div class="hhi-card-addr">149 Rudder Run</div>
+          <div class="hhi-card-specs">3 BD &nbsp;&middot;&nbsp; 3 BA &nbsp;&middot;&nbsp; 2,372 SF</div>
+          <span class="hhi-card-btn">View Home &#8594;</span>
+        </div>
+      </a>
+    </div>
+    <button class="hhi-arrow next" id="bltNext" onclick="bltSlide(1)">&#8594;</button>
+  </div>
+  <div class="hhi-dots" id="bltDots"></div>
+  <div class="hhi-footer">
+    <a href="https://search.besthiltonheadproperties.com/search?s[orderBy]=sourceCreationDate%2Cdesc&s[page]=1&s[locations][0][city]=Bluffton&s[locations][0][state]=SC" class="hhi-browse-btn" target="_blank">Browse All Bluffton Homes</a>
+  </div>
+</section>
+<script>
+(function(){
+  var track = document.getElementById('bltTrack');
+  var prev  = document.getElementById('bltPrev');
+  var next  = document.getElementById('bltNext');
+  var dotsEl = document.getElementById('bltDots');
+  var cards = track.querySelectorAll('.hhi-card');
+  var total = cards.length;
+  var perPage = window.innerWidth <= 600 ? 1 : window.innerWidth <= 900 ? 2 : 3;
+  var maxStep = total - perPage;
+  var step = 0;
+  function buildDots(){
+    dotsEl.innerHTML = '';
+    for(var i=0; i<=maxStep; i++){
+      var d = document.createElement('button');
+      d.className = 'hhi-dot' + (i===0?' active':'');
+      d.setAttribute('aria-label','Go to slide '+(i+1));
+      (function(idx){ d.onclick = function(){ goTo(idx); }; })(i);
+      dotsEl.appendChild(d);
+    }
+  }
+  function goTo(n){
+    step = Math.max(0, Math.min(n, maxStep));
+    var cardW = cards[0].offsetWidth + 20;
+    track.style.transform = 'translateX(-' + (step * cardW) + 'px)';
+    prev.classList.toggle('disabled', step === 0);
+    next.classList.toggle('disabled', step === maxStep);
+    dotsEl.querySelectorAll('.hhi-dot').forEach(function(d,i){ d.classList.toggle('active', i===step); });
+  }
+  window.bltSlide = function(dir){ goTo(step + dir); };
+  window.addEventListener('resize', function(){
+    perPage = window.innerWidth <= 600 ? 1 : window.innerWidth <= 900 ? 2 : 3;
+    maxStep = total - perPage;
+    step = Math.min(step, maxStep);
+    buildDots(); goTo(step);
+  });
+  buildDots(); goTo(0);
+})();
+</script>
+
 <!-- PPP COMMUNITIES FILMSTRIP — Option D PPP -->
 <section class="communities-film">
   <div class="film-hdr">
