@@ -67,6 +67,44 @@
   </div>
   <div class="hero-scroll">Scroll to discover</div>
 </section>
+<!-- ═══ WIDGET 3: HOME SEARCH WELCOME ═══ -->
+<style>
+.search-welcome {
+  background: #fff;
+  border-top: 3px solid #d4af37;
+  padding: 52px 80px;
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 56px;
+  align-items: center;
+}
+.search-welcome .sw-eyebrow { font-family: 'Montserrat', sans-serif; font-size: 10px; font-weight: 600; letter-spacing: 4px; text-transform: uppercase; color: #d4af37; margin-bottom: 12px; }
+.search-welcome h2 { font-family: 'Playfair Display', serif; font-size: clamp(22px, 2.8vw, 30px); font-weight: 500; color: #0d1f40; line-height: 1.25; margin-bottom: 16px; }
+.search-welcome p { font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: 400; color: #222; line-height: 1.75; margin-bottom: 28px; }
+.sw-btn { display: inline-block; padding: 14px 32px; background: #0d1f40; color: #fff; font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; text-decoration: none; border: none; cursor: pointer; transition: background 0.2s; }
+.sw-btn:hover { background: #1a3260; }
+.sw-video { position: relative; background: #0d1f40; aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; cursor: pointer; overflow: hidden; text-decoration: none; }
+.sw-video .sw-play { width: 56px; height: 56px; border-radius: 50%; background: rgba(212,175,55,0.9); display: flex; align-items: center; justify-content: center; transition: transform 0.2s; }
+.sw-video:hover .sw-play { transform: scale(1.08); }
+.sw-video .sw-play::after { content: ''; border-left: 18px solid #fff; border-top: 11px solid transparent; border-bottom: 11px solid transparent; margin-left: 4px; }
+.sw-video .sw-vid-label { position: absolute; bottom: 14px; left: 0; right: 0; text-align: center; color: #d4af37; font-family: 'Montserrat', sans-serif; font-size: 10px; letter-spacing: 3px; text-transform: uppercase; }
+@media (max-width: 900px) { .search-welcome { grid-template-columns: 1fr; padding: 44px 32px; gap: 32px; } }
+@media (max-width: 600px) { .search-welcome { padding: 36px 20px; } .search-welcome p { font-size: 16px; } }
+</style>
+<section class="search-welcome">
+  <div>
+    <div class="sw-eyebrow">Your Dream Home Awaits</div>
+    <h2>Start Your Exciting Hilton Head Home Search</h2>
+    <p>How exciting to start your home search journey! Explore the latest listings with our advanced home search across Hilton Head Island, Bluffton, Beaufort and the greater Lowcountry area.</p>
+    <!-- id="start-home-search" is the Google Ads conversion target — do not rename -->
+    <a href="https://search.besthiltonheadproperties.com" target="_blank" class="sw-btn" id="start-home-search">Start Home Search &rarr;</a>
+  </div>
+  <a href="videos/get-inspired.mp4" target="_blank" class="sw-video">
+    <div class="sw-play"></div>
+    <div class="sw-vid-label">&#9658; Get Inspired</div>
+  </a>
+</section>
+
 
 <!-- PPP COMMUNITIES FILMSTRIP — Option D PPP -->
 <section class="communities-film">
