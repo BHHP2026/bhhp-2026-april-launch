@@ -83,11 +83,10 @@
 .search-welcome p { font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: 400; color: #222; line-height: 1.75; margin-bottom: 28px; }
 .sw-btn { display: inline-block; padding: 14px 32px; background: #0d1f40; color: #fff; font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; text-decoration: none; border: none; cursor: pointer; transition: background 0.2s; }
 .sw-btn:hover { background: #1a3260; }
-.sw-video { position: relative; background: #0d1f40; aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; cursor: pointer; overflow: hidden; text-decoration: none; }
-.sw-video .sw-play { width: 56px; height: 56px; border-radius: 50%; background: rgba(212,175,55,0.9); display: flex; align-items: center; justify-content: center; transition: transform 0.2s; }
-.sw-video:hover .sw-play { transform: scale(1.08); }
-.sw-video .sw-play::after { content: ''; border-left: 18px solid #fff; border-top: 11px solid transparent; border-bottom: 11px solid transparent; margin-left: 4px; }
-.sw-video .sw-vid-label { position: absolute; bottom: 14px; left: 0; right: 0; text-align: center; color: #d4af37; font-family: 'Montserrat', sans-serif; font-size: 10px; letter-spacing: 3px; text-transform: uppercase; }
+.sw-video-wrap { position: relative; aspect-ratio: 16/9; overflow: hidden; background: #0d1f40; }
+.sw-video { width: 100%; height: 100%; object-fit: cover; display: block; }
+.sw-mute-btn { position: absolute; bottom: 12px; right: 12px; background: rgba(0,0,0,0.55); border: 1px solid rgba(212,175,55,0.7); color: #d4af37; font-family: 'Montserrat', sans-serif; font-size: 10px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; padding: 6px 12px; cursor: pointer; transition: background 0.2s; border-radius: 2px; }
+.sw-mute-btn:hover { background: rgba(212,175,55,0.25); }
 @media (max-width: 900px) { .search-welcome { grid-template-columns: 1fr; padding: 44px 32px; gap: 32px; } }
 @media (max-width: 600px) { .search-welcome { padding: 36px 20px; } .search-welcome p { font-size: 16px; } }
 </style>
@@ -99,10 +98,12 @@
     <!-- id="start-home-search" is the Google Ads conversion target — do not rename -->
     <a href="https://search.besthiltonheadproperties.com" target="_blank" class="sw-btn" id="start-home-search">Start Home Search &rarr;</a>
   </div>
-  <a href="videos/get-inspired.mp4" target="_blank" class="sw-video">
-    <div class="sw-play"></div>
-    <div class="sw-vid-label">&#9658; Get Inspired</div>
-  </a>
+  <div class="sw-video-wrap">
+    <video class="sw-video" id="sw-vid" autoplay muted loop playsinline>
+      <source src="videos/get-inspired.mp4" type="video/mp4">
+    </video>
+    <button class="sw-mute-btn" id="sw-mute-btn" onclick="(function(){var v=document.getElementById('sw-vid'),b=document.getElementById('sw-mute-btn');v.muted=!v.muted;b.textContent=v.muted?'🔇 Unmute':'🔊 Mute';})()">🔇 Unmute</button>
+  </div>
 </section>
 
 
