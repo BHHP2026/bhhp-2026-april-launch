@@ -102,8 +102,8 @@
     <video class="sw-video" id="sw-vid" autoplay muted loop playsinline>
       <source src="videos/get-inspired.mp4" type="video/mp4">
     </video>
-    <button class="sw-mute-btn" id="sw-mute-btn" onclick="(function(){var v=document.getElementById('sw-vid'),b=document.getElementById('sw-mute-btn');v.muted=!v.muted;b.textContent=v.muted?'🔊 Unmute':'=
- Mute';})()">🔊 Unmute</button>
+    <button class="sw-mute-btn" id="sw-mute-btn" onclick="(function(){var v=document.getElementById('sw-vid'),b=document.getElementById('sw-mute-btn');v.muted=!v.muted;b.textContent=v.muted?'ð Unmute':'=
+ Mute';})()">ð Unmute</button>
   </div>
 </section>
 
@@ -877,5 +877,21 @@
 </footer>
 
   <script src="fub-widget.js"></script>
+
+  <script>
+  // Ensure second section video autoplays when it enters the viewport
+  (function() {
+    var vid = document.getElementById('sw-vid');
+    if (!vid) return;
+    function tryPlay() { vid.muted = true; vid.play().catch(function(){}); }
+    if ('IntersectionObserver' in window) {
+      var obs = new IntersectionObserver(function(entries) {
+        if (entries[0].isIntersecting) { tryPlay(); obs.disconnect(); }
+      }, { threshold: 0.1 });
+      obs.observe(vid);
+    }
+    window.addEventListener('load', tryPlay);
+  })();
+  </script>
 </body>
 </html>
