@@ -647,7 +647,7 @@
   </div>
   <div class="buysell2-grid">
     <div class="buysell2-card">
-      <div class="buysell2-img" style="background-image: url('https://besthiltonheadproperties.com/wp-content/uploads/2022/03/Palmetto-Bluff-luxury-home-exterior-rendering-square-1-1.jpg');"></div>
+      <div class="buysell2-img" style="background-image: url('images/buysell-find-home.jpg');"></div>
       <div class="buysell2-body">
         <h3>Find Your Dream Home</h3>
         <p>Browse every listing across Hilton Head Island, Bluffton, and the surrounding Lowcountry with our advanced property search &mdash; or tell us your vision and let us curate the perfect match.</p>
@@ -655,7 +655,7 @@
       </div>
     </div>
     <div class="buysell2-card">
-      <div class="buysell2-img" style="background-image: url('https://besthiltonheadproperties.com/wp-content/uploads/2022/03/PBHomeEvaluationoption2-1-1.jpeg');"></div>
+      <div class="buysell2-img" style="background-image: url('images/buysell-home-value.jpeg');"></div>
       <div class="buysell2-body">
         <h3>What Is Your Home Worth?</h3>
         <p>Get your free, no-obligation home valuation from our market experts &mdash; backed by data analytics, cinematic marketing, and a proven record of achieving maximum sale price.</p>
@@ -876,6 +876,19 @@
   </div>
 </footer>
 
+  
+  <script>
+  (function() {
+    var vid = document.getElementById('sw-vid');
+    var btn = document.getElementById('sw-mute-btn');
+    if (vid && btn) {
+      btn.addEventListener('click', function() {
+        vid.muted = !vid.muted;
+        btn.textContent = vid.muted ? '🔊 Unmute' : '🔇 Mute';
+      });
+    }
+  })();
+  </script>
   <script src="fub-widget.js"></script>
 
   <script>
