@@ -884,9 +884,32 @@
     if (vid && btn) {
       btn.addEventListener('click', function() {
         vid.muted = !vid.muted;
-        btn.textContent = vid.muted ? '🔊 Unmute' : '🔇 Mute';
+        btn.textContent = vid.muted ? 'ð Unmute' : 'ð Mute';
       });
     }
+  })();
+  </script>
+  
+  <script>
+  (function() {
+    function fixCarouselImages() {
+      var imgs = document.querySelectorAll('.swipe-track img, img.hhi-card-img');
+      imgs.forEach(function(img) {
+        if (img.getAttribute('loading') === 'lazy') {
+          img.removeAttribute('loading');
+          if (!img.complete || img.naturalWidth === 0) {
+            var s = img.src; img.src = ''; img.src = s;
+          }
+        }
+      });
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', fixCarouselImages);
+    } else {
+      fixCarouselImages();
+    }
+    setTimeout(fixCarouselImages, 800);
+    setTimeout(fixCarouselImages, 2500);
   })();
   </script>
   <script src="fub-widget.js"></script>
