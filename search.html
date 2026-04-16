@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Properties | Best Hilton Head Properties</title>
+  <!-- Google tag (gtag.js) — fires Page Load conversion for Google Ads -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ML1LSXE9Y3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ML1LSXE9Y3');
+    gtag('config', 'AW-17591767799');
+    // Redirect quickly — Google Tag uses sendBeacon so the conversion
+    // fires even as the page navigates away. 300ms is imperceptible.
+    setTimeout(function() {
+      window.location.replace('https://search.besthiltonheadproperties.com');
+    }, 300);
+  </script>
+  <!-- Hard fallback if JS is disabled -->
+  <meta http-equiv="refresh" content="1;url=https://search.besthiltonheadproperties.com">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #0a0a0a; display: flex; align-items: center; justify-content: center; min-height: 100vh; font-family: 'Montserrat', Georgia, sans-serif; }
+    .msg { text-align: center; color: rgba(255,255,255,0.6); }
+    .spinner { width: 28px; height: 28px; border: 2px solid rgba(255,255,255,0.1); border-top-color: rgba(255,255,255,0.55); border-radius: 50%; animation: spin 0.75s linear infinite; margin: 0 auto 18px; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    p { font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; }
+  </style>
+</head>
+<body>
+  <div class="msg">
+    <div class="spinner"></div>
+    <p>Loading property search…</p>
+  </div>
+</body>
+</html>
