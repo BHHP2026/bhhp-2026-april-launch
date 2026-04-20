@@ -7,7 +7,7 @@
   <meta name="description" content="Boutique luxury real estate advisory serving Hilton Head Island &amp; Bluffton. 45 years of combined experience across five continents. Luxury homes &amp; estates in the Lowcountry.">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-ML1LSXE9Y3"></script>
-  <script>h
+  <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
@@ -111,7 +111,7 @@
     <video class="sw-video" id="sw-vid" autoplay muted loop playsinline>
       <source src="videos/get-inspired.mp4" type="video/mp4">
     </video>
-    <button class="sw-mute-btn" id="sw-mute-btn" onclick="(function(){var v=document.getElementById('sw-vid'),b=document.getElementById('sw-mute-btn');v.muted=!v.muted;b.textContent=v.muted?'UNMUTE':'MUTE';})()" >UNMUTE</button>
+    <button class="sw-mute-btn" id="sw-mute-btn">UNMUTE</button>
   </div>
 </section>
 
@@ -902,11 +902,11 @@
     if (vid && btn) {
       btn.addEventListener('click', function() {
         vid.muted = !vid.muted;
-        btn.textContent = vid.muted ? 'ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ°ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ Unmute' : 'ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ°ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ Mute';
+        btn.textContent = vid.muted ? 'UNMUTE' : 'MUTE';
       });
     }
   })();
-  </script>
+</script>
   
   <script>
   (function() {
