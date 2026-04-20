@@ -111,7 +111,7 @@
     <video class="sw-video" id="sw-vid" autoplay muted loop playsinline>
       <source src="videos/get-inspired.mp4" type="video/mp4">
     </video>
-    <button class="sw-mute-btn" id="sw-mute-btn" onclick="(function(){var v=document.getElementById('sw-vid'),b=document.getElementById('sw-mute-btn');v.muted=!v.muted;b.innerHTML=v.muted?'&#128266; Unmute':'&#128264; Mute';})()">&#128266; Unmute</button>
+    <button class="sw-mute-btn" id="sw-mute-btn" onclick="(function(){var v=document.getElementById('sw-vid'),b=document.getElementById('sw-mute-btn');v.muted=!v.muted;b.textContent=v.muted?'UNMUTE':'MUTE';})()" >UNMUTE</button>
   </div>
 </section>
 
