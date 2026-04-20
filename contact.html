@@ -8,70 +8,63 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <nav class="nav">
-    <a href="index.html" class="nav-logo"><img src="https://raw.githubusercontent.com/BHHP2026/bhhp-website-b564f/main/images/bhhp-logo-square.png" alt="Best Hilton Head Properties" class="nav-logo-img"></a>
-    <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('active')" aria-label="Menu"><span></span><span></span><span></span></button>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">Our Story</a></li>
-      <li><a href="communities.html">Communities</a></li>
-      <li><a href="https://search.besthiltonheadproperties.com" target="_blank">Search Properties</a></li>
-      <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
-    </ul>
-  </nav>
-  <section class="hero" style="background:linear-gradient(135deg,var(--teal) 0%,var(--teal-vivid) 100%);">
-    <div class="hero-content"><h1>Get in Touch</h1><p>Our advisors are ready to help you find your Hilton Head home</p></div>
-  </section>
-  <section class="section">
-    <div class="contact-grid">
-      <div class="contact-info">
-        <h3>Contact Information</h3>
-        <div style="margin-bottom:32px;"><h4 style="font-family:'Lora',serif;font-size:18px;margin-bottom:8px;">Phone</h4><a href="tel:+18435483337" style="color:var(--teal-vivid);text-decoration:none;font-size:16px;">(843) 548-3337</a></div>
-        <div style="margin-bottom:32px;"><h4 style="font-family:'Lora',serif;font-size:18px;margin-bottom:8px;">Email</h4><a href="mailto:info@besthiltonheadproperties.com" style="color:var(--teal-vivid);text-decoration:none;font-size:16px;">info@besthiltonheadproperties.com</a></div>
-        <div style="margin-bottom:32px;"><h4 style="font-family:'Lora',serif;font-size:18px;margin-bottom:8px;">Office Location</h4><p style="font-size:16px;line-height:1.6;color:#333;">Best Hilton Head Properties<br>Two Grasslawn Ave<br>Hilton Head Island, SC 29928</p></div>
-        <div><h4 style="font-family:'Lora',serif;font-size:18px;margin-bottom:8px;">Hours</h4><p style="font-size:16px;line-height:1.6;color:#333;">Monday–Friday: 9:00 AM–5:00 PM<br>Saturday: By Appointment<br>Sunday: Closed</p></div>
-      </div>
-      <div class="contact-form-wrapper">
-        <form class="contact-form" id="bhhp-contact-form">
-          <div class="form-group"><label for="name">Full Name</label><input type="text" id="name" name="name" placeholder="Your name" required></div>
-          <div class="form-group"><label for="email">Email Address</label><input type="email" id="email" name="email" placeholder="your@email.com" required></div>
-          <div class="form-group"><label for="phone">Phone Number</label><input type="tel" id="phone" name="phone" placeholder="(843) 548-3337"></div>
-          <div class="form-group"><label for="interest">I'm interested in</label><select id="interest" name="interest" required><option value="">Select an option</option><option value="buying">Buying a property</option><option value="selling">Selling a property</option><option value="both">Buying &amp; Selling</option><option value="other">Other inquiry</option></select></div>
-          <div class="form-group"><label for="message">Message</label><textarea id="message" name="message" placeholder="Tell us more about what you're looking for..." rows="5"></textarea></div>
-          <button type="submit" class="form-submit" id="submit-btn">Send Message</button>
-          <div id="form-status" style="display:none;margin-top:16px;padding:12px 16px;border-radius:6px;font-size:15px;font-family:'Montserrat',sans-serif;"></div>
-        </form>
-      </div>
+<nav class="nav">
+  <a href="index.html" class="nav-logo"><img src="https://raw.githubusercontent.com/BHHP2026/bhhp-website-b564f/main/images/bhhp-logo-square.png" alt="Best Hilton Head Properties" class="nav-logo-img"></a>
+  <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('active')" aria-label="Menu"><span></span><span></span><span></span></button>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">Our Story</a></li>
+    <li><a href="communities.html">Communities</a></li>
+    <li><a href="https://search.besthiltonheadproperties.com" target="_blank">Search Properties</a></li>
+    <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+  </ul>
+</nav>
+
+<section class="page-hero">
+  <div class="hero-bg" style="background-image: url('sea_pines_harbour_town marina.jpg');"></div>
+  <div class="page-hero-content">
+    <p class="hero-eyebrow">Contact Us</p>
+    <h1>Get in Touch</h1>
+    <p>Our advisors are ready to help you find your Hilton Head home</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="contact-grid">
+    <div class="contact-info">
+      <h3>Contact Information</h3>
+      <div style="margin-bottom:32px;"><h4 style="font-family:'Lora',serif;font-size:18px;margin-bottom:8px;">Phone</h4><a href="tel:+18435483337" style="color:var(--teal-vivid);text-decoration:none;font-size:16px;">(843) 548-3337</a></div>
+      <div style="margin-bottom:32px;"><h4 style="font-family:'Lora',serif;font-size:18px;margin-bottom:8px;">Email</h4><a href="mailto:info@besthiltonheadproperties.com" style="color:var(--teal-vivid);text-decoration:none;font-size:16px;">info@besthiltonheadproperties.com</a></div>
+      <div style="margin-bottom:32px;"><h4 style="font-family:'Lora',serif;font-size:18px;margin-bottom:8px;">Office Location</h4><p style="font-size:16px;line-height:1.6;color:#333;">Best Hilton Head Properties<br>Two Grasslawn Ave<br>Hilton Head Island, SC 29928</p></div>
+      <div><h4 style="font-family:'Lora',serif;font-size:18px;margin-bottom:8px;">Hours</h4><p style="font-size:16px;line-height:1.6;color:#333;">Monday–Friday: 9:00 AM–5:00 PM<br>Saturday: By Appointment<br>Sunday: Closed</p></div>
     </div>
-  </section>
-  <script>
-  document.getElementById('bhhp-contact-form').addEventListener('submit', async function(e) {
-    e.preventDefault();
-    var btn=document.getElementById('submit-btn'),status=document.getElementById('form-status');
-    btn.textContent='Sending...';btn.disabled=true;
-    var fn=document.getElementById('name').value.trim().split(' ');
-    var payload={source:'Website Contact Form',system:'BHHP Website',type:'Registration',
-      person:{firstName:fn[0]||'',lastName:fn.slice(1).join(' ')||'',
-        emails:[{value:document.getElementById('email').value.trim()}],
-        phones:document.getElementById('phone').value.trim()?[{value:document.getElementById('phone').value.trim()}]:[]},
-      message:({buying:'Buying a property',selling:'Selling a property',both:'Buying & Selling',other:'Other inquiry'}[document.getElementById('interest').value]?'Interest: '+{buying:'Buying a property',selling:'Selling a property',both:'Buying & Selling',other:'Other inquiry'}[document.getElementById('interest').value]+'. ':'')+document.getElementById('message').value.trim(),
-      note:'Lead came from BHHP Website Contact Form'};
-    try {
-      var res=await fetch('https://api.followupboss.com/v1/events',{method:'POST',headers:{'Content-Type':'application/json','Authorization':'Basic '+btoa('fka_00PZ9NnsZnfoBjSx4winnPJQdAlvnVfnSR:')},body:JSON.stringify(payload)});
-      if(res.ok||res.status===201){status.style.cssText='display:block;margin-top:16px;padding:12px 16px;border-radius:6px;font-size:15px;background:#e8f5e9;color:#2e7d32;';status.textContent='Thank you! We’ll be in touch within 24 hours.';this.reset();btn.textContent='Message Sent ✓';}
-      else throw new Error('status '+res.status);
-    } catch(err){status.style.cssText='display:block;margin-top:16px;padding:12px 16px;border-radius:6px;font-size:15px;background:#fff3e0;color:#e65100;';status.textContent='Something went wrong. Please call us at (843) 548-3337.';btn.textContent='Send Message';btn.disabled=false;}
-  });
-  </script>
-  <script src="fub-widget.js"></script>
-  <footer class="footer">
-    <div class="footer-grid">
-      <div class="footer-brand"><a href="index.html"><img src="https://raw.githubusercontent.com/BHHP2026/bhhp-website-b564f/main/images/bhhp-logo-square.png" alt="Best Hilton Head Properties" class="nav-logo-img" style="height:64px;width:auto;display:block;"></a><p style="margin-top:16px;">Boutique luxury real estate advisory serving Hilton Head Island, Bluffton, and the surrounding Lowcountry.</p></div>
-      <div class="footer-col"><h4>Navigate</h4><a href="index.html">Home</a><a href="about.html">Our Story</a><a href="communities.html">Communities</a><a href="contact.html">Contact</a></div>
-      <div class="footer-col"><h4>Communities</h4><a href="communities/sea-pines.html">Sea Pines Resort</a><a href="communities/palmetto-bluff.html">Palmetto Bluff</a><a href="communities/colleton-river.html">Colleton River</a><a href="communities/wexford.html">Wexford Plantation</a><a href="communities/berkeley-hall.html">Berkeley Hall</a><a href="communities/hampton-lake.html">Hampton Lake</a></div>
-      <div class="footer-col"><h4>Contact</h4><a href="tel:+18435483337">(843) 548-3337</a><a href="mailto:info@besthiltonheadproperties.com">info@besthiltonheadproperties.com</a><a href="https://search.besthiltonheadproperties.com" target="_blank">Search Properties</a></div>
+    <div class="contact-form-wrapper">
+      <form class="contact-form" id="bhhp-contact-form">
+        <div class="form-group"><label for="name">Full Name</label><input type="text" id="name" name="name" placeholder="Your name" required></div>
+        <div class="form-group"><label for="email">Email Address</label><input type="email" id="email" name="email" placeholder="your@email.com" required></div>
+        <div class="form-group"><label for="phone">Phone Number</label><input type="tel" id="phone" name="phone" placeholder="(843) 548-3337"></div>
+        <div class="form-group"><label for="interest">I'm interested in</label><select id="interest" name="interest" required><option value="">Select an option</option><option value="buying">Buying a property</option><option value="selling">Selling a property</option><option value="both">Buying &amp; Selling</option><option value="other">Other inquiry</option></select></div>
+        <div class="form-group"><label for="message">Message</label><textarea id="message" name="message" placeholder="Tell us more about what you're looking for..." rows="5"></textarea></div>
+        <button type="submit" class="form-submit" id="submit-btn">Send Message</button>
+        <div id="form-status" style="display:none;margin-top:16px;padding:12px 16px;border-radius:6px;font-size:15px;font-family:'Montserrat',sans-serif;"></div>
+      </form>
     </div>
-    <div class="footer-bottom"><p>&copy; 2026 Best Hilton Head Properties. All rights reserved. Licensed in South Carolina.</p></div>
-  </footer>
+  </div>
+</section>
+
+<script>
+document.getElementById('bhhp-contact-form').addEventListener('submit', async function(e) { e.preventDefault(); var btn=document.getElementById('submit-btn'),status=document.getElementById('form-status'); btn.textContent='Sending...';btn.disabled=true; var fn=document.getElementById('name').value.trim().split(' '); var payload={source:'Website Contact Form',system:'BHHP Website',type:'Registration', person:{firstName:fn[0]||'',lastName:fn.slice(1).join(' ')||'', emails:[{value:document.getElementById('email').value.trim()}], phones:document.getElementById('phone').value.trim()?[{value:document.getElementById('phone').value.trim()}]:[]}, message:({buying:'Buying a property',selling:'Selling a property',both:'Buying & Selling',other:'Other inquiry'}[document.getElementById('interest').value]?'Interest: '+{buying:'Buying a property',selling:'Selling a property',both:'Buying & Selling',other:'Other inquiry'}[document.getElementById('interest').value]+'. ':'')+document.getElementById('message').value.trim(), note:'Lead came from BHHP Website Contact Form'}; try { var res=await fetch('https://api.followupboss.com/v1/events',{method:'POST',headers:{'Content-Type':'application/json','Authorization':'Basic '+btoa('fka_00PZ9NnsZnfoBjSx4winnPJQdAlvnVfnSR:')},body:JSON.stringify(payload)}); if(res.ok||res.status===201){status.style.cssText='display:block;margin-top:16px;padding:12px 16px;border-radius:6px;font-size:15px;background:#e8f5e9;color:#2e7d32;';status.textContent='Thank you! We’ll be in touch within 24 hours.';this.reset();btn.textContent='Message Sent ✓';} else throw new Error('status '+res.status); } catch(err){status.style.cssText='display:block;margin-top:16px;padding:12px 16px;border-radius:6px;font-size:15px;background:#fff3e0;color:#e65100;';status.textContent='Something went wrong. Please call us at (843) 548-3337.';btn.textContent='Send Message';btn.disabled=false;} });
+</script>
+<script src="fub-widget.js"></script>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand"><a href="index.html"><img src="https://raw.githubusercontent.com/BHHP2026/bhhp-website-b564f/main/images/bhhp-logo-square.png" alt="Best Hilton Head Properties" class="nav-logo-img" style="height:64px;width:auto;display:block;"></a><p style="margin-top:16px;">Boutique luxury real estate advisory serving Hilton Head Island, Bluffton, and the surrounding Lowcountry.</p></div>
+    <div class="footer-col"><h4>Navigate</h4><a href="index.html">Home</a><a href="about.html">Our Story</a><a href="communities.html">Communities</a><a href="contact.html">Contact</a></div>
+    <div class="footer-col"><h4>Communities</h4><a href="communities/sea-pines.html">Sea Pines Resort</a><a href="communities/palmetto-bluff.html">Palmetto Bluff</a><a href="communities/colleton-river.html">Colleton River</a><a href="communities/wexford.html">Wexford Plantation</a><a href="communities/berkeley-hall.html">Berkeley Hall</a><a href="communities/hampton-lake.html">Hampton Lake</a></div>
+    <div class="footer-col"><h4>Contact</h4><a href="tel:+18435483337">(843) 548-3337</a><a href="mailto:info@besthiltonheadproperties.com">info@besthiltonheadproperties.com</a><a href="https://search.besthiltonheadproperties.com" target="_blank">Search Properties</a></div>
+  </div>
+  <div class="footer-bottom"><p>&copy; 2026 Best Hilton Head Properties. All rights reserved. Licensed in South Carolina.</p></div>
+</footer>
 </body>
 </html>
