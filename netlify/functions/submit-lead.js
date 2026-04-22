@@ -21,10 +21,10 @@ exports.handler = async function(event, context) {
     const response = await fetch('https://api.followupboss.com/v1/events', {
       method: 'POST',
       headers: {
-        'Authorization': 'Basic ' + Buffer.from('fka_00PZ9NJ91V1pdN3m9klrI3PECX2ZJI4NIQ:').toString('base64'),
+        'Authorization': 'Basic ' + Buffer.from('fka_00PZ9NggpZuKgSEyOBkC52EZxd1Z09hIWi:').toString('base64'),
         'Content-Type': 'application/json',
         'X-System': 'bhhp website popup',
-        'X-System-Key': 'fka_00PZ9NJ91V1pdN3m9klrI3PECX2ZJI4NIQ'
+        'X-System-Key': 'fka_00PZ9NggpZuKgSEyOBkC52EZxd1Z09hIWi'
       },
       body: JSON.stringify(data)
     });
