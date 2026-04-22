@@ -18,6 +18,90 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+
+  <!-- ══ BHHP HOMEPAGE POPUP ══ -->
+  <style id="bhhp-popup-styles">
+    #bhhp-popup-overlay {
+      position:fixed;inset:0;z-index:9000;background:rgba(0,0,0,0.65);
+      display:flex;align-items:center;justify-content:center;padding:20px;
+      animation:bhhpFadeIn 0.35s ease;
+    }
+    @keyframes bhhpFadeIn{from{opacity:0}to{opacity:1}}
+    #bhhp-popup-box {
+      position:relative;width:100%;max-width:520px;border-radius:2px;
+      overflow:hidden;animation:bhhpSlideUp 0.4s cubic-bezier(0.22,1,0.36,1);
+      box-shadow:0 30px 80px rgba(0,0,0,0.5);
+    }
+    @keyframes bhhpSlideUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+    #bhhp-popup-bg {
+      position:absolute;inset:0;
+      background-image:url('https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=900&q=85');
+      background-size:cover;background-position:center 25%;
+    }
+    #bhhp-popup-bg-overlay {
+      position:absolute;inset:0;
+      background:linear-gradient(160deg,rgba(5,15,10,0.88) 0%,rgba(10,25,15,0.82) 100%);
+    }
+    #bhhp-popup-close {
+      position:absolute;top:14px;right:16px;z-index:10;
+      background:none;border:none;cursor:pointer;
+      color:rgba(255,255,255,0.4);font-size:20px;line-height:1;
+      transition:color 0.2s;padding:4px;font-family:sans-serif;
+    }
+    #bhhp-popup-close:hover{color:#fff;}
+    #bhhp-popup-inner {
+      position:relative;z-index:2;padding:40px 36px 32px;
+      font-family:'Inter',sans-serif;
+    }
+    #bhhp-popup-inner .bp-eyebrow {
+      font-size:9px;letter-spacing:0.3em;text-transform:uppercase;
+      color:#c8a96e;margin-bottom:16px;display:block;
+    }
+    #bhhp-popup-inner h2 {
+      font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:400;
+      color:#fff;line-height:1.15;margin-bottom:10px;font-style:italic;
+    }
+    #bhhp-popup-inner .bp-sub {
+      font-size:13px;color:rgba(255,255,255,0.55);font-weight:300;
+      line-height:1.65;margin-bottom:28px;
+    }
+    .bp-field-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px;}
+    .bp-field-full{margin-bottom:10px;}
+    #bhhp-popup-inner input,#bhhp-popup-inner textarea {
+      width:100%;background:rgba(255,255,255,0.07);
+      border:1px solid rgba(255,255,255,0.15);color:#fff;font-size:13px;
+      font-family:'Inter',sans-serif;font-weight:300;padding:12px 16px;
+      outline:none;transition:border-color 0.2s,background 0.2s;
+      letter-spacing:0.02em;border-radius:1px;box-sizing:border-box;
+    }
+    #bhhp-popup-inner input::placeholder,#bhhp-popup-inner textarea::placeholder{color:rgba(255,255,255,0.28);}
+    #bhhp-popup-inner input:focus,#bhhp-popup-inner textarea:focus{border-color:#c8a96e;background:rgba(255,255,255,0.1);}
+    #bhhp-popup-inner input.bp-error{border-color:#e07070!important;background:rgba(255,100,100,0.08)!important;}
+    #bhhp-popup-inner textarea{resize:none;height:68px;line-height:1.5;}
+    #bp-submit {
+      width:100%;margin-top:16px;background:#c8a96e;color:#0d1a08;border:none;
+      font-family:'Inter',sans-serif;font-size:11px;font-weight:600;
+      letter-spacing:0.22em;text-transform:uppercase;padding:16px;
+      cursor:pointer;transition:all 0.2s;border-radius:1px;
+    }
+    #bp-submit:hover:not(:disabled){background:#dfc080;transform:translateY(-1px);}
+    #bp-submit:disabled{opacity:0.7;cursor:default;}
+    #bp-val-msg{font-size:10px;color:#e07070;margin-top:8px;text-align:center;letter-spacing:0.05em;display:none;}
+    .bp-fine{font-size:10px;color:rgba(255,255,255,0.25);text-align:center;margin-top:12px;letter-spacing:0.05em;line-height:1.6;}
+    .bp-fine span{color:rgba(200,169,110,0.6);}
+    .bp-skip{display:block;text-align:center;margin-top:14px;font-size:11px;color:rgba(255,255,255,0.25);cursor:pointer;letter-spacing:0.08em;transition:color 0.2s;text-decoration:underline;text-underline-offset:3px;}
+    .bp-skip:hover{color:rgba(255,255,255,0.5);}
+    #bhhp-popup-success{position:relative;z-index:2;padding:60px 36px;text-align:center;display:none;font-family:'Inter',sans-serif;}
+    .bp-success-icon{width:48px;height:48px;border:1px solid #c8a96e;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 24px;font-size:20px;color:#c8a96e;}
+    #bhhp-popup-success h3{font-family:'Cormorant Garamond',serif;font-size:32px;color:#fff;font-weight:400;margin-bottom:12px;font-style:italic;}
+    #bhhp-popup-success p{font-size:13px;color:rgba(255,255,255,0.5);line-height:1.7;max-width:300px;margin:0 auto;}
+    @media(max-width:480px){
+      #bhhp-popup-box{max-width:100%;}
+      #bhhp-popup-inner{padding:32px 24px 26px;}
+      #bhhp-popup-inner h2{font-size:30px;}
+      .bp-field-row{grid-template-columns:1fr;}
+    }
+  </style>
 </head>
 <body>
 
@@ -946,6 +1030,94 @@
     }
     window.addEventListener('load', tryPlay);
   })();
+  </script>
+
+  <!-- ══ BHHP HOMEPAGE POPUP — wired to FUB + Google Ads ══ -->
+  <div id="bhhp-popup-overlay" style="display:none;">
+    <div id="bhhp-popup-box">
+      <div id="bhhp-popup-bg"></div>
+      <div id="bhhp-popup-bg-overlay"></div>
+      <button id="bhhp-popup-close" onclick="bhhpClosePopup()" aria-label="Close">✕</button>
+      <div id="bhhp-popup-inner">
+        <span class="bp-eyebrow">Hilton Head Island · Private Collection</span>
+        <h2>Your Hilton Head home,<br>hand-picked for you.</h2>
+        <p class="bp-sub">Tell us what you're looking for and we'll personally text you hand-picked Hilton Head listings — curated by a local expert.</p>
+        <div class="bp-field-row">
+          <input type="text" id="bp-name" placeholder="Your Name">
+          <input type="tel" id="bp-phone" placeholder="Phone Number">
+        </div>
+        <div class="bp-field-full">
+          <input type="email" id="bp-email" placeholder="Email Address">
+        </div>
+        <div class="bp-field-full">
+          <textarea id="bp-message" placeholder="What are you looking for? (optional) e.g. 3-bed with pool, Sea Pines, under $2M..."></textarea>
+        </div>
+        <div id="bp-val-msg">Please enter your name and phone number.</div>
+        <button id="bp-submit" onclick="bhhpSubmitPopup()">Text Me Listings →</button>
+        <p class="bp-fine">No spam. <span>Just homes worth your time.</span><br>We'll reach out personally within 24 hours.</p>
+        <span class="bp-skip" onclick="bhhpClosePopup()">I'll browse on my own for now</span>
+      </div>
+      <div id="bhhp-popup-success">
+        <div class="bp-success-icon">✓</div>
+        <h3>You're all set.</h3>
+        <p>We'll personally text you Hilton Head listings that match what you're looking for. Expect to hear from us soon.</p>
+      </div>
+    </div>
+  </div>
+  <script>
+    // Show popup after 6 seconds (only once per session)
+    if (!sessionStorage.getItem('bhhp_popup_seen')) {
+      setTimeout(function() {
+        document.getElementById('bhhp-popup-overlay').style.display = 'flex';
+      }, 6000);
+    }
+    function bhhpClosePopup() {
+      document.getElementById('bhhp-popup-overlay').style.display = 'none';
+      sessionStorage.setItem('bhhp_popup_seen', '1');
+    }
+    async function bhhpSubmitPopup() {
+      var name    = document.getElementById('bp-name').value.trim();
+      var phone   = document.getElementById('bp-phone').value.trim();
+      var email   = document.getElementById('bp-email').value.trim();
+      var message = document.getElementById('bp-message').value.trim();
+      var valMsg  = document.getElementById('bp-val-msg');
+      var btn     = document.getElementById('bp-submit');
+      ['bp-name','bp-phone'].forEach(function(id){ document.getElementById(id).classList.remove('bp-error'); });
+      valMsg.style.display = 'none';
+      if (!name || !phone) {
+        if (!name)  document.getElementById('bp-name').classList.add('bp-error');
+        if (!phone) document.getElementById('bp-phone').classList.add('bp-error');
+        valMsg.style.display = 'block';
+        return;
+      }
+      btn.disabled = true; btn.textContent = 'Sending...';
+      try {
+        var parts = name.split(' ');
+        await fetch('https://api.followupboss.com/v1/events', {
+          method: 'POST',
+          headers: {
+            'Authorization': 'Basic ' + btoa('fka_00PZ9NJ91V1pdN3m9klrI3PECX2ZJI4NIQ:'),
+            'Content-Type': 'application/json',
+            'X-System': 'bhhp website popup',
+            'X-System-Key': 'fka_00PZ9NJ91V1pdN3m9klrI3PECX2ZJI4NIQ'
+          },
+          body: JSON.stringify({
+            source: 'BHHP Homepage Popup', system: 'bhhp website popup', type: 'Property Inquiry',
+            person: {
+              firstName: parts[0], lastName: parts.slice(1).join(' '),
+              phones: [{value: phone, type: 'mobile'}],
+              emails: email ? [{value: email}] : []
+            },
+            message: message || (name + ' submitted the BHHP homepage popup requesting hand-picked Hilton Head listings.')
+          })
+        });
+      } catch(e) { console.warn('FUB error:', e); }
+      try { gtag('event','conversion',{'send_to':'AW-17591767799/9w02CI3b1J8cEPeltMRB'}); } catch(e) {}
+      document.getElementById('bhhp-popup-inner').style.display = 'none';
+      document.getElementById('bhhp-popup-success').style.display = 'block';
+      sessionStorage.setItem('bhhp_popup_seen','1');
+      setTimeout(bhhpClosePopup, 3500);
+    }
   </script>
 </body>
 </html>
