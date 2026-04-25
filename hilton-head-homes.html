@@ -6,6 +6,14 @@
   <meta name="robots" content="noindex, nofollow">
   <title>Hilton Head Island Homes $500K–$1M — Best Hilton Head Properties</title>
   <script>(function(){var p=new URLSearchParams(window.location.search);if(!p.get('utm_source')&&!p.get('utm_medium')&&!p.get('utm_campaign')&&!p.get('gclid')){window.location.replace('https://besthiltonheadproperties.com');}})();</script>
+  <!-- Google Ads Global Tag -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17591767799"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-17591767799');
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Bodoni+Moda:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -333,7 +341,7 @@
     e.preventDefault();
     const btn = hf.querySelector('.btn-sub'); btn.textContent='Sending…'; btn.disabled=true;
     const fd = new FormData(hf);
-    try { const r = await fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(fd).toString()}); if(r.ok){hfw.style.display='none';hty.style.display='block';} else throw new Error(); }
+    try { const r = await fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(fd).toString()}); if(r.ok){hfw.style.display='none';hty.style.display='block';if(typeof gtag!=='undefined'){gtag('event','conversion',{'send_to':'AW-17591767799/mgMCC0_2sKIcEPeltMRB'});}} else throw new Error(); }
     catch { hfw.style.display='none'; hty.style.display='block'; }
   });
 
@@ -344,7 +352,7 @@
     e.preventDefault();
     const btn = document.getElementById('bf-btn'); btn.textContent='Sending…'; btn.disabled=true;
     const fd = new FormData(bf);
-    try { const r = await fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(fd).toString()}); if(r.ok){bf.style.display='none';bty.style.display='block';} else throw new Error(); }
+    try { const r = await fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(fd).toString()}); if(r.ok){bf.style.display='none';bty.style.display='block';if(typeof gtag!=='undefined'){gtag('event','conversion',{'send_to':'AW-17591767799/mgMCC0_2sKIcEPeltMRB'});}} else throw new Error(); }
     catch { bf.style.display='none'; bty.style.display='block'; }
   });
 
