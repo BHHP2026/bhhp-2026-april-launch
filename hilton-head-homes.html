@@ -176,7 +176,7 @@
       <div id="hero-form-wrap">
         <div class="fc-title">See Homes in Your Budget</div>
         <p class="fc-sub">Tell us what you need — we'll send matched listings within 2 hours, including units not yet on Zillow.</p>
-        <form id="hero-form" name="hhi-500k-leads" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <form id="hero-form" name="hhi-500k-leads" method="POST">
           <input type="hidden" name="form-name" value="hhi-500k-leads">
           <input type="hidden" name="source" value="Google Ads – HHI 500K-1M">
           <p style="display:none"><input name="bot-field"></p>
@@ -292,7 +292,7 @@
       <p class="bf-body">Talita will personally reach out within 2 hours with homes matched to your budget and timeline — including units that aren't listed publicly yet.</p>
     </div>
     <div>
-      <form id="bf-form" name="hhi-500k-leads-b" method="POST" data-netlify="true" netlify-honeypot="bf-bot">
+      <form id="bf-form" name="hhi-500k-leads-b" method="POST">
         <input type="hidden" name="form-name" value="hhi-500k-leads-b">
         <input type="hidden" name="source" value="Google Ads – HHI 500K-1M Bottom">
         <p style="display:none"><input name="bf-bot"></p>
@@ -341,7 +341,7 @@
     e.preventDefault();
     const btn = hf.querySelector('.btn-sub'); btn.textContent='Sending…'; btn.disabled=true;
     const fd = new FormData(hf);
-    try { const r = await fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(fd).toString()}); if(r.ok){hfw.style.display='none';hty.style.display='block';if(typeof gtag!=='undefined'){gtag('event','conversion',{'send_to':'AW-17591767799/mgMCC0_2sKIcEPeltMRB'});}} else throw new Error(); }
+    try { const r = await fetch('/.netlify/functions/submit-lead',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name:((fd.get('first-name')||fd.get('name')||'').trim()+' '+(fd.get('last-name')||'').trim()).trim(),source:'Website Contact Form',system:'bhhp website popup',type:'Property Inquiry',person:{firstName:(fd.get('first-name')||fd.get('name')||'').trim(),lastName:(fd.get('last-name')||'').trim(),phones:(fd.get('phone')||'')?[{value:(fd.get('phone')||'').trim(),type:'mobile'}]:[],emails:(fd.get('email')||'')?[{value:(fd.get('email')||'').trim(),type:'work'}]:[]}})}); if(r.ok){hfw.style.display='none';hty.style.display='block';if(typeof gtag!=='undefined'){gtag('event','conversion',{'send_to':'AW-17591767799/mgMCC0_2sKIcEPeltMRB'});}} else throw new Error(); }
     catch { hfw.style.display='none'; hty.style.display='block'; }
   });
 
@@ -352,7 +352,7 @@
     e.preventDefault();
     const btn = document.getElementById('bf-btn'); btn.textContent='Sending…'; btn.disabled=true;
     const fd = new FormData(bf);
-    try { const r = await fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(fd).toString()}); if(r.ok){bf.style.display='none';bty.style.display='block';if(typeof gtag!=='undefined'){gtag('event','conversion',{'send_to':'AW-17591767799/mgMCC0_2sKIcEPeltMRB'});}} else throw new Error(); }
+    try { const r = await fetch('/.netlify/functions/submit-lead',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name:((fd.get('first-name')||fd.get('name')||'').trim()+' '+(fd.get('last-name')||'').trim()).trim(),source:'Website Contact Form',system:'bhhp website popup',type:'Property Inquiry',person:{firstName:(fd.get('first-name')||fd.get('name')||'').trim(),lastName:(fd.get('last-name')||'').trim(),phones:(fd.get('phone')||'')?[{value:(fd.get('phone')||'').trim(),type:'mobile'}]:[],emails:(fd.get('email')||'')?[{value:(fd.get('email')||'').trim(),type:'work'}]:[]}})}); if(r.ok){bf.style.display='none';bty.style.display='block';if(typeof gtag!=='undefined'){gtag('event','conversion',{'send_to':'AW-17591767799/mgMCC0_2sKIcEPeltMRB'});}} else throw new Error(); }
     catch { bf.style.display='none'; bty.style.display='block'; }
   });
 
@@ -368,5 +368,5 @@
     a.addEventListener('click',function(e){const t=document.querySelector(this.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'});}});
   });
 </script>
-</body>
+<script>function submitToFUB(form, wrapId, tyId) {
 </html>
