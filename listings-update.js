@@ -179,18 +179,43 @@
     return true;
   }
 
+  /* ── HHI carousel reorder ──────────────────────────────────
+     Pin 201 Jonesville Road first; all other cards keep order.
+  ─────────────────────────────────────────────────────────── */
+  function reorderHHI() {
+    var tracks = document.querySelectorAll('.hhi-track');
+    if (!tracks.length) return false;
+
+    var track = tracks[0]; // HHI is the first hhi-track
+    var cards = Array.from(track.querySelectorAll('.hhi-card'));
+    if (!cards.length) return false;
+
+    function addrOf(card) {
+      var el = card.querySelector('.hhi-card-addr');
+      return el ? el.textContent.trim().toLowerCase() : '';
+    }
+
+    var firstCard = cards.find(function (c) { return addrOf(c).indexOf('201 jonesville') !== -1; });
+    if (!firstCard) return false;
+
+    if (track.firstChild !== firstCard) track.insertBefore(firstCard, track.firstChild);
+    return true;
+  }
+
   /* ── Run with retry (in case carousel renders after DOMContentLoaded) ─── */
   function run() {
     var replaced = applyReplacements();
+    var reorderedH = reorderHHI();
     var reordered = reorderBluffton();
 
-    if (replaced || reordered) return;
+    if (replaced || reorderedH || reordered) return;
 
     var attempts = 0;
     var timer = setInterval(function () {
       var r1 = applyReplacements();
+      var r0 = reorderHHI();
       var r2 = reorderBluffton();
-      if ((r1 || r2) || ++attempts >= 15) {
+      if ((r1 || r0 || r2) || ++attempts >= 15) {
         clearInterval(timer);
       }
     }, 300);
