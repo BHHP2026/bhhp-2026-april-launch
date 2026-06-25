@@ -22,7 +22,7 @@
       price: '$3,995,000',
       addr:  '10 Wexford Drive',
       specs: '6 BD  |  7 BA  |  5,513 SF',
-      img:   'https://d25fhp1qfwqa2h.cloudfront.net/122a7238f04f1eda1dd445b4f134db19,1781772336170_auto_650',
+      img:   'https://d25fhp1qfwqa2h.cloudfront.net/122a7238f04f1eda1dd445b4f134db19,1781772336170_auto_294',
       url:   'https://search.besthiltonheadproperties.com/search/detail/266332790?s[orderBy]=sourceCreationDate%2Cdesc&s[page]=1&s[locations][0][city]=Hilton%20Head%20Island&s[locations][0][state]=SC',
     },
     {
