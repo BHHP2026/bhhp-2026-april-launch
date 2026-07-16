@@ -76,11 +76,11 @@
     },
     {
       find:  '149 Rudder Run',            // card slot 5
-      price: '$349,000',
-      addr:  '4 Nob Hill Court',
-      specs: '4 BD  ·  3 BA  ·  1,860 SF',
-      img:   'https://d25fhp1qfwqa2h.cloudfront.net/581548b3567295e36f61885924d29936,1784089220323_auto_650',
-      url:   'https://search.besthiltonheadproperties.com/search/detail/267263087?s[orderBy]=sourceCreationDate%2Cdesc&s[page]=1&s[locations][0][city]=Bluffton&s[locations][0][state]=SC',
+      price: '$1,225,000',
+      addr:  '2 Rice Mill Road',
+      specs: '4 BD  ·  5 BA  ·  2,783 SF',
+      img:   'https://d25fhp1qfwqa2h.cloudfront.net/21066b04c8952671a44bb3e72bb74141,1784113860653_auto_650',
+      url:   'https://search.besthiltonheadproperties.com/search/detail/267262866?s[orderBy]=sourceCreationDate%2Cdesc&s[page]=1&s[locations][0][city]=Bluffton&s[locations][0][state]=SC',
     },
     // ── Add more swaps here as needed ─────────────────────
   ];
