@@ -19,27 +19,27 @@
     // ── Hilton Head Island (HHI cards use | separator) ───────
     {
       find:  '100 Harbour Passage',       // card slot 2
-      price: '$5,900,000',
-      addr:  '10 Bald Eagle Road',
-      specs: '7 BD  |  7 BA  |  5,203 SF',
-      img:   'https://d25fhp1qfwqa2h.cloudfront.net/52d266bac61d2bacf720900e06e2c7d7,1784773560780_auto_650',
-      url:   'https://search.besthiltonheadproperties.com/search/detail/267565988?s[orderBy]=sourceCreationDate%2Cdesc&s[page]=1&s[locations][0][city]=Hilton%20Head%20Island&s[locations][0][state]=SC',
+      price: '$9,495,000',
+      addr:  '52 Canvasback Road',
+      specs: '4 BD  |  5 BA  |  4,025 SF',
+      img:   'https://d25fhp1qfwqa2h.cloudfront.net/64ae77744f344eb4d4f03997bd673e2b,1781634544220_auto_650',
+      url:   'https://search.besthiltonheadproperties.com/search/detail/259252093?s[orderBy]=sourceCreationDate%2Cdesc&s[page]=1&s[locations][0][city]=Hilton%20Head%20Island&s[locations][0][state]=SC',
     },
     {
       find:  '44 Sparwheel Lane',         // card slot 4
-      price: '$1,875,000',
-      addr:  '50 Plantation Drive',
-      specs: '3 BD  |  4 BA  |  2,721 SF',
-      img:   'https://d25fhp1qfwqa2h.cloudfront.net/b163c2acebd88d6849dfa24d3ec9ed70,1784743682513_auto_650',
-      url:   'https://search.besthiltonheadproperties.com/search/detail/267546372?s[orderBy]=sourceCreationDate%2Cdesc&s[page]=1&s[locations][0][city]=Hilton%20Head%20Island&s[locations][0][state]=SC',
+      price: '$7,400,000',
+      addr:  '3 Stella Del Mare Manor',
+      specs: '4 BD  |  6 BA  |  5,831 SF',
+      img:   'https://d25fhp1qfwqa2h.cloudfront.net/be136b5e1dad462660578c11274f83b7,1784145672990_auto_650',
+      url:   'https://search.besthiltonheadproperties.com/search/detail/267293924?s[orderBy]=sourceCreationDate%2Cdesc&s[page]=1&s[locations][0][city]=Hilton%20Head%20Island&s[locations][0][state]=SC',
     },
     {
       find:  '219 Jonesville Road',       // card slot 5
-      price: '$1,195,000',
-      addr:  '9 Wild Holly Court',
-      specs: '3 BD  |  3 BA  |  2,244 SF',
-      img:   'https://d25fhp1qfwqa2h.cloudfront.net/8177a7a6f7e69af93feb228fb9393d02,1784838380040_auto_650',
-      url:   'https://search.besthiltonheadproperties.com/search/detail/267652065?s[orderBy]=sourceCreationDate%2Cdesc&s[page]=1&s[locations][0][city]=Hilton%20Head%20Island&s[locations][0][state]=SC',
+      price: '$3,999,000',
+      addr:  '47 River Club Drive',
+      specs: '5 BD  |  5 BA  |  6,330 SF',
+      img:   'https://d25fhp1qfwqa2h.cloudfront.net/cd7d8b9aaf2489a8d586e3f1b687dfc9,1784015281237_auto_650',
+      url:   'https://search.besthiltonheadproperties.com/search/detail/259588391?s[orderBy]=sourceCreationDate%2Cdesc&s[page]=1&s[locations][0][city]=Hilton%20Head%20Island&s[locations][0][state]=SC',
     },
     {
       find:  '2 Talon Court',             // card slot 6
