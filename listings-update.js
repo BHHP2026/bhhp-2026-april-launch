@@ -49,6 +49,22 @@
       img:   'https://d25fhp1qfwqa2h.cloudfront.net/c1cd1cf08afbb9c72ea78b83cbe4c2b6,1784909220713_auto_650',
       url:   'https://search.besthiltonheadproperties.com/search/detail/267652061?s[orderBy]=sourceCreationDate%2Cdesc&s[page]=1&s[locations][0][city]=Hilton%20Head%20Island&s[locations][0][state]=SC',
     },
+    {
+      find:  '12 Widewater',                   // hardcoded card (1st visible)
+      price: '$9,375,000',
+      addr:  '33 Ruddy Turnstone Road',
+      specs: '5 BD  |  5 BA  |  5,837 SF',
+      img:   'https://d25fhp1qfwqa2h.cloudfront.net/c9c84a52441eec713b4ea4a9b87d6cc6,1783001761140_auto_650',
+      url:   'https://search.besthiltonheadproperties.com/search/detail/265106786?s[orderBy]=sourceCreationDate%2Cdesc&s[page]=1&s[locations][0][city]=Hilton%20Head%20Island&s[locations][0][state]=SC',
+    },
+    {
+      find:  '46 Yorkshire',                    // hardcoded card (3rd visible)
+      price: '$5,295,000',
+      addr:  '4 Plantation Drive',
+      specs: '5 BD  |  6 BA  |  4,965 SF',
+      img:   'https://d25fhp1qfwqa2h.cloudfront.net/e68537ecfffa3ed568db2528e6745bc3,1782661620867_auto_650',
+      url:   'https://search.besthiltonheadproperties.com/search/detail/257617988?s[orderBy]=sourceCreationDate%2Cdesc&s[page]=1&s[locations][0][city]=Hilton%20Head%20Island&s[locations][0][state]=SC',
+    },
     // ── Bluffton (Bluffton cards use · separator) ────────────
     {
       find:  '16 Baldwin Lane',           // card slot 1
