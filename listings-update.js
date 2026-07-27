@@ -19,68 +19,68 @@
     // ── Hilton Head Island (HHI cards use | separator) ───────
     {
       find:  '100 Harbour Passage',       // card slot 2
-      price: '$7,400,000',
-      addr:  '3 Stella Del Mare Manor',
-      specs: '4 BD  |  6 BA  |  5,831 SF',
-      img:   'https://d25fhp1qfwqa2h.cloudfront.net/be136b5e1dad462660578c11274f83b7,1784145672990_auto_650',
-      url:   'https://search.besthiltonheadproperties.com/search/detail/267293924?s[orderBy]=sourceCreationDate%2Cdesc&s[page]=1&s[locations][0][city]=Hilton%20Head%20Island&s[locations][0][state]=SC',
+      price: '$5,900,000',
+      addr:  '10 Bald Eagle Road',
+      specs: '7 BD  |  7 BA  |  5,203 SF',
+      img:   'https://d25fhp1qfwqa2h.cloudfront.net/52d266bac61d2bacf720900e06e2c7d7,1784773560780_auto_650',
+      url:   'https://search.besthiltonheadproperties.com/search/detail/267565988?s[orderBy]=sourceCreationDate%2Cdesc&s[page]=1&s[locations][0][city]=Hilton%20Head%20Island&s[locations][0][state]=SC',
     },
     {
       find:  '44 Sparwheel Lane',         // card slot 4
-      price: '$2,599,000',
-      addr:  '37 Woodbine Place',
-      specs: '4 BD  |  4 BA  |  2,767 SF',
-      img:   'https://d25fhp1qfwqa2h.cloudfront.net/84a71f6dbd5feb6a8819d032e194a66c,1784089220323_auto_650',
-      url:   'https://search.besthiltonheadproperties.com/search/detail/267263086?s[orderBy]=sourceCreationDate%2Cdesc&s[page]=1&s[locations][0][city]=Hilton%20Head%20Island&s[locations][0][state]=SC',
+      price: '$1,875,000',
+      addr:  '50 Plantation Drive',
+      specs: '3 BD  |  4 BA  |  2,721 SF',
+      img:   'https://d25fhp1qfwqa2h.cloudfront.net/b163c2acebd88d6849dfa24d3ec9ed70,1784743682513_auto_650',
+      url:   'https://search.besthiltonheadproperties.com/search/detail/267546372?s[orderBy]=sourceCreationDate%2Cdesc&s[page]=1&s[locations][0][city]=Hilton%20Head%20Island&s[locations][0][state]=SC',
     },
     {
       find:  '219 Jonesville Road',       // card slot 5
-      price: '$1,499,000',
-      addr:  '44 Off Shore',
-      specs: '4 BD  |  3 BA  |  1,932 SF',
-      img:   'https://d25fhp1qfwqa2h.cloudfront.net/6329bf01ff6bf99c2116191cffebbd82,1784140021400_auto_650',
-      url:   'https://search.besthiltonheadproperties.com/search/detail/267271144?s[orderBy]=sourceCreationDate%2Cdesc&s[page]=1&s[locations][0][city]=Hilton%20Head%20Island&s[locations][0][state]=SC',
+      price: '$1,195,000',
+      addr:  '9 Wild Holly Court',
+      specs: '3 BD  |  3 BA  |  2,244 SF',
+      img:   'https://d25fhp1qfwqa2h.cloudfront.net/8177a7a6f7e69af93feb228fb9393d02,1784838380040_auto_650',
+      url:   'https://search.besthiltonheadproperties.com/search/detail/267652065?s[orderBy]=sourceCreationDate%2Cdesc&s[page]=1&s[locations][0][city]=Hilton%20Head%20Island&s[locations][0][state]=SC',
     },
     {
       find:  '2 Talon Court',             // card slot 6
-      price: '$965,000',
-      addr:  '312 Seabrook Drive',
-      specs: '3 BD  |  3 BA  |  2,588 SF',
-      img:   'https://d25fhp1qfwqa2h.cloudfront.net/1676f09038c6a8d9b7b970061b3b8ffb,1783716721453_auto_650',
-      url:   'https://search.besthiltonheadproperties.com/search/detail/267084267?s[orderBy]=sourceCreationDate%2Cdesc&s[page]=1&s[locations][0][city]=Hilton%20Head%20Island&s[locations][0][state]=SC',
+      price: '$675,000',
+      addr:  '34 Sweet Bay Lane',
+      specs: '3 BD  |  4 BA  |  1,983 SF',
+      img:   'https://d25fhp1qfwqa2h.cloudfront.net/c1cd1cf08afbb9c72ea78b83cbe4c2b6,1784909220713_auto_650',
+      url:   'https://search.besthiltonheadproperties.com/search/detail/267652061?s[orderBy]=sourceCreationDate%2Cdesc&s[page]=1&s[locations][0][city]=Hilton%20Head%20Island&s[locations][0][state]=SC',
     },
     // ── Bluffton (Bluffton cards use · separator) ────────────
     {
       find:  '16 Baldwin Lane',           // card slot 1
-      price: '$1,395,000',
-      addr:  '20 Driftwood Court W',
-      specs: '5 BD  ·  4 BA  ·  4,699 SF',
-      img:   'https://d25fhp1qfwqa2h.cloudfront.net/24443d47d90b10208589583acb1f0f80,1784213341340_auto_650',
-      url:   'https://search.besthiltonheadproperties.com/search/detail/267321053?s[orderBy]=sourceCreationDate%2Cdesc&s[page]=1&s[locations][0][city]=Bluffton&s[locations][0][state]=SC',
+      price: '$2,400,000',
+      addr:  '216 Hunting Lodge Road',
+      specs: '4 BD  ·  5 BA  ·  3,475 SF',
+      img:   'https://d25fhp1qfwqa2h.cloudfront.net/045e9e16a9ce86fc9e64389ee5d7d6b0,1784824921283_auto_650',
+      url:   'https://search.besthiltonheadproperties.com/search/detail/267774583?s[orderBy]=sourceCreationDate%2Cdesc&s[page]=1&s[locations][0][city]=Bluffton&s[locations][0][state]=SC',
     },
     {
       find:  '30 Heathrow Avenue',        // card slot 2
-      price: '$800,000',
-      addr:  '2 Lake Somerset Circle',
-      specs: '3 BD  ·  3 BA  ·  2,994 SF',
-      img:   'https://d25fhp1qfwqa2h.cloudfront.net/cb902c978b8cf8d885481c0736ddf2a2,1784199419677_auto_650',
-      url:   'https://search.besthiltonheadproperties.com/search/detail/267316955?s[orderBy]=sourceCreationDate%2Cdesc&s[page]=1&s[locations][0][city]=Bluffton&s[locations][0][state]=SC',
+      price: '$1,300,000',
+      addr:  '55 Wicklow Drive',
+      specs: '5 BD  ·  4 BA  ·  3,100 SF',
+      img:   'https://d25fhp1qfwqa2h.cloudfront.net/d0236e2165a3f69f5ffcf052a97d63c0,1784991180980_auto_650',
+      url:   'https://search.besthiltonheadproperties.com/search/detail/267750357?s[orderBy]=sourceCreationDate%2Cdesc&s[page]=1&s[locations][0][city]=Bluffton&s[locations][0][state]=SC',
     },
     {
       find:  '108 Keller Springs',        // card slot 4
-      price: '$615,000',
-      addr:  '43 Yonges Island Drive',
-      specs: '4 BD  ·  4 BA  ·  3,016 SF',
-      img:   'https://d25fhp1qfwqa2h.cloudfront.net/346ff43052469c42d05630ffba05bebd,1784213503450_auto_650',
-      url:   'https://search.besthiltonheadproperties.com/search/detail/267324964?s[orderBy]=sourceCreationDate%2Cdesc&s[page]=1&s[locations][0][city]=Bluffton&s[locations][0][state]=SC',
+      price: '$739,815',
+      addr:  '25 Golden Poppy Lane',
+      specs: '3 BD  ·  4 BA  ·  2,700 SF',
+      img:   'https://d25fhp1qfwqa2h.cloudfront.net/cc48a24dec2e46bfce6bbcb83239deaa,1785092763313_auto_650',
+      url:   'https://search.besthiltonheadproperties.com/search/detail/267769171?s[orderBy]=sourceCreationDate%2Cdesc&s[page]=1&s[locations][0][city]=Bluffton&s[locations][0][state]=SC',
     },
     {
       find:  '149 Rudder Run',            // card slot 5
-      price: '$1,225,000',
-      addr:  '2 Rice Mill Road',
-      specs: '4 BD  ·  5 BA  ·  2,783 SF',
-      img:   'https://d25fhp1qfwqa2h.cloudfront.net/21066b04c8952671a44bb3e72bb74141,1784113860653_auto_650',
-      url:   'https://search.besthiltonheadproperties.com/search/detail/267262866?s[orderBy]=sourceCreationDate%2Cdesc&s[page]=1&s[locations][0][city]=Bluffton&s[locations][0][state]=SC',
+      price: '$684,430',
+      addr:  '53 Coral Cove Road',
+      specs: '5 BD  ·  3 BA  ·  2,800 SF',
+      img:   'https://d25fhp1qfwqa2h.cloudfront.net/d85b74c2b6c68c6da1147b3c9c2c0422,1785095162390_auto_650',
+      url:   'https://search.besthiltonheadproperties.com/search/detail/267769861?s[orderBy]=sourceCreationDate%2Cdesc&s[page]=1&s[locations][0][city]=Bluffton&s[locations][0][state]=SC',
     },
     // ── Add more swaps here as needed ─────────────────────
   ];
