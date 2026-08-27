@@ -44,7 +44,7 @@
     },
     {
       find:  '219 Jonesville Road',       // card slot 5
-      price: '$3,999,000',
+      price: '$3,875,000',
       addr:  '47 River Club Drive',
       specs: '5 BD  |  5 BA  |  6,330 SF',
       img:   'https://d25fhp1qfwqa2h.cloudfront.net/cd7d8b9aaf2489a8d586e3f1b687dfc9,1784015281237_auto_650',
@@ -72,7 +72,7 @@
       price: '$2,400,000',
       addr:  '216 Hunting Lodge Road',
       specs: '4 BD  ·  5 BA  ·  3,475 SF',
-      img:   'https://d25fhp1qfwqa2h.cloudfront.net/045e9e16a9ce86fc9e64389ee5d7d6b0,1784824921283_auto_650',
+      img:   'https://d25fhp1qfwqa2h.cloudfront.net/c9898ff6e976c234916cf48d19768088,1786666595563_auto_650',
       url:   'https://search.besthiltonheadproperties.com/search/detail/267774583?s[orderBy]=sourceCreationDate%2Cdesc&s[page]=1&s[locations][0][city]=Bluffton&s[locations][0][state]=SC',
     },
     {
@@ -88,7 +88,7 @@
       price: '$1,249,000',                // 2026-08-24: reduced from $1,300,000
       addr:  '55 Wicklow Drive',
       specs: '5 BD  ·  4 BA  ·  3,100 SF',
-      img:   'https://d25fhp1qfwqa2h.cloudfront.net/d0236e2165a3f69f5ffcf052a97d63c0,1784991180980_auto_650',
+      img:   'https://d25fhp1qfwqa2h.cloudfront.net/c905aaafb6f90e568732169bdc003999,1785267614767_auto_650',
       url:   'https://search.besthiltonheadproperties.com/search/detail/267750357?s[orderBy]=sourceCreationDate%2Cdesc&s[page]=1&s[locations][0][city]=Bluffton&s[locations][0][state]=SC',
     },
     {
