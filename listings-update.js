@@ -36,11 +36,11 @@
     },
     {
       find:  '46 Yorkshire',                    // hardcoded card
-      price: '$5,295,000',
-      addr:  '4 Plantation Drive',
-      specs: '5 BD  |  6 BA  |  4,965 SF',
-      img:   'https://d25fhp1qfwqa2h.cloudfront.net/e68537ecfffa3ed568db2528e6745bc3,1782661620867_auto_650',
-      url:   'https://search.besthiltonheadproperties.com/search/detail/257617988?s[orderBy]=sourceCreationDate%2Cdesc&s[page]=1&s[locations][0][city]=Hilton%20Head%20Island&s[locations][0][state]=SC',
+      price: '$5,500,000',
+      addr:  '21 Barnacle Road',
+      specs: '4 BD  |  5 BA  |  3,590 SF',
+      img:   'https://d25fhp1qfwqa2h.cloudfront.net/300713d572cd03a19e0cdef3f79c4acb,1784556900683_auto_650',
+      url:   'https://search.besthiltonheadproperties.com/search/detail/267452770?s[orderBy]=sourceCreationDate%2Cdesc&s[page]=1&s[locations][0][city]=Hilton%20Head%20Island&s[locations][0][state]=SC',
     },
     {
       find:  '219 Jonesville Road',       // card slot 5
@@ -77,11 +77,11 @@
     },
     {
       find:  '91 Farnsleigh',             // hardcoded card (2026-08-24: original listing went inactive)
-      price: '$1,475,000',
-      addr:  '275 Belfair Oaks Boulevard',
-      specs: '3 BD  ·  4 BA  ·  4,200 SF',
-      img:   'https://d25fhp1qfwqa2h.cloudfront.net/095c453ce8a505cf74d877de5ac2fd4d,1787146552053_auto_650',
-      url:   'https://search.besthiltonheadproperties.com/search/detail/268659484?s[orderBy]=sourceCreationDate%2Cdesc&s[page]=1&s[locations][0][city]=Bluffton&s[locations][0][state]=SC',
+      price: '$1,799,000',
+      addr:  '80 Hampton Lake Drive',
+      specs: '4 BD  ·  5 BA  ·  4,061 SF',
+      img:   'https://d25fhp1qfwqa2h.cloudfront.net/61fe6dad0744677c467f9cbe25ec10e7,1789747040617_auto_650',
+      url:   'https://search.besthiltonheadproperties.com/search/detail/270221636?s[orderBy]=sourceCreationDate%2Cdesc&s[page]=1&s[locations][0][city]=Bluffton&s[locations][0][state]=SC',
     },
     {
       find:  '30 Heathrow Avenue',        // card slot 2
@@ -177,7 +177,7 @@
   var HHI_ORDER = [
     '52 Canvasback',
     '33 Ruddy Turnstone',
-    '4 Plantation Drive',
+    '21 Barnacle',
     '47 River Club',
     '17 Arthur Hills',
     '34 Sweet Bay',
@@ -185,7 +185,7 @@
 
   var BLUFFTON_ORDER = [
     '216 Hunting Lodge',
-    '275 Belfair Oaks',
+    '80 Hampton Lake',
     '55 Wicklow',
     '36 Skipperling',
     '110 Great Heron',
